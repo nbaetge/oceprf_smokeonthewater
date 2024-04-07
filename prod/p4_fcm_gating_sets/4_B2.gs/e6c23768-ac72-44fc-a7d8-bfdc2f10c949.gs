@@ -1,0 +1,27 @@
+Ô
+B2-1.fcs
+	B2-10.fcs
+	B2-11.fcs
+	B2-12.fcs
+	B2-13.fcs
+	B2-14.fcs
+	B2-15.fcs
+	B2-16.fcs
+	B2-17.fcs
+	B2-18.fcs
+	B2-19.fcs
+B2-2.fcs
+	B2-20.fcs
+	B2-21.fcs
+	B2-22.fcs
+	B2-23.fcs
+	B2-24.fcs
+	B2-25.fcs
+	B2-26.fcs
+B2-3.fcs
+B2-4.fcs
+B2-5.fcs
+B2-6.fcs
+B2-7.fcs
+B2-8.fcs
+B2-9.fcs2$e6c23768-ac72-44fc-a7d8-bfdc2f10c949:2.12.1B3008000J1.10.7

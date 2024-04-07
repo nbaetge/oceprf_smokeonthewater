@@ -1,0 +1,1831 @@
+FCS3.0    000000580000871500008716000092270000922800030084/$PAR/8/$BEGINDATA/000000008716/$ENDDATA/000000009227/$BEGINANALYSIS/000000009228/$ENDANALYSIS/000000030084/$BEGINSTEXT/000000000000/$ENDSTEXT/000000000000/$NEXTDATA/000000000000/GTI$BEGINLOG/       30085/GTI$ENDLOG/      136449/GTI$ANALYSISSETUPBEGIN/000000000000/GTI$ANALYSISSETUPEND/000000000000/$BTIM/11:37:19 /$BYTEORD/1,2,3,4/$COMMENT/No Comments/$CYT/Guava EasyCyte3L, InCyte 3.4/$CYTSN/8470H50282/$DATATYPE/F/$DATE/30-AUG-2023 /$ETIM/11:40:49 /$FIL/D:\fcm\B3_14_dil.fcs/$MODE/L/$P10G/0.000000/$P10V/0/$P11G/0.000000/$P11V/0/$P12G/0.000000/$P12V/0/$P13G/0.000000/$P13V/0/$P14G/0.000000/$P14V/0/$P1B/32/$P1E/0.0,0.0/$P1G/39.739449/$P1N/FSC-HLin/$P1R/100000/$P1S/Forward Scatter (FSC-HLin)/$P1V/0/$P2B/32/$P2E/0.0,0.0/$P2G/45.551544/$P2N/SSC-HLin/$P2R/100000/$P2S/Side Scatter (SSC-HLin)/$P2V/150/$P3B/32/$P3E/0.0,0.0/$P3G/40.000000/$P3N/GRN-B-HLin/$P3R/100000/$P3S/Green-B Fluorescence (GRN-B-HLin)/$P3V/457/$P4B/32/$P4E/0.0,0.0/$P4G/33.635857/$P4N/YEL-B-HLin/$P4R/100000/$P4S/Yellow-B Fluorescence (YEL-B-HLin)/$P4V/442/$P5B/32/$P5E/0.0,0.0/$P5G/61.688431/$P5N/RED-B-HLin/$P5R/100000/$P5S/Red-B Fluorescence (RED-B-HLin)/$P5V/605/$P6B/32/$P6E/0.0,0.0/$P6G/0.000000/$P6N/GRN-B-ALin/$P6R/100000/$P6S/Green-B Fluorescence Area (GRN-B-ALin)/$P6V/0/$P7B/32/$P7E/0.0,0.0/$P7G/0.000000/$P7N/GRN-B-W/$P7R/100000/$P7S/Green-B Width (GRN-B-W)/$P7V/0/$P8B/32/$P8E/0.0,0.0/$P8G/0.000000/$P8N/TIME/$P8R/100000/$P8S/Time/$P8V/0/$P9G/0.000000/$P9V/0/$PLATEID/{24bf16ee-82ce-4816-a58d-3ce0b81ae3ba}/$PLATENAME/96-Well Plate/$SMNO/33/$SYS/Microsoft Windows NT x86/$TIMESTEP/0.000017/$TOT/16/$TR/GRN-B-HLin,30/GTI$ACCESSRIGHTS/Administrator/GTI$ANALYSISDATE/30-AUG-2023/GTI$ANALYSISTIME/11:40:49/GTI$AREAMODEENABLED/No/GTI$AREASCALE/500/GTI$ASSAYTYPE/INCYTE/GTI$CHANNEL0BASELINE/0/GTI$CHANNEL0FINEGAIN/100/GTI$CHANNEL10BASELINE/0/GTI$CHANNEL10FINEGAIN/100/GTI$CHANNEL11BASELINE/0/GTI$CHANNEL11FINEGAIN/100/GTI$CHANNEL12BASELINE/0/GTI$CHANNEL12FINEGAIN/100/GTI$CHANNEL13BASELINE/0/GTI$CHANNEL13FINEGAIN/100/GTI$CHANNEL1BASELINE/0/GTI$CHANNEL1FINEGAIN/100/GTI$CHANNEL2BASELINE/0/GTI$CHANNEL2FINEGAIN/100/GTI$CHANNEL3BASELINE/0/GTI$CHANNEL3FINEGAIN/100/GTI$CHANNEL4BASELINE/0/GTI$CHANNEL4FINEGAIN/100/GTI$CHANNEL5BASELINE/0/GTI$CHANNEL5FINEGAIN/100/GTI$CHANNEL6BASELINE/0/GTI$CHANNEL6FINEGAIN/100/GTI$CHANNEL7BASELINE/0/GTI$CHANNEL7FINEGAIN/100/GTI$CHANNEL8BASELINE/0/GTI$CHANNEL8FINEGAIN/100/GTI$CHANNEL9BASELINE/0/GTI$CHANNEL9FINEGAIN/100/GTI$CHANNELFORAREAWIDTH/9/GTI$CHANNELMASK/248/GTI$COMPENSATIONPM10PM1/0.0000/GTI$COMPENSATIONPM10PM11/0.0000/GTI$COMPENSATIONPM10PM12/0.0000/GTI$COMPENSATIONPM10PM13/0.0000/GTI$COMPENSATIONPM10PM2/0.0000/GTI$COMPENSATIONPM10PM3/0.0000/GTI$COMPENSATIONPM10PM4/0.0000/GTI$COMPENSATIONPM10PM5/0.0000/GTI$COMPENSATIONPM10PM6/0.0000/GTI$COMPENSATIONPM10PM7/0.0000/GTI$COMPENSATIONPM10PM8/0.0000/GTI$COMPENSATIONPM10PM9/0.0000/GTI$COMPENSATIONPM11PM1/0.0000/GTI$COMPENSATIONPM11PM10/0.0000/GTI$COMPENSATIONPM11PM12/0.0000/GTI$COMPENSATIONPM11PM13/0.0000/GTI$COMPENSATIONPM11PM2/0.0000/GTI$COMPENSATIONPM11PM3/0.0000/GTI$COMPENSATIONPM11PM4/0.0000/GTI$COMPENSATIONPM11PM5/0.0000/GTI$COMPENSATIONPM11PM6/0.0000/GTI$COMPENSATIONPM11PM7/0.0000/GTI$COMPENSATIONPM11PM8/0.0000/GTI$COMPENSATIONPM11PM9/0.0000/GTI$COMPENSATIONPM12PM1/0.0000/GTI$COMPENSATIONPM12PM10/0.0000/GTI$COMPENSATIONPM12PM11/0.0000/GTI$COMPENSATIONPM12PM13/0.0000/GTI$COMPENSATIONPM12PM2/0.0000/GTI$COMPENSATIONPM12PM3/0.0000/GTI$COMPENSATIONPM12PM4/0.0000/GTI$COMPENSATIONPM12PM5/0.0000/GTI$COMPENSATIONPM12PM6/0.0000/GTI$COMPENSATIONPM12PM7/0.0000/GTI$COMPENSATIONPM12PM8/0.0000/GTI$COMPENSATIONPM12PM9/0.0000/GTI$COMPENSATIONPM13PM1/0.0000/GTI$COMPENSATIONPM13PM10/0.0000/GTI$COMPENSATIONPM13PM11/0.0000/GTI$COMPENSATIONPM13PM12/0.0000/GTI$COMPENSATIONPM13PM2/0.0000/GTI$COMPENSATIONPM13PM3/0.0000/GTI$COMPENSATIONPM13PM4/0.0000/GTI$COMPENSATIONPM13PM5/0.0000/GTI$COMPENSATIONPM13PM6/0.0000/GTI$COMPENSATIONPM13PM7/0.0000/GTI$COMPENSATIONPM13PM8/0.0000/GTI$COMPENSATIONPM13PM9/0.0000/GTI$COMPENSATIONPM1PM10/0.0000/GTI$COMPENSATIONPM1PM11/0.0000/GTI$COMPENSATIONPM1PM12/0.0000/GTI$COMPENSATIONPM1PM13/0.0000/GTI$COMPENSATIONPM1PM2/0.0000/GTI$COMPENSATIONPM1PM3/0.0000/GTI$COMPENSATIONPM1PM4/0.0000/GTI$COMPENSATIONPM1PM5/0.0000/GTI$COMPENSATIONPM1PM6/0.0000/GTI$COMPENSATIONPM1PM7/0.0000/GTI$COMPENSATIONPM1PM8/0.0000/GTI$COMPENSATIONPM1PM9/0.0000/GTI$COMPENSATIONPM2PM1/0.0000/GTI$COMPENSATIONPM2PM10/0.0000/GTI$COMPENSATIONPM2PM11/0.0000/GTI$COMPENSATIONPM2PM12/0.0000/GTI$COMPENSATIONPM2PM13/0.0000/GTI$COMPENSATIONPM2PM3/0.0000/GTI$COMPENSATIONPM2PM4/0.0000/GTI$COMPENSATIONPM2PM5/0.0000/GTI$COMPENSATIONPM2PM6/0.0000/GTI$COMPENSATIONPM2PM7/0.0000/GTI$COMPENSATIONPM2PM8/0.0000/GTI$COMPENSATIONPM2PM9/0.0000/GTI$COMPENSATIONPM3PM1/0.0000/GTI$COMPENSATIONPM3PM10/0.0000/GTI$COMPENSATIONPM3PM11/0.0000/GTI$COMPENSATIONPM3PM12/0.0000/GTI$COMPENSATIONPM3PM13/0.0000/GTI$COMPENSATIONPM3PM2/0.0000/GTI$COMPENSATIONPM3PM4/0.0000/GTI$COMPENSATIONPM3PM5/0.0000/GTI$COMPENSATIONPM3PM6/0.0000/GTI$COMPENSATIONPM3PM7/0.0000/GTI$COMPENSATIONPM3PM8/0.0000/GTI$COMPENSATIONPM3PM9/0.0000/GTI$COMPENSATIONPM4PM1/0.0000/GTI$COMPENSATIONPM4PM10/0.0000/GTI$COMPENSATIONPM4PM11/0.0000/GTI$COMPENSATIONPM4PM12/0.0000/GTI$COMPENSATIONPM4PM13/0.0000/GTI$COMPENSATIONPM4PM2/0.0000/GTI$COMPENSATIONPM4PM3/0.0000/GTI$COMPENSATIONPM4PM5/0.0000/GTI$COMPENSATIONPM4PM6/0.0000/GTI$COMPENSATIONPM4PM7/0.0000/GTI$COMPENSATIONPM4PM8/0.0000/GTI$COMPENSATIONPM4PM9/0.0000/GTI$COMPENSATIONPM5PM1/0.0000/GTI$COMPENSATIONPM5PM10/0.0000/GTI$COMPENSATIONPM5PM11/0.0000/GTI$COMPENSATIONPM5PM12/0.0000/GTI$COMPENSATIONPM5PM13/0.0000/GTI$COMPENSATIONPM5PM2/0.0000/GTI$COMPENSATIONPM5PM3/0.0000/GTI$COMPENSATIONPM5PM4/0.0000/GTI$COMPENSATIONPM5PM6/0.0000/GTI$COMPENSATIONPM5PM7/0.0000/GTI$COMPENSATIONPM5PM8/0.0000/GTI$COMPENSATIONPM5PM9/0.0000/GTI$COMPENSATIONPM6PM1/0.0000/GTI$COMPENSATIONPM6PM10/0.0000/GTI$COMPENSATIONPM6PM11/0.0000/GTI$COMPENSATIONPM6PM12/0.0000/GTI$COMPENSATIONPM6PM13/0.0000/GTI$COMPENSATIONPM6PM2/0.0000/GTI$COMPENSATIONPM6PM3/0.0000/GTI$COMPENSATIONPM6PM4/0.0000/GTI$COMPENSATIONPM6PM5/0.0000/GTI$COMPENSATIONPM6PM7/0.0000/GTI$COMPENSATIONPM6PM8/0.0000/GTI$COMPENSATIONPM6PM9/0.0000/GTI$COMPENSATIONPM7PM1/0.0000/GTI$COMPENSATIONPM7PM10/0.0000/GTI$COMPENSATIONPM7PM11/0.0000/GTI$COMPENSATIONPM7PM12/0.0000/GTI$COMPENSATIONPM7PM13/0.0000/GTI$COMPENSATIONPM7PM2/0.0000/GTI$COMPENSATIONPM7PM3/0.0000/GTI$COMPENSATIONPM7PM4/0.0000/GTI$COMPENSATIONPM7PM5/0.0000/GTI$COMPENSATIONPM7PM6/0.0000/GTI$COMPENSATIONPM7PM8/0.0000/GTI$COMPENSATIONPM7PM9/0.0000/GTI$COMPENSATIONPM8PM1/0.0000/GTI$COMPENSATIONPM8PM10/0.0000/GTI$COMPENSATIONPM8PM11/0.0000/GTI$COMPENSATIONPM8PM12/0.0000/GTI$COMPENSATIONPM8PM13/0.0000/GTI$COMPENSATIONPM8PM2/0.0000/GTI$COMPENSATIONPM8PM3/0.0000/GTI$COMPENSATIONPM8PM4/0.0000/GTI$COMPENSATIONPM8PM5/0.0000/GTI$COMPENSATIONPM8PM6/0.0000/GTI$COMPENSATIONPM8PM7/0.0000/GTI$COMPENSATIONPM8PM9/0.0000/GTI$COMPENSATIONPM9PM1/0.0000/GTI$COMPENSATIONPM9PM10/0.0000/GTI$COMPENSATIONPM9PM11/0.0000/GTI$COMPENSATIONPM9PM12/0.0000/GTI$COMPENSATIONPM9PM13/0.0000/GTI$COMPENSATIONPM9PM2/0.0000/GTI$COMPENSATIONPM9PM3/0.0000/GTI$COMPENSATIONPM9PM4/0.0000/GTI$COMPENSATIONPM9PM5/0.0000/GTI$COMPENSATIONPM9PM6/0.0000/GTI$COMPENSATIONPM9PM7/0.0000/GTI$COMPENSATIONPM9PM8/0.0000/GTI$COUNTGATE/ /GTI$DATASETNAME/D:\fcm\B3_14_dil.fcs/GTI$ERRORCOUNT/3/GTI$FLOWRATECAL/0.118000/GTI$FULLUSERNAME/Unknown/GTI$GREENLASERPOSITION/-1/GTI$HIGHCONCTRIGGER/500/GTI$HIGHGAIN.BLUV/1/GTI$HIGHGAIN.GRN/1/GTI$HIGHGAIN.NIR/1/GTI$HIGHGAIN.RED/1/GTI$HIGHGAIN.RED2/1/GTI$HIGHGAIN.SSC/1/GTI$HIGHGAIN.YEL/1/GTI$INSTRUMENTTYPE/9/GTI$LASERACTIVATIONMASK/1/GTI$NGATES/0/GTI$NREGIONS/0/GTI$NUMPLOTS/0/GTI$ORIGINALRUNGUID/{cb1df4ff-24e6-430c-a4ff-3d6e651e835f}/GTI$PARAM1CHANNEL/13/GTI$PARAM1TYPE/0/GTI$PARAM2CHANNEL/12/GTI$PARAM2TYPE/0/GTI$PARAM3CHANNEL/9/GTI$PARAM3TYPE/0/GTI$PARAM4CHANNEL/11/GTI$PARAM4TYPE/0/GTI$PARAM5CHANNEL/10/GTI$PARAM5TYPE/0/GTI$PARAM6CHANNEL/9/GTI$PARAM6TYPE/3/GTI$PARAM7CHANNEL/9/GTI$PARAM7TYPE/2/GTI$PARAM8CHANNEL/-1/GTI$PARAM8TYPE/1/GTI$PUMPSAMPLESPEED/5/GTI$REFRESHRATE/0/GTI$RUNGUID/{cb1df4ff-24e6-430c-a4ff-3d6e651e835f}/GTI$TERMCOUNT/10000/GTI$TOTALNUMREADINGS/12448783/GTI$USERNAME/DESKTOP-R0UF04H\User/GTI$WIDTHSCALE/500/GTI$WORKLIST/D://fcm//B3_14_dil_map.csv/GTI$SAMPLEID/B14-2-4-0/GTI$DILUTIONFACTOR/1/GTI$ORIGINALVOLUME/0.2/GTI$QUANTITY/0/$WELLID/G08/GTI$WELL/G08/GTI$TIMESCALE/60/$SPILLOVER/3,GRN-B-HLin,YEL-B-HLin,RED-B-HLin,1,0,0,0,1,0,0,0,1/GTI$SPILLOVERUUID/{c5a3a4e1-b53f-4d27-9c73-08ec97f79d8c}/GTI$SUBREGIONLIST/<InCyteSubRegionList appName="InCyte" version="1.0" appVersion="3.4">
+ <subRegionManager objectName="" class="TSubRegionManager"//>
+<//InCyteSubRegionList>
+/ùœ.AlùâBŸe¸AX7?Œ#Aﬁ;ÂAÀÍ£F¿ê|H„:ZAÅêøM˙AÉ˝—>IòA7Á¥A
+4ƒbIIêáèAôûô¬…aCÉ˝—øèbRA…âBˆf«ò6íI$ñAëpì¬,.ôFc%@ƒ‚A¡eKF¬#û≈»6íII·@ûπ
+√µËdC0-¶@ÛuâAï∏åBˆf«6íI:Çn¡(?¬V‡ˇAr>¿y≈¯¿à±A¬#û≈®IÕI˙[≈æ<NB∑F˙Aê(Ç¿…«√ΩtÇÎAU“GÙ¸HJT7£@w:ú¬È=˜A¬@\?N@r…∏AxBbE ¡tJæjüAø0ñA∞û¸A§òB@[æ
+¿®î÷A3@F0«›J,6öA9!#¬ñH B{’∞ΩZ€y¿zt„AÀÍ£FhOKÈ=˜A©ˆB,¶eCwΩ>⁄i#@ÄéBˆf«ÕFKscA˛ïéBâôFç ;£ñBd»KF¬#û≈”FK2ZMAÚí±¡åÚmC„:¿Üëb¿‡¬ìBˆf«ÿFK^±®AﬁûÌø›öˇA>}Ë?/gØA$…∑A
+4ƒî	)Kﬁ‡“@‘fÕA„∫˝AØÿ>¿ÔüAè”A3@F^1K‡≥¡,9∞¬∑BÓ…@Œn¿¶ÄÈA+ÇF¬à<K<GuavaInCyteMethod version="2.0">
+ <analysisMethod objectName="" metric="kPercent" logDisplay="false" class="TAnalysisMethod" analysisName="Method-2" statGate="" controlGate="" meanParamString="" requiredParams="">
+  <gateManager objectName="" class="TGateManager">
+   <regionManager objectName="regionManager" class="TRegionManager"/>
+  </gateManager>
+  <plotSetup objectName="" version="2" layoutType="k2x2" class="TPlotSetup">
+   <plotSettings xsPar="SSC-HLog" objectName="" ysPar="FSC-HLog" class="TPlotSettings2" worldRect.right="5" histoCount="100" worldRect.top="5" worldRect.left="0" visible="true" type="dotPlot" name="P01" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double dotPlot.dotPercent="100"/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="SSC-HLog" objectName="" ysPar="GRN-B-HLog" class="TPlotSettings2" worldRect.right="5" histoCount="100" worldRect.top="5" worldRect.left="0" visible="true" type="dotPlot" name="P02" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double dotPlot.dotPercent="100"/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="GRN-B-HLog" objectName="" ysPar="" class="TPlotSettings2" worldRect.right="5" histoCount="100" worldRect.top="100" worldRect.left="0" visible="true" type="histPlot" name="P03" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double histPlot.smoothing="1.5"/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="GRN-B-HLin" objectName="" ysPar="RED-B-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P04" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P05" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P06" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P07" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P08" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P09" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P10" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P11" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P12" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P13" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P14" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P15" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P16" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P17" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P18" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P19" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P20" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P21" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P22" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P23" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P24" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+  </plotSetup>
+  <statTemplate>
+   <showStat showItem.2="1" showItem.3="1" showItem.4="1" showItem.5="1" showItem.6="1" showItem.7="1" showItem.8="1" showItem.0="1" showItem.1="1"/>
+   <visualItem visualOrder="0,1,2,3,4,5,6,7,8"/>
+  </statTemplate>
+  <Template TemplateName="" PairedAppName="" SupportedDecades="4" TemplateVersion="" PairedAppVersion="">
+   <Workspace OriginalFormHeight="647" OriginalFormWidth="684">
+    <Items>
+     <Item OriginalY="10" ResizableVertically="true" AxisLocked.2Ebool="false" OriginalWidth="326" ShowNewRegionTool.2Ebool="true" AnchorBottom="false" QuadLabelUL="" PlotSettings="&lt;Root>&#xa; &lt;plotSettings xsPar=&quot;SSC-HLog&quot; objectName=&quot;&quot; ysPar=&quot;FSC-HLog&quot; class=&quot;TPlotSettings2&quot; worldRect.right=&quot;5&quot; histoCount=&quot;100&quot; worldRect.top=&quot;5&quot; worldRect.left=&quot;0&quot; visible=&quot;false&quot; type=&quot;dotPlot&quot; name=&quot;P01&quot; gate=&quot;&quot; worldRect.bottom=&quot;0&quot; backgroundGate=&quot;&quot;>&#xa;  &lt;overlayModel objectName=&quot;&quot; class=&quot;TOverlayModel&quot;>&#xa;   &lt;overlayItemBase baseItem=&quot;baseItem&quot; fill=&quot;true&quot; wellLocation=&quot;-1,-1&quot; fillColor=&quot;80ff0000&quot; lineColor=&quot;ff000000&quot; lineStyle=&quot;1&quot; show=&quot;true&quot;/>&#xa;   &lt;visualItem visualOrder=&quot;0&quot;/>&#xa;  &lt;/overlayModel>&#xa;  &lt;properties>&#xa;   &lt;bool/>&#xa;   &lt;double dotPlot.dotPercent=&quot;100&quot;/>&#xa;   &lt;int/>&#xa;  &lt;/properties>&#xa; &lt;/plotSettings>&#xa; &lt;plotSettingsVersion major=&quot;2&quot; minor=&quot;6&quot;/>&#xa;&lt;/Root>" ItemType="Plot" AnchorTop="false" ShowPlotZoomTool.2Ebool="true" FixedAspectRatioAlignment="33" QuadLabelLL="" QuadLabelLR="" ShowStatTool.2Ebool="true" QuadLabelUR="" AnchorLeft="false" ItemLocked="false" AnchorRight="false" ShowPlotTypeTool.2Ebool="true" ShowOverlayTool.2Ebool="true" PlotName="P01" ShowZoomTool.2Ebool="true" ShowGateTool.2Ebool="true" ResizableHorizontally="true" OriginalX="10" OriginalHeight="308"/>
+     <Item OriginalY="10" ResizableVertically="true" AxisLocked.2Ebool="false" OriginalWidth="326" ShowNewRegionTool.2Ebool="true" AnchorBottom="false" QuadLabelUL="" PlotSettings="&lt;Root>&#xa; &lt;plotSettings xsPar=&quot;SSC-HLog&quot; objectName=&quot;&quot; ysPar=&quot;GRN-B-HLog&quot; class=&quot;TPlotSettings2&quot; worldRect.right=&quot;5&quot; histoCount=&quot;100&quot; worldRect.top=&quot;5&quot; worldRect.left=&quot;0&quot; visible=&quot;false&quot; type=&quot;dotPlot&quot; name=&quot;P02&quot; gate=&quot;&quot; worldRect.bottom=&quot;0&quot; backgroundGate=&quot;&quot;>&#xa;  &lt;overlayModel objectName=&quot;&quot; class=&quot;TOverlayModel&quot;>&#xa;   &lt;overlayItemBase baseItem=&quot;baseItem&quot; fill=&quot;true&quot; wellLocation=&quot;-1,-1&quot; fillColor=&quot;80ff0000&quot; lineColor=&quot;ff000000&quot; lineStyle=&quot;1&quot; show=&quot;true&quot;/>&#xa;   &lt;visualItem visualOrder=&quot;0&quot;/>&#xa;  &lt;/overlayModel>&#xa;  &lt;properties>&#xa;   &lt;bool/>&#xa;   &lt;double dotPlot.dotPercent=&quot;100&quot;/>&#xa;   &lt;int/>&#xa;  &lt;/properties>&#xa; &lt;/plotSettings>&#xa; &lt;plotSettingsVersion major=&quot;2&quot; minor=&quot;6&quot;/>&#xa;&lt;/Root>" ItemType="Plot" AnchorTop="false" ShowPlotZoomTool.2Ebool="true" FixedAspectRatioAlignment="33" QuadLabelLL="" QuadLabelLR="" ShowStatTool.2Ebool="true" QuadLabelUR="" AnchorLeft="false" ItemLocked="false" AnchorRight="false" ShowPlotTypeTool.2Ebool="true" ShowOverlayTool.2Ebool="true" PlotName="P02" ShowZoomTool.2Ebool="true" ShowGateTool.2Ebool="true" ResizableHorizontally="true" OriginalX="346" OriginalHeight="308"/>
+     <Item AnchorTop="false" FixedAspectRatioAlignment="33" AnchorBottom="false" OriginalWidth="326" OriginalX="10" ItemLocked="false" OriginalY="328" OriginalHeight="308" ResizableVertically="true" AnchorRight="false" AnchorLeft="false" ItemType="PlateTable" ResizableHorizontally="true"/>
+     <Item OriginalY="328" ResizableVertically="true" AxisLocked.2Ebool="false" OriginalWidth="326" ShowNewRegionTool.2Ebool="true" AnchorBottom="false" QuadLabelUL="" PlotSettings="&lt;Root>&#xa; &lt;plotSettings xsPar=&quot;GRN-B-HLog&quot; objectName=&quot;&quot; ysPar=&quot;&quot; class=&quot;TPlotSettings2&quot; worldRect.right=&quot;5&quot; histoCount=&quot;100&quot; worldRect.top=&quot;100&quot; worldRect.left=&quot;0&quot; visible=&quot;false&quot; type=&quot;histPlot&quot; name=&quot;P03&quot; gate=&quot;&quot; worldRect.bottom=&quot;0&quot; backgroundGate=&quot;&quot;>&#xa;  &lt;overlayModel objectName=&quot;&quot; class=&quot;TOverlayModel&quot;>&#xa;   &lt;overlayItemBase baseItem=&quot;baseItem&quot; fill=&quot;true&quot; wellLocation=&quot;-1,-1&quot; fillColor=&quot;80ff0000&quot; lineColor=&quot;ff000000&quot; lineStyle=&quot;1&quot; show=&quot;true&quot;/>&#xa;   &lt;visualItem visualOrder=&quot;0&quot;/>&#xa;  &lt;/overlayModel>&#xa;  &lt;properties>&#xa;   &lt;bool/>&#xa;   &lt;double histPlot.smoothing=&quot;1.5&quot;/>&#xa;   &lt;int/>&#xa;  &lt;/properties>&#xa; &lt;/plotSettings>&#xa; &lt;plotSettingsVersion major=&quot;2&quot; minor=&quot;6&quot;/>&#xa;&lt;/Root>" ItemType="Plot" AnchorTop="false" ShowPlotZoomTool.2Ebool="true" FixedAspectRatioAlignment="33" QuadLabelLL="" QuadLabelLR="" ShowStatTool.2Ebool="true" QuadLabelUR="" AnchorLeft="false" ItemLocked="false" AnchorRight="false" ShowPlotTypeTool.2Ebool="true" ShowOverlayTool.2Ebool="true" PlotName="P03" ShowZoomTool.2Ebool="true" ShowGateTool.2Ebool="true" ResizableHorizontally="true" OriginalX="346" OriginalHeight="308"/>
+    </Items>
+   </Workspace>
+   <Formulas/>
+  </Template>
+ </analysisMethod>
+</GuavaInCyteMethod>
+30-Aug-2023 10:36:55  STATUS : Acquisition Session Started 
+30-Aug-2023 10:36:55  STATUS : User: DESKTOP-R0UF04H\User, Fullname: Unknown, Access Rights: Administrator 
+30-Aug-2023 10:36:55  STATUS : Assay Name: InCyte, Version: 3.4 
+30-Aug-2023 10:36:55  ACTION : Data File Created: D:/fcm/B3_14_dil.fcs 
+30-Aug-2023 10:36:55  ACTION : Retrieve settings from file: D:/fcm/sybr.gst 
+30-Aug-2023 10:43:20  ACTION : Resume worklist button clicked 
+30-Aug-2023 10:43:20  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:43:20  STATUS : Begin Well B04 
+30-Aug-2023 10:43:27  STATUS : Mixing Well B04 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:43:32  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:43:38  STATUS : Loading Well B04 
+30-Aug-2023 10:43:40  STATUS : Mixing Well B06 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:43:40  STATUS : Sampling Protocol Started for Sample # 1 
+30-Aug-2023 10:43:41  STATUS : Loading Sample... 
+30-Aug-2023 10:43:42  STATUS : Purging System... 
+30-Aug-2023 10:43:43  STATUS : Purging System... 
+30-Aug-2023 10:43:46  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:43:50  STATUS : Setting Thresholds... 
+30-Aug-2023 10:43:52  STATUS : Thresholds Set 
+30-Aug-2023 10:43:52  STATUS : Acquiring... 
+30-Aug-2023 10:44:51  STATUS : Acquisition Complete 
+30-Aug-2023 10:44:52  STATUS : Calculating... 
+30-Aug-2023 10:44:53  STATUS : Waste Cycle... 
+30-Aug-2023 10:44:54  STATUS : End of Waste Cycle 
+30-Aug-2023 10:44:55  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:44:55  WARNING : Maximum Velocity Exceeded For 509 Events 
+30-Aug-2023 10:44:55  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:44:55  STATUS : Begin Well B05 
+30-Aug-2023 10:45:02  STATUS : Mixing Well B05 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:45:07  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:45:13  STATUS : Loading Well B05 
+30-Aug-2023 10:45:15  STATUS : Mixing Well B07 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:45:15  STATUS : Sampling Protocol Started for Sample # 2 
+30-Aug-2023 10:45:16  STATUS : Loading Sample... 
+30-Aug-2023 10:45:17  STATUS : Purging System... 
+30-Aug-2023 10:45:18  STATUS : Purging System... 
+30-Aug-2023 10:45:21  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:45:25  STATUS : Setting Thresholds... 
+30-Aug-2023 10:45:27  STATUS : Thresholds Set 
+30-Aug-2023 10:45:27  STATUS : Acquiring... 
+30-Aug-2023 10:46:29  STATUS : Acquisition Complete 
+30-Aug-2023 10:46:30  STATUS : Calculating... 
+30-Aug-2023 10:46:31  STATUS : Waste Cycle... 
+30-Aug-2023 10:46:31  STATUS : End of Waste Cycle 
+30-Aug-2023 10:46:33  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:46:33  WARNING : Maximum Velocity Exceeded For 527 Events 
+30-Aug-2023 10:46:33  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:46:33  STATUS : Begin Well B06 
+30-Aug-2023 10:46:39  STATUS : Mixing Well B06 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:46:45  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:46:51  STATUS : Loading Well B06 
+30-Aug-2023 10:46:53  STATUS : Mixing Well B08 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:46:53  STATUS : Sampling Protocol Started for Sample # 3 
+30-Aug-2023 10:46:54  STATUS : Loading Sample... 
+30-Aug-2023 10:46:55  STATUS : Purging System... 
+30-Aug-2023 10:46:56  STATUS : Purging System... 
+30-Aug-2023 10:46:59  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:47:03  STATUS : Setting Thresholds... 
+30-Aug-2023 10:47:05  STATUS : Thresholds Set 
+30-Aug-2023 10:47:05  STATUS : Acquiring... 
+30-Aug-2023 10:47:50  STATUS : Acquisition Complete 
+30-Aug-2023 10:47:51  STATUS : Calculating... 
+30-Aug-2023 10:47:53  STATUS : Waste Cycle... 
+30-Aug-2023 10:47:53  STATUS : End of Waste Cycle 
+30-Aug-2023 10:47:54  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:47:54  WARNING : Maximum Velocity Exceeded For 470 Events 
+30-Aug-2023 10:47:55  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:47:55  STATUS : Begin Well B07 
+30-Aug-2023 10:48:01  STATUS : Mixing Well B07 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:48:06  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:48:12  STATUS : Loading Well B07 
+30-Aug-2023 10:48:14  STATUS : Mixing Well B09 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:48:14  STATUS : Sampling Protocol Started for Sample # 4 
+30-Aug-2023 10:48:15  STATUS : Loading Sample... 
+30-Aug-2023 10:48:16  STATUS : Purging System... 
+30-Aug-2023 10:48:17  STATUS : Purging System... 
+30-Aug-2023 10:48:20  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:48:24  STATUS : Setting Thresholds... 
+30-Aug-2023 10:48:26  STATUS : Thresholds Set 
+30-Aug-2023 10:48:27  STATUS : Acquiring... 
+30-Aug-2023 10:49:15  STATUS : Acquisition Complete 
+30-Aug-2023 10:49:16  STATUS : Calculating... 
+30-Aug-2023 10:49:17  STATUS : Waste Cycle... 
+30-Aug-2023 10:49:18  STATUS : End of Waste Cycle 
+30-Aug-2023 10:49:19  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:49:19  WARNING : Maximum Velocity Exceeded For 454 Events 
+30-Aug-2023 10:49:19  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:49:19  STATUS : Begin Well B08 
+30-Aug-2023 10:49:25  STATUS : Mixing Well B08 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:49:30  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:49:36  STATUS : Loading Well B08 
+30-Aug-2023 10:49:38  STATUS : Mixing Well B10 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:49:38  STATUS : Sampling Protocol Started for Sample # 5 
+30-Aug-2023 10:49:39  STATUS : Loading Sample... 
+30-Aug-2023 10:49:40  STATUS : Purging System... 
+30-Aug-2023 10:49:41  STATUS : Purging System... 
+30-Aug-2023 10:49:44  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:49:48  STATUS : Setting Thresholds... 
+30-Aug-2023 10:49:50  STATUS : Thresholds Set 
+30-Aug-2023 10:49:50  STATUS : Acquiring... 
+30-Aug-2023 10:50:39  STATUS : Acquisition Complete 
+30-Aug-2023 10:50:40  STATUS : Calculating... 
+30-Aug-2023 10:50:41  STATUS : Waste Cycle... 
+30-Aug-2023 10:50:42  STATUS : End of Waste Cycle 
+30-Aug-2023 10:50:43  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:50:43  WARNING : Maximum Velocity Exceeded For 482 Events 
+30-Aug-2023 10:50:43  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:50:43  STATUS : Begin Well B09 
+30-Aug-2023 10:50:49  STATUS : Mixing Well B09 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:50:55  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:51:01  STATUS : Loading Well B09 
+30-Aug-2023 10:51:03  STATUS : Mixing Well B11 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:51:03  STATUS : Sampling Protocol Started for Sample # 6 
+30-Aug-2023 10:51:04  STATUS : Loading Sample... 
+30-Aug-2023 10:51:05  STATUS : Purging System... 
+30-Aug-2023 10:51:06  STATUS : Purging System... 
+30-Aug-2023 10:51:09  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:51:13  STATUS : Setting Thresholds... 
+30-Aug-2023 10:51:15  STATUS : Thresholds Set 
+30-Aug-2023 10:51:15  STATUS : Acquiring... 
+30-Aug-2023 10:52:05  STATUS : Acquisition Complete 
+30-Aug-2023 10:52:06  STATUS : Calculating... 
+30-Aug-2023 10:52:07  STATUS : Waste Cycle... 
+30-Aug-2023 10:52:08  STATUS : End of Waste Cycle 
+30-Aug-2023 10:52:09  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:52:09  WARNING : Maximum Velocity Exceeded For 438 Events 
+30-Aug-2023 10:52:09  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:52:09  STATUS : Begin Well B10 
+30-Aug-2023 10:52:16  STATUS : Mixing Well B10 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:52:22  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:52:28  STATUS : Loading Well B10 
+30-Aug-2023 10:52:30  STATUS : Mixing Well B12 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:52:30  STATUS : Sampling Protocol Started for Sample # 7 
+30-Aug-2023 10:52:31  STATUS : Loading Sample... 
+30-Aug-2023 10:52:32  STATUS : Purging System... 
+30-Aug-2023 10:52:33  STATUS : Purging System... 
+30-Aug-2023 10:52:36  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:52:40  STATUS : Setting Thresholds... 
+30-Aug-2023 10:52:42  STATUS : Thresholds Set 
+30-Aug-2023 10:52:42  STATUS : Acquiring... 
+30-Aug-2023 10:53:32  STATUS : Acquisition Complete 
+30-Aug-2023 10:53:34  STATUS : Calculating... 
+30-Aug-2023 10:53:35  STATUS : Waste Cycle... 
+30-Aug-2023 10:53:35  STATUS : End of Waste Cycle 
+30-Aug-2023 10:53:37  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:53:37  WARNING : Maximum Velocity Exceeded For 433 Events 
+30-Aug-2023 10:53:37  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:53:37  STATUS : Begin Well B11 
+30-Aug-2023 10:53:43  STATUS : Mixing Well B11 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:53:49  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:53:55  STATUS : Loading Well B11 
+30-Aug-2023 10:53:57  STATUS : Sampling Protocol Started for Sample # 8 
+30-Aug-2023 10:53:57  STATUS : Loading Sample... 
+30-Aug-2023 10:53:58  STATUS : Purging System... 
+30-Aug-2023 10:53:59  STATUS : Purging System... 
+30-Aug-2023 10:54:03  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:54:07  STATUS : Setting Thresholds... 
+30-Aug-2023 10:54:09  STATUS : Thresholds Set 
+30-Aug-2023 10:54:09  STATUS : Acquiring... 
+30-Aug-2023 10:55:05  STATUS : Acquisition Complete 
+30-Aug-2023 10:55:06  STATUS : Calculating... 
+30-Aug-2023 10:55:07  STATUS : Waste Cycle... 
+30-Aug-2023 10:55:08  STATUS : End of Waste Cycle 
+30-Aug-2023 10:55:09  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:55:09  WARNING : Maximum Velocity Exceeded For 425 Events 
+30-Aug-2023 10:55:09  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:55:09  STATUS : Begin Well B12 
+30-Aug-2023 10:55:12  STATUS : Mixing Well B12 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:55:17  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:55:23  STATUS : Loading Well B12 
+30-Aug-2023 10:55:25  STATUS : Sampling Protocol Started for Sample # 9 
+30-Aug-2023 10:55:25  STATUS : Loading Sample... 
+30-Aug-2023 10:55:26  STATUS : Purging System... 
+30-Aug-2023 10:55:27  STATUS : Purging System... 
+30-Aug-2023 10:55:31  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:55:35  STATUS : Setting Thresholds... 
+30-Aug-2023 10:55:37  STATUS : Thresholds Set 
+30-Aug-2023 10:55:37  STATUS : Acquiring... 
+30-Aug-2023 10:56:30  STATUS : Acquisition Complete 
+30-Aug-2023 10:56:31  STATUS : Calculating... 
+30-Aug-2023 10:56:32  STATUS : Waste Cycle... 
+30-Aug-2023 10:56:33  STATUS : End of Waste Cycle 
+30-Aug-2023 10:56:34  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:56:34  WARNING : Maximum Velocity Exceeded For 480 Events 
+30-Aug-2023 10:56:34  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:56:34  STATUS : Begin Well C01 
+30-Aug-2023 10:56:37  STATUS : Mixing Well C01 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:56:42  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:56:48  STATUS : Loading Well C01 
+30-Aug-2023 10:56:50  STATUS : Mixing Well C03 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:56:50  STATUS : Sampling Protocol Started for Sample # 10 
+30-Aug-2023 10:56:51  STATUS : Loading Sample... 
+30-Aug-2023 10:56:52  STATUS : Purging System... 
+30-Aug-2023 10:56:53  STATUS : Purging System... 
+30-Aug-2023 10:56:56  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:57:00  STATUS : Setting Thresholds... 
+30-Aug-2023 10:57:02  STATUS : Thresholds Set 
+30-Aug-2023 10:57:02  STATUS : Acquiring... 
+30-Aug-2023 10:58:01  STATUS : Acquisition Complete 
+30-Aug-2023 10:58:02  STATUS : Calculating... 
+30-Aug-2023 10:58:03  STATUS : Waste Cycle... 
+30-Aug-2023 10:58:04  STATUS : End of Waste Cycle 
+30-Aug-2023 10:58:05  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:58:05  WARNING : Maximum Velocity Exceeded For 432 Events 
+30-Aug-2023 10:58:06  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:58:06  STATUS : Begin Well C02 
+30-Aug-2023 10:58:12  STATUS : Mixing Well C02 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:58:18  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:58:24  STATUS : Loading Well C02 
+30-Aug-2023 10:58:26  STATUS : Mixing Well C04 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:58:26  STATUS : Sampling Protocol Started for Sample # 11 
+30-Aug-2023 10:58:27  STATUS : Loading Sample... 
+30-Aug-2023 10:58:28  STATUS : Purging System... 
+30-Aug-2023 10:58:29  STATUS : Purging System... 
+30-Aug-2023 10:58:32  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:58:36  STATUS : Setting Thresholds... 
+30-Aug-2023 10:58:38  STATUS : Thresholds Set 
+30-Aug-2023 10:58:38  STATUS : Acquiring... 
+30-Aug-2023 10:59:18  STATUS : Acquisition Complete 
+30-Aug-2023 10:59:19  STATUS : Calculating... 
+30-Aug-2023 10:59:20  STATUS : Waste Cycle... 
+30-Aug-2023 10:59:21  STATUS : End of Waste Cycle 
+30-Aug-2023 10:59:22  STATUS : Sampling Protocol Completed 
+30-Aug-2023 10:59:22  WARNING : Maximum Velocity Exceeded For 522 Events 
+30-Aug-2023 10:59:22  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 10:59:22  STATUS : Begin Well C03 
+30-Aug-2023 10:59:28  STATUS : Mixing Well C03 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 10:59:34  STATUS : Washing capillary and mixer. 
+30-Aug-2023 10:59:40  STATUS : Loading Well C03 
+30-Aug-2023 10:59:42  STATUS : Mixing Well C05 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 10:59:42  STATUS : Sampling Protocol Started for Sample # 12 
+30-Aug-2023 10:59:43  STATUS : Loading Sample... 
+30-Aug-2023 10:59:44  STATUS : Purging System... 
+30-Aug-2023 10:59:45  STATUS : Purging System... 
+30-Aug-2023 10:59:48  STATUS : Establishing Steady Flow... 
+30-Aug-2023 10:59:52  STATUS : Setting Thresholds... 
+30-Aug-2023 10:59:54  STATUS : Thresholds Set 
+30-Aug-2023 10:59:54  STATUS : Acquiring... 
+30-Aug-2023 11:00:36  STATUS : Acquisition Complete 
+30-Aug-2023 11:00:37  STATUS : Calculating... 
+30-Aug-2023 11:00:38  STATUS : Waste Cycle... 
+30-Aug-2023 11:00:38  STATUS : End of Waste Cycle 
+30-Aug-2023 11:00:39  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:00:39  WARNING : Maximum Velocity Exceeded For 465 Events 
+30-Aug-2023 11:00:40  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:00:40  STATUS : Begin Well C04 
+30-Aug-2023 11:00:46  STATUS : Mixing Well C04 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:00:52  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:00:58  STATUS : Loading Well C04 
+30-Aug-2023 11:01:00  STATUS : Mixing Well C06 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:01:00  STATUS : Sampling Protocol Started for Sample # 13 
+30-Aug-2023 11:01:01  STATUS : Loading Sample... 
+30-Aug-2023 11:01:02  STATUS : Purging System... 
+30-Aug-2023 11:01:03  STATUS : Purging System... 
+30-Aug-2023 11:01:06  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:01:10  STATUS : Setting Thresholds... 
+30-Aug-2023 11:01:12  STATUS : Thresholds Set 
+30-Aug-2023 11:01:13  STATUS : Acquiring... 
+30-Aug-2023 11:01:59  STATUS : Acquisition Complete 
+30-Aug-2023 11:02:00  STATUS : Calculating... 
+30-Aug-2023 11:02:01  STATUS : Waste Cycle... 
+30-Aug-2023 11:02:02  STATUS : End of Waste Cycle 
+30-Aug-2023 11:02:03  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:02:03  WARNING : Maximum Velocity Exceeded For 478 Events 
+30-Aug-2023 11:02:03  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:02:03  STATUS : Begin Well C05 
+30-Aug-2023 11:02:10  STATUS : Mixing Well C05 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:02:16  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:02:22  STATUS : Loading Well C05 
+30-Aug-2023 11:02:24  STATUS : Mixing Well C07 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:02:24  STATUS : Sampling Protocol Started for Sample # 14 
+30-Aug-2023 11:02:25  STATUS : Loading Sample... 
+30-Aug-2023 11:02:26  STATUS : Purging System... 
+30-Aug-2023 11:02:27  STATUS : Purging System... 
+30-Aug-2023 11:02:30  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:02:34  STATUS : Setting Thresholds... 
+30-Aug-2023 11:02:36  STATUS : Thresholds Set 
+30-Aug-2023 11:02:36  STATUS : Acquiring... 
+30-Aug-2023 11:03:29  STATUS : Acquisition Complete 
+30-Aug-2023 11:03:30  STATUS : Calculating... 
+30-Aug-2023 11:03:31  STATUS : Waste Cycle... 
+30-Aug-2023 11:03:32  STATUS : End of Waste Cycle 
+30-Aug-2023 11:03:33  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:03:33  WARNING : Maximum Velocity Exceeded For 478 Events 
+30-Aug-2023 11:03:33  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:03:33  STATUS : Begin Well C06 
+30-Aug-2023 11:03:40  STATUS : Mixing Well C06 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:03:46  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:03:52  STATUS : Loading Well C06 
+30-Aug-2023 11:03:54  STATUS : Mixing Well C08 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:03:54  STATUS : Sampling Protocol Started for Sample # 15 
+30-Aug-2023 11:03:55  STATUS : Loading Sample... 
+30-Aug-2023 11:03:56  STATUS : Purging System... 
+30-Aug-2023 11:03:57  STATUS : Purging System... 
+30-Aug-2023 11:04:00  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:04:04  STATUS : Setting Thresholds... 
+30-Aug-2023 11:04:06  STATUS : Thresholds Set 
+30-Aug-2023 11:04:06  STATUS : Acquiring... 
+30-Aug-2023 11:04:56  STATUS : Acquisition Complete 
+30-Aug-2023 11:04:57  STATUS : Calculating... 
+30-Aug-2023 11:04:58  STATUS : Waste Cycle... 
+30-Aug-2023 11:04:59  STATUS : End of Waste Cycle 
+30-Aug-2023 11:05:00  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:05:00  WARNING : Maximum Velocity Exceeded For 494 Events 
+30-Aug-2023 11:05:00  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:05:00  STATUS : Begin Well C07 
+30-Aug-2023 11:05:07  STATUS : Mixing Well C07 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:05:13  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:05:19  STATUS : Loading Well C07 
+30-Aug-2023 11:05:21  STATUS : Mixing Well C09 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:05:21  STATUS : Sampling Protocol Started for Sample # 16 
+30-Aug-2023 11:05:22  STATUS : Loading Sample... 
+30-Aug-2023 11:05:23  STATUS : Purging System... 
+30-Aug-2023 11:05:24  STATUS : Purging System... 
+30-Aug-2023 11:05:27  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:05:31  STATUS : Setting Thresholds... 
+30-Aug-2023 11:05:33  STATUS : Thresholds Set 
+30-Aug-2023 11:05:33  STATUS : Acquiring... 
+30-Aug-2023 11:06:25  STATUS : Acquisition Complete 
+30-Aug-2023 11:06:26  STATUS : Calculating... 
+30-Aug-2023 11:06:28  STATUS : Waste Cycle... 
+30-Aug-2023 11:06:28  STATUS : End of Waste Cycle 
+30-Aug-2023 11:06:29  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:06:29  WARNING : Maximum Velocity Exceeded For 390 Events 
+30-Aug-2023 11:06:30  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:06:30  STATUS : Begin Well C08 
+30-Aug-2023 11:06:36  STATUS : Mixing Well C08 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:06:42  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:06:48  STATUS : Loading Well C08 
+30-Aug-2023 11:06:50  STATUS : Mixing Well C10 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:06:50  STATUS : Sampling Protocol Started for Sample # 17 
+30-Aug-2023 11:06:51  STATUS : Loading Sample... 
+30-Aug-2023 11:06:52  STATUS : Purging System... 
+30-Aug-2023 11:06:53  STATUS : Purging System... 
+30-Aug-2023 11:06:56  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:07:00  STATUS : Setting Thresholds... 
+30-Aug-2023 11:07:02  STATUS : Thresholds Set 
+30-Aug-2023 11:07:02  STATUS : Acquiring... 
+30-Aug-2023 11:07:50  STATUS : Acquisition Complete 
+30-Aug-2023 11:07:51  STATUS : Calculating... 
+30-Aug-2023 11:07:52  STATUS : Waste Cycle... 
+30-Aug-2023 11:07:53  STATUS : End of Waste Cycle 
+30-Aug-2023 11:07:54  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:07:54  WARNING : Maximum Velocity Exceeded For 492 Events 
+30-Aug-2023 11:07:54  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:07:54  STATUS : Begin Well C09 
+30-Aug-2023 11:08:01  STATUS : Mixing Well C09 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:08:07  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:08:13  STATUS : Loading Well C09 
+30-Aug-2023 11:08:15  STATUS : Mixing Well C11 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:08:15  STATUS : Sampling Protocol Started for Sample # 18 
+30-Aug-2023 11:08:16  STATUS : Loading Sample... 
+30-Aug-2023 11:08:17  STATUS : Purging System... 
+30-Aug-2023 11:08:18  STATUS : Purging System... 
+30-Aug-2023 11:08:21  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:08:25  STATUS : Setting Thresholds... 
+30-Aug-2023 11:08:27  STATUS : Thresholds Set 
+30-Aug-2023 11:08:27  STATUS : Acquiring... 
+30-Aug-2023 11:09:35  STATUS : Acquisition Complete 
+30-Aug-2023 11:09:36  STATUS : Calculating... 
+30-Aug-2023 11:09:37  STATUS : Waste Cycle... 
+30-Aug-2023 11:09:38  STATUS : End of Waste Cycle 
+30-Aug-2023 11:09:39  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:09:39  WARNING : Maximum Velocity Exceeded For 452 Events 
+30-Aug-2023 11:09:39  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:09:39  STATUS : Begin Well C10 
+30-Aug-2023 11:09:46  STATUS : Mixing Well C10 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:09:52  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:09:58  STATUS : Loading Well C10 
+30-Aug-2023 11:10:00  STATUS : Mixing Well C12 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:10:00  STATUS : Sampling Protocol Started for Sample # 19 
+30-Aug-2023 11:10:01  STATUS : Loading Sample... 
+30-Aug-2023 11:10:02  STATUS : Purging System... 
+30-Aug-2023 11:10:03  STATUS : Purging System... 
+30-Aug-2023 11:10:06  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:10:10  STATUS : Setting Thresholds... 
+30-Aug-2023 11:10:12  STATUS : Thresholds Set 
+30-Aug-2023 11:10:12  STATUS : Acquiring... 
+30-Aug-2023 11:11:08  STATUS : Acquisition Complete 
+30-Aug-2023 11:11:09  STATUS : Calculating... 
+30-Aug-2023 11:11:10  STATUS : Waste Cycle... 
+30-Aug-2023 11:11:11  STATUS : End of Waste Cycle 
+30-Aug-2023 11:11:12  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:11:12  WARNING : Maximum Velocity Exceeded For 437 Events 
+30-Aug-2023 11:11:12  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:11:12  STATUS : Begin Well C11 
+30-Aug-2023 11:11:18  STATUS : Mixing Well C11 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:11:24  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:11:30  STATUS : Loading Well C11 
+30-Aug-2023 11:11:32  STATUS : Sampling Protocol Started for Sample # 20 
+30-Aug-2023 11:11:32  STATUS : Loading Sample... 
+30-Aug-2023 11:11:33  STATUS : Purging System... 
+30-Aug-2023 11:11:34  STATUS : Purging System... 
+30-Aug-2023 11:11:38  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:11:42  STATUS : Setting Thresholds... 
+30-Aug-2023 11:11:44  STATUS : Thresholds Set 
+30-Aug-2023 11:11:44  STATUS : Acquiring... 
+30-Aug-2023 11:12:41  STATUS : Acquisition Complete 
+30-Aug-2023 11:12:42  STATUS : Calculating... 
+30-Aug-2023 11:12:43  STATUS : Waste Cycle... 
+30-Aug-2023 11:12:44  STATUS : End of Waste Cycle 
+30-Aug-2023 11:12:45  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:12:45  WARNING : Maximum Velocity Exceeded For 421 Events 
+30-Aug-2023 11:12:45  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:12:45  STATUS : Begin Well C12 
+30-Aug-2023 11:12:48  STATUS : Mixing Well C12 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:12:54  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:13:00  STATUS : Loading Well C12 
+30-Aug-2023 11:13:02  STATUS : Sampling Protocol Started for Sample # 21 
+30-Aug-2023 11:13:02  STATUS : Loading Sample... 
+30-Aug-2023 11:13:03  STATUS : Purging System... 
+30-Aug-2023 11:13:04  STATUS : Purging System... 
+30-Aug-2023 11:13:08  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:13:12  STATUS : Setting Thresholds... 
+30-Aug-2023 11:13:14  STATUS : Thresholds Set 
+30-Aug-2023 11:13:14  STATUS : Acquiring... 
+30-Aug-2023 11:14:09  STATUS : Acquisition Complete 
+30-Aug-2023 11:14:11  STATUS : Calculating... 
+30-Aug-2023 11:14:12  STATUS : Waste Cycle... 
+30-Aug-2023 11:14:12  STATUS : End of Waste Cycle 
+30-Aug-2023 11:14:13  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:14:13  WARNING : Maximum Velocity Exceeded For 436 Events 
+30-Aug-2023 11:14:14  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:14:14  STATUS : Begin Well D01 
+30-Aug-2023 11:14:17  STATUS : Mixing Well D01 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:14:23  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:14:29  STATUS : Loading Well D01 
+30-Aug-2023 11:14:31  STATUS : Mixing Well D03 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:14:31  STATUS : Sampling Protocol Started for Sample # 22 
+30-Aug-2023 11:14:31  STATUS : Loading Sample... 
+30-Aug-2023 11:14:33  STATUS : Purging System... 
+30-Aug-2023 11:14:34  STATUS : Purging System... 
+30-Aug-2023 11:14:37  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:14:41  STATUS : Setting Thresholds... 
+30-Aug-2023 11:14:43  STATUS : Thresholds Set 
+30-Aug-2023 11:14:43  STATUS : Acquiring... 
+30-Aug-2023 11:15:41  STATUS : Acquisition Complete 
+30-Aug-2023 11:15:42  STATUS : Calculating... 
+30-Aug-2023 11:15:43  STATUS : Waste Cycle... 
+30-Aug-2023 11:15:44  STATUS : End of Waste Cycle 
+30-Aug-2023 11:15:45  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:15:45  WARNING : Maximum Velocity Exceeded For 461 Events 
+30-Aug-2023 11:15:46  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:15:46  STATUS : Begin Well D02 
+30-Aug-2023 11:15:53  STATUS : Mixing Well D02 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:15:59  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:16:05  STATUS : Loading Well D02 
+30-Aug-2023 11:16:07  STATUS : Mixing Well D04 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:16:07  STATUS : Sampling Protocol Started for Sample # 23 
+30-Aug-2023 11:16:08  STATUS : Loading Sample... 
+30-Aug-2023 11:16:09  STATUS : Purging System... 
+30-Aug-2023 11:16:09  STATUS : Purging System... 
+30-Aug-2023 11:16:13  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:16:17  STATUS : Setting Thresholds... 
+30-Aug-2023 11:16:19  STATUS : Thresholds Set 
+30-Aug-2023 11:16:19  STATUS : Acquiring... 
+30-Aug-2023 11:17:13  STATUS : Acquisition Complete 
+30-Aug-2023 11:17:14  STATUS : Calculating... 
+30-Aug-2023 11:17:15  STATUS : Waste Cycle... 
+30-Aug-2023 11:17:16  STATUS : End of Waste Cycle 
+30-Aug-2023 11:17:17  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:17:17  WARNING : Maximum Velocity Exceeded For 485 Events 
+30-Aug-2023 11:17:17  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:17:17  STATUS : Begin Well D03 
+30-Aug-2023 11:17:24  STATUS : Mixing Well D03 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:17:30  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:17:36  STATUS : Loading Well D03 
+30-Aug-2023 11:17:38  STATUS : Mixing Well D05 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:17:38  STATUS : Sampling Protocol Started for Sample # 24 
+30-Aug-2023 11:17:38  STATUS : Loading Sample... 
+30-Aug-2023 11:17:40  STATUS : Purging System... 
+30-Aug-2023 11:17:41  STATUS : Purging System... 
+30-Aug-2023 11:17:44  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:17:48  STATUS : Setting Thresholds... 
+30-Aug-2023 11:17:50  STATUS : Thresholds Set 
+30-Aug-2023 11:17:50  STATUS : Acquiring... 
+30-Aug-2023 11:18:46  STATUS : Acquisition Complete 
+30-Aug-2023 11:18:47  STATUS : Calculating... 
+30-Aug-2023 11:18:48  STATUS : Waste Cycle... 
+30-Aug-2023 11:18:48  STATUS : End of Waste Cycle 
+30-Aug-2023 11:18:50  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:18:50  WARNING : Maximum Velocity Exceeded For 437 Events 
+30-Aug-2023 11:18:50  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:18:50  STATUS : Begin Well D04 
+30-Aug-2023 11:18:56  STATUS : Mixing Well D04 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:19:02  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:19:08  STATUS : Loading Well D04 
+30-Aug-2023 11:19:10  STATUS : Mixing Well D06 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:19:10  STATUS : Sampling Protocol Started for Sample # 25 
+30-Aug-2023 11:19:10  STATUS : Loading Sample... 
+30-Aug-2023 11:19:12  STATUS : Purging System... 
+30-Aug-2023 11:19:13  STATUS : Purging System... 
+30-Aug-2023 11:19:16  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:19:20  STATUS : Setting Thresholds... 
+30-Aug-2023 11:19:22  STATUS : Thresholds Set 
+30-Aug-2023 11:19:22  STATUS : Acquiring... 
+30-Aug-2023 11:20:21  STATUS : Acquisition Complete 
+30-Aug-2023 11:20:22  STATUS : Calculating... 
+30-Aug-2023 11:20:23  STATUS : Waste Cycle... 
+30-Aug-2023 11:20:24  STATUS : End of Waste Cycle 
+30-Aug-2023 11:20:25  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:20:25  WARNING : Maximum Velocity Exceeded For 441 Events 
+30-Aug-2023 11:20:25  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:20:25  STATUS : Begin Well D05 
+30-Aug-2023 11:20:32  STATUS : Mixing Well D05 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:20:38  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:20:44  STATUS : Loading Well D05 
+30-Aug-2023 11:20:46  STATUS : Mixing Well D07 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:20:46  STATUS : Sampling Protocol Started for Sample # 26 
+30-Aug-2023 11:20:46  STATUS : Loading Sample... 
+30-Aug-2023 11:20:47  STATUS : Purging System... 
+30-Aug-2023 11:20:49  STATUS : Purging System... 
+30-Aug-2023 11:20:52  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:20:56  STATUS : Setting Thresholds... 
+30-Aug-2023 11:20:58  STATUS : Thresholds Set 
+30-Aug-2023 11:20:58  STATUS : Acquiring... 
+30-Aug-2023 11:22:04  STATUS : Acquisition Complete 
+30-Aug-2023 11:22:05  STATUS : Calculating... 
+30-Aug-2023 11:22:06  STATUS : Waste Cycle... 
+30-Aug-2023 11:22:07  STATUS : End of Waste Cycle 
+30-Aug-2023 11:22:08  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:22:08  WARNING : Maximum Velocity Exceeded For 454 Events 
+30-Aug-2023 11:22:08  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:22:08  STATUS : Begin Well D06 
+30-Aug-2023 11:22:14  STATUS : Mixing Well D06 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:22:20  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:22:26  STATUS : Loading Well D06 
+30-Aug-2023 11:22:28  STATUS : Mixing Well D08 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:22:28  STATUS : Sampling Protocol Started for Sample # 27 
+30-Aug-2023 11:22:28  STATUS : Loading Sample... 
+30-Aug-2023 11:22:30  STATUS : Purging System... 
+30-Aug-2023 11:22:31  STATUS : Purging System... 
+30-Aug-2023 11:22:34  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:22:38  STATUS : Setting Thresholds... 
+30-Aug-2023 11:22:40  STATUS : Thresholds Set 
+30-Aug-2023 11:22:40  STATUS : Acquiring... 
+30-Aug-2023 11:24:24  STATUS : Acquisition Complete 
+30-Aug-2023 11:24:25  STATUS : Calculating... 
+30-Aug-2023 11:24:26  STATUS : Waste Cycle... 
+30-Aug-2023 11:24:27  STATUS : End of Waste Cycle 
+30-Aug-2023 11:24:28  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:24:28  WARNING : Maximum Velocity Exceeded For 389 Events 
+30-Aug-2023 11:24:28  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:24:28  STATUS : Begin Well D07 
+30-Aug-2023 11:24:35  STATUS : Mixing Well D07 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:24:41  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:24:47  STATUS : Loading Well D07 
+30-Aug-2023 11:24:49  STATUS : Mixing Well D09 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:24:49  STATUS : Sampling Protocol Started for Sample # 28 
+30-Aug-2023 11:24:49  STATUS : Loading Sample... 
+30-Aug-2023 11:24:51  STATUS : Purging System... 
+30-Aug-2023 11:24:52  STATUS : Purging System... 
+30-Aug-2023 11:24:55  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:24:59  STATUS : Setting Thresholds... 
+30-Aug-2023 11:25:01  STATUS : Thresholds Set 
+30-Aug-2023 11:25:01  STATUS : Acquiring... 
+30-Aug-2023 11:26:55  STATUS : Acquisition Complete 
+30-Aug-2023 11:26:56  STATUS : Calculating... 
+30-Aug-2023 11:26:57  STATUS : Waste Cycle... 
+30-Aug-2023 11:26:58  STATUS : End of Waste Cycle 
+30-Aug-2023 11:26:59  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:26:59  WARNING : Maximum Velocity Exceeded For 443 Events 
+30-Aug-2023 11:27:00  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:27:00  STATUS : Begin Well D08 
+30-Aug-2023 11:27:07  STATUS : Mixing Well D08 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:27:13  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:27:19  STATUS : Loading Well D08 
+30-Aug-2023 11:27:21  STATUS : Mixing Well D10 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:27:21  STATUS : Sampling Protocol Started for Sample # 29 
+30-Aug-2023 11:27:21  STATUS : Loading Sample... 
+30-Aug-2023 11:27:22  STATUS : Purging System... 
+30-Aug-2023 11:27:24  STATUS : Purging System... 
+30-Aug-2023 11:27:27  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:27:31  STATUS : Setting Thresholds... 
+30-Aug-2023 11:27:33  STATUS : Thresholds Set 
+30-Aug-2023 11:27:33  STATUS : Acquiring... 
+30-Aug-2023 11:29:16  STATUS : Acquisition Complete 
+30-Aug-2023 11:29:17  STATUS : Calculating... 
+30-Aug-2023 11:29:18  STATUS : Waste Cycle... 
+30-Aug-2023 11:29:19  STATUS : End of Waste Cycle 
+30-Aug-2023 11:29:20  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:29:20  WARNING : Maximum Velocity Exceeded For 404 Events 
+30-Aug-2023 11:29:21  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:29:21  STATUS : Begin Well D09 
+30-Aug-2023 11:29:28  STATUS : Mixing Well D09 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:29:34  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:29:40  STATUS : Loading Well D09 
+30-Aug-2023 11:29:42  STATUS : Mixing Well D11 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:29:42  STATUS : Sampling Protocol Started for Sample # 30 
+30-Aug-2023 11:29:42  STATUS : Loading Sample... 
+30-Aug-2023 11:29:44  STATUS : Purging System... 
+30-Aug-2023 11:29:45  STATUS : Purging System... 
+30-Aug-2023 11:29:48  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:29:52  STATUS : Setting Thresholds... 
+30-Aug-2023 11:29:54  STATUS : Thresholds Set 
+30-Aug-2023 11:29:54  STATUS : Acquiring... 
+30-Aug-2023 11:31:24  STATUS : Acquisition Complete 
+30-Aug-2023 11:31:25  STATUS : Calculating... 
+30-Aug-2023 11:31:26  STATUS : Waste Cycle... 
+30-Aug-2023 11:31:27  STATUS : End of Waste Cycle 
+30-Aug-2023 11:31:28  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:31:28  WARNING : Maximum Velocity Exceeded For 433 Events 
+30-Aug-2023 11:31:29  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:31:29  STATUS : Begin Well D10 
+30-Aug-2023 11:31:36  STATUS : Mixing Well D10 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:31:42  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:31:48  STATUS : Loading Well D10 
+30-Aug-2023 11:31:50  STATUS : Sampling Protocol Started for Sample # 31 
+30-Aug-2023 11:31:50  STATUS : Loading Sample... 
+30-Aug-2023 11:31:51  STATUS : Purging System... 
+30-Aug-2023 11:31:52  STATUS : Purging System... 
+30-Aug-2023 11:31:56  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:32:00  STATUS : Setting Thresholds... 
+30-Aug-2023 11:32:02  STATUS : Thresholds Set 
+30-Aug-2023 11:32:02  STATUS : Acquiring... 
+30-Aug-2023 11:34:03  STATUS : Acquisition Complete 
+30-Aug-2023 11:34:04  STATUS : Calculating... 
+30-Aug-2023 11:34:05  STATUS : Waste Cycle... 
+30-Aug-2023 11:34:07  STATUS : End of Waste Cycle 
+30-Aug-2023 11:34:08  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:34:08  WARNING : Maximum Velocity Exceeded For 391 Events 
+30-Aug-2023 11:34:08  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:34:08  STATUS : Begin Well D11 
+30-Aug-2023 11:34:11  STATUS : Mixing Well D11 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:34:17  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:34:23  STATUS : Loading Well D11 
+30-Aug-2023 11:34:25  STATUS : Sampling Protocol Started for Sample # 32 
+30-Aug-2023 11:34:25  STATUS : Loading Sample... 
+30-Aug-2023 11:34:26  STATUS : Purging System... 
+30-Aug-2023 11:34:27  STATUS : Purging System... 
+30-Aug-2023 11:34:31  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:34:35  STATUS : Setting Thresholds... 
+30-Aug-2023 11:34:37  STATUS : Thresholds Set 
+30-Aug-2023 11:34:37  STATUS : Acquiring... 
+30-Aug-2023 11:36:44  STATUS : Acquisition Complete 
+30-Aug-2023 11:36:45  STATUS : Calculating... 
+30-Aug-2023 11:36:46  STATUS : Waste Cycle... 
+30-Aug-2023 11:36:48  STATUS : End of Waste Cycle 
+30-Aug-2023 11:36:49  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:36:49  WARNING : Maximum Velocity Exceeded For 401 Events 
+30-Aug-2023 11:36:49  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:36:49  STATUS : Begin Well G08 
+30-Aug-2023 11:36:53  STATUS : Mixing Well G08 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:36:59  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:37:05  STATUS : Loading Well G08 
+30-Aug-2023 11:37:07  STATUS : Mixing Well G10 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:37:07  STATUS : Sampling Protocol Started for Sample # 33 
+30-Aug-2023 11:37:07  STATUS : Loading Sample... 
+30-Aug-2023 11:37:08  STATUS : Purging System... 
+30-Aug-2023 11:37:10  STATUS : Purging System... 
+30-Aug-2023 11:37:13  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:37:17  STATUS : Setting Thresholds... 
+30-Aug-2023 11:37:19  STATUS : Thresholds Set 
+30-Aug-2023 11:37:19  STATUS : Acquiring... 
+30-Aug-2023 11:40:49  WARNING : The run timed out before enough events were acquired. 
+30-Aug-2023 11:40:49  STATUS : Acquisition Complete 
+30-Aug-2023 11:40:50  STATUS : Calculating... 
+30-Aug-2023 11:40:52  STATUS : Waste Cycle... 
+30-Aug-2023 11:40:54  STATUS : End of Waste Cycle 
+30-Aug-2023 11:40:55  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:40:55  WARNING : Less than 10 particles/µL. Sample is too dilute. Accuracy may be compromised. 
+30-Aug-2023 11:40:55  WARNING : Maximum Velocity Exceeded For 16 Events 
+30-Aug-2023 11:40:55  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:40:55  STATUS : Begin Well G09 
+30-Aug-2023 11:41:02  STATUS : Mixing Well G09 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:41:08  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:41:14  STATUS : Loading Well G09 
+30-Aug-2023 11:41:16  STATUS : Mixing Well G11 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:41:16  STATUS : Sampling Protocol Started for Sample # 34 
+30-Aug-2023 11:41:16  STATUS : Loading Sample... 
+30-Aug-2023 11:41:17  STATUS : Purging System... 
+30-Aug-2023 11:41:19  STATUS : Purging System... 
+30-Aug-2023 11:41:22  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:41:26  STATUS : Setting Thresholds... 
+30-Aug-2023 11:41:28  STATUS : Thresholds Set 
+30-Aug-2023 11:41:28  STATUS : Acquiring... 
+30-Aug-2023 11:42:17  STATUS : Acquisition Complete 
+30-Aug-2023 11:42:18  STATUS : Calculating... 
+30-Aug-2023 11:42:20  STATUS : Waste Cycle... 
+30-Aug-2023 11:42:20  STATUS : End of Waste Cycle 
+30-Aug-2023 11:42:21  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:42:21  WARNING : Maximum Velocity Exceeded For 368 Events 
+30-Aug-2023 11:42:22  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:42:22  STATUS : Begin Well G10 
+30-Aug-2023 11:42:28  STATUS : Mixing Well G10 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:42:34  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:42:40  STATUS : Loading Well G10 
+30-Aug-2023 11:42:42  STATUS : Mixing Well G12 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:42:42  STATUS : Sampling Protocol Started for Sample # 35 
+30-Aug-2023 11:42:42  STATUS : Loading Sample... 
+30-Aug-2023 11:42:43  STATUS : Purging System... 
+30-Aug-2023 11:42:45  STATUS : Purging System... 
+30-Aug-2023 11:42:48  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:42:52  STATUS : Setting Thresholds... 
+30-Aug-2023 11:42:54  STATUS : Thresholds Set 
+30-Aug-2023 11:42:54  STATUS : Acquiring... 
+30-Aug-2023 11:43:41  STATUS : Acquisition Complete 
+30-Aug-2023 11:43:42  STATUS : Calculating... 
+30-Aug-2023 11:43:43  STATUS : Waste Cycle... 
+30-Aug-2023 11:43:44  STATUS : End of Waste Cycle 
+30-Aug-2023 11:43:45  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:43:45  WARNING : Maximum Velocity Exceeded For 450 Events 
+30-Aug-2023 11:43:45  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:43:45  STATUS : Begin Well G11 
+30-Aug-2023 11:43:52  STATUS : Mixing Well G11 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:43:57  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:44:03  STATUS : Loading Well G11 
+30-Aug-2023 11:44:05  STATUS : Sampling Protocol Started for Sample # 36 
+30-Aug-2023 11:44:05  STATUS : Loading Sample... 
+30-Aug-2023 11:44:06  STATUS : Purging System... 
+30-Aug-2023 11:44:07  STATUS : Purging System... 
+30-Aug-2023 11:44:11  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:44:15  STATUS : Setting Thresholds... 
+30-Aug-2023 11:44:17  STATUS : Thresholds Set 
+30-Aug-2023 11:44:17  STATUS : Acquiring... 
+30-Aug-2023 11:45:21  STATUS : Acquisition Complete 
+30-Aug-2023 11:45:22  STATUS : Calculating... 
+30-Aug-2023 11:45:23  STATUS : Waste Cycle... 
+30-Aug-2023 11:45:24  STATUS : End of Waste Cycle 
+30-Aug-2023 11:45:25  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:45:25  WARNING : Maximum Velocity Exceeded For 399 Events 
+30-Aug-2023 11:45:25  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:45:25  STATUS : Begin Well G12 
+30-Aug-2023 11:45:28  STATUS : Mixing Well G12 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:45:34  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:45:40  STATUS : Loading Well G12 
+30-Aug-2023 11:45:42  STATUS : Sampling Protocol Started for Sample # 37 
+30-Aug-2023 11:45:42  STATUS : Loading Sample... 
+30-Aug-2023 11:45:43  STATUS : Purging System... 
+30-Aug-2023 11:45:44  STATUS : Purging System... 
+30-Aug-2023 11:45:48  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:45:52  STATUS : Setting Thresholds... 
+30-Aug-2023 11:45:54  STATUS : Thresholds Set 
+30-Aug-2023 11:45:54  STATUS : Acquiring... 
+30-Aug-2023 11:46:51  STATUS : Acquisition Complete 
+30-Aug-2023 11:46:52  STATUS : Calculating... 
+30-Aug-2023 11:46:53  STATUS : Waste Cycle... 
+30-Aug-2023 11:46:54  STATUS : End of Waste Cycle 
+30-Aug-2023 11:46:55  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:46:55  WARNING : Maximum Velocity Exceeded For 376 Events 
+30-Aug-2023 11:46:55  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:46:55  STATUS : Begin Well H01 
+30-Aug-2023 11:46:59  STATUS : Mixing Well H01 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:47:05  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:47:11  STATUS : Loading Well H01 
+30-Aug-2023 11:47:13  STATUS : Mixing Well H03 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:47:13  STATUS : Sampling Protocol Started for Sample # 38 
+30-Aug-2023 11:47:13  STATUS : Loading Sample... 
+30-Aug-2023 11:47:14  STATUS : Purging System... 
+30-Aug-2023 11:47:16  STATUS : Purging System... 
+30-Aug-2023 11:47:19  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:47:23  STATUS : Setting Thresholds... 
+30-Aug-2023 11:47:25  STATUS : Thresholds Set 
+30-Aug-2023 11:47:25  STATUS : Acquiring... 
+30-Aug-2023 11:48:30  STATUS : Acquisition Complete 
+30-Aug-2023 11:48:31  STATUS : Calculating... 
+30-Aug-2023 11:48:32  STATUS : Waste Cycle... 
+30-Aug-2023 11:48:33  STATUS : End of Waste Cycle 
+30-Aug-2023 11:48:34  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:48:34  WARNING : Maximum Velocity Exceeded For 325 Events 
+30-Aug-2023 11:48:34  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:48:34  STATUS : Begin Well H02 
+30-Aug-2023 11:48:41  STATUS : Mixing Well H02 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:48:48  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:48:54  STATUS : Loading Well H02 
+30-Aug-2023 11:48:56  STATUS : Mixing Well H04 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:48:56  STATUS : Sampling Protocol Started for Sample # 39 
+30-Aug-2023 11:48:56  STATUS : Loading Sample... 
+30-Aug-2023 11:48:57  STATUS : Purging System... 
+30-Aug-2023 11:48:59  STATUS : Purging System... 
+30-Aug-2023 11:49:02  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:49:06  STATUS : Setting Thresholds... 
+30-Aug-2023 11:49:08  STATUS : Thresholds Set 
+30-Aug-2023 11:49:08  STATUS : Acquiring... 
+30-Aug-2023 11:50:13  STATUS : Acquisition Complete 
+30-Aug-2023 11:50:14  STATUS : Calculating... 
+30-Aug-2023 11:50:15  STATUS : Waste Cycle... 
+30-Aug-2023 11:50:16  STATUS : End of Waste Cycle 
+30-Aug-2023 11:50:17  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:50:17  WARNING : Maximum Velocity Exceeded For 390 Events 
+30-Aug-2023 11:50:17  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:50:17  STATUS : Begin Well H03 
+30-Aug-2023 11:50:24  STATUS : Mixing Well H03 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:50:29  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:50:35  STATUS : Loading Well H03 
+30-Aug-2023 11:50:37  STATUS : Mixing Well H05 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:50:37  STATUS : Sampling Protocol Started for Sample # 40 
+30-Aug-2023 11:50:37  STATUS : Loading Sample... 
+30-Aug-2023 11:50:38  STATUS : Purging System... 
+30-Aug-2023 11:50:40  STATUS : Purging System... 
+30-Aug-2023 11:50:43  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:50:47  STATUS : Setting Thresholds... 
+30-Aug-2023 11:50:49  STATUS : Thresholds Set 
+30-Aug-2023 11:50:49  STATUS : Acquiring... 
+30-Aug-2023 11:52:11  STATUS : Acquisition Complete 
+30-Aug-2023 11:52:12  STATUS : Calculating... 
+30-Aug-2023 11:52:13  STATUS : Waste Cycle... 
+30-Aug-2023 11:52:14  STATUS : End of Waste Cycle 
+30-Aug-2023 11:52:15  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:52:15  WARNING : Maximum Velocity Exceeded For 367 Events 
+30-Aug-2023 11:52:15  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:52:15  STATUS : Begin Well H04 
+30-Aug-2023 11:52:22  STATUS : Mixing Well H04 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:52:27  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:52:33  STATUS : Loading Well H04 
+30-Aug-2023 11:52:35  STATUS : Mixing Well H06 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:52:35  STATUS : Sampling Protocol Started for Sample # 41 
+30-Aug-2023 11:52:35  STATUS : Loading Sample... 
+30-Aug-2023 11:52:36  STATUS : Purging System... 
+30-Aug-2023 11:52:38  STATUS : Purging System... 
+30-Aug-2023 11:52:41  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:52:45  STATUS : Setting Thresholds... 
+30-Aug-2023 11:52:47  STATUS : Thresholds Set 
+30-Aug-2023 11:52:47  STATUS : Acquiring... 
+30-Aug-2023 11:53:41  STATUS : Acquisition Complete 
+30-Aug-2023 11:53:42  STATUS : Calculating... 
+30-Aug-2023 11:53:43  STATUS : Waste Cycle... 
+30-Aug-2023 11:53:44  STATUS : End of Waste Cycle 
+30-Aug-2023 11:53:45  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:53:45  WARNING : Maximum Velocity Exceeded For 399 Events 
+30-Aug-2023 11:53:46  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:53:46  STATUS : Begin Well H05 
+30-Aug-2023 11:53:52  STATUS : Mixing Well H05 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:53:58  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:54:04  STATUS : Loading Well H05 
+30-Aug-2023 11:54:06  STATUS : Mixing Well H07 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:54:06  STATUS : Sampling Protocol Started for Sample # 42 
+30-Aug-2023 11:54:06  STATUS : Loading Sample... 
+30-Aug-2023 11:54:07  STATUS : Purging System... 
+30-Aug-2023 11:54:09  STATUS : Purging System... 
+30-Aug-2023 11:54:12  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:54:16  STATUS : Setting Thresholds... 
+30-Aug-2023 11:54:18  STATUS : Thresholds Set 
+30-Aug-2023 11:54:18  STATUS : Acquiring... 
+30-Aug-2023 11:55:09  STATUS : Acquisition Complete 
+30-Aug-2023 11:55:10  STATUS : Calculating... 
+30-Aug-2023 11:55:11  STATUS : Waste Cycle... 
+30-Aug-2023 11:55:12  STATUS : End of Waste Cycle 
+30-Aug-2023 11:55:13  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:55:13  WARNING : Maximum Velocity Exceeded For 408 Events 
+30-Aug-2023 11:55:13  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:55:13  STATUS : Begin Well H06 
+30-Aug-2023 11:55:20  STATUS : Mixing Well H06 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:55:25  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:55:31  STATUS : Loading Well H06 
+30-Aug-2023 11:55:33  STATUS : Mixing Well H08 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:55:33  STATUS : Sampling Protocol Started for Sample # 43 
+30-Aug-2023 11:55:33  STATUS : Loading Sample... 
+30-Aug-2023 11:55:34  STATUS : Purging System... 
+30-Aug-2023 11:55:36  STATUS : Purging System... 
+30-Aug-2023 11:55:39  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:55:43  STATUS : Setting Thresholds... 
+30-Aug-2023 11:55:45  STATUS : Thresholds Set 
+30-Aug-2023 11:55:45  STATUS : Acquiring... 
+30-Aug-2023 11:56:31  STATUS : Acquisition Complete 
+30-Aug-2023 11:56:32  STATUS : Calculating... 
+30-Aug-2023 11:56:33  STATUS : Waste Cycle... 
+30-Aug-2023 11:56:34  STATUS : End of Waste Cycle 
+30-Aug-2023 11:56:35  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:56:35  WARNING : Maximum Velocity Exceeded For 420 Events 
+30-Aug-2023 11:56:36  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:56:36  STATUS : Begin Well H07 
+30-Aug-2023 11:56:42  STATUS : Mixing Well H07 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:56:48  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:56:54  STATUS : Loading Well H07 
+30-Aug-2023 11:56:56  STATUS : Mixing Well H09 ,for 3 sec, Speed: medium rpm 
+30-Aug-2023 11:56:56  STATUS : Sampling Protocol Started for Sample # 44 
+30-Aug-2023 11:56:56  STATUS : Loading Sample... 
+30-Aug-2023 11:56:57  STATUS : Purging System... 
+30-Aug-2023 11:56:59  STATUS : Purging System... 
+30-Aug-2023 11:57:02  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:57:06  STATUS : Setting Thresholds... 
+30-Aug-2023 11:57:08  STATUS : Thresholds Set 
+30-Aug-2023 11:57:08  STATUS : Acquiring... 
+30-Aug-2023 11:58:04  STATUS : Acquisition Complete 
+30-Aug-2023 11:58:05  STATUS : Calculating... 
+30-Aug-2023 11:58:06  STATUS : Waste Cycle... 
+30-Aug-2023 11:58:07  STATUS : End of Waste Cycle 
+30-Aug-2023 11:58:08  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:58:08  WARNING : Maximum Velocity Exceeded For 389 Events 
+30-Aug-2023 11:58:08  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:58:08  STATUS : Begin Well H08 
+30-Aug-2023 11:58:15  STATUS : Mixing Well H08 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:58:21  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:58:27  STATUS : Loading Well H08 
+30-Aug-2023 11:58:29  STATUS : Sampling Protocol Started for Sample # 45 
+30-Aug-2023 11:58:29  STATUS : Loading Sample... 
+30-Aug-2023 11:58:30  STATUS : Purging System... 
+30-Aug-2023 11:58:31  STATUS : Purging System... 
+30-Aug-2023 11:58:35  STATUS : Establishing Steady Flow... 
+30-Aug-2023 11:58:39  STATUS : Setting Thresholds... 
+30-Aug-2023 11:58:41  STATUS : Thresholds Set 
+30-Aug-2023 11:58:41  STATUS : Acquiring... 
+30-Aug-2023 11:59:38  STATUS : Acquisition Complete 
+30-Aug-2023 11:59:39  STATUS : Calculating... 
+30-Aug-2023 11:59:40  STATUS : Waste Cycle... 
+30-Aug-2023 11:59:41  STATUS : End of Waste Cycle 
+30-Aug-2023 11:59:42  STATUS : Sampling Protocol Completed 
+30-Aug-2023 11:59:42  WARNING : Maximum Velocity Exceeded For 412 Events 
+30-Aug-2023 11:59:42  STATUS : Washing capillary and mixer. 
+
+30-Aug-2023 11:59:42  STATUS : Begin Well H09 
+30-Aug-2023 11:59:45  STATUS : Mixing Well H09 ,for 3 sec, Speed: medium (1) rpm 
+30-Aug-2023 11:59:50  STATUS : Washing capillary and mixer. 
+30-Aug-2023 11:59:56  STATUS : Loading Well H09 
+30-Aug-2023 11:59:58  STATUS : Sampling Protocol Started for Sample # 46 
+30-Aug-2023 11:59:58  STATUS : Loading Sample... 
+30-Aug-2023 11:59:59  STATUS : Purging System... 
+30-Aug-2023 12:00:00  STATUS : Purging System... 
+30-Aug-2023 12:00:03  STATUS : Establishing Steady Flow... 
+30-Aug-2023 12:00:08  STATUS : Setting Thresholds... 
+30-Aug-2023 12:00:10  STATUS : Thresholds Set 
+30-Aug-2023 12:00:10  STATUS : Acquiring... 
+30-Aug-2023 12:01:13  STATUS : Acquisition Complete 
+30-Aug-2023 12:01:14  STATUS : Calculating... 
+30-Aug-2023 12:01:15  STATUS : Waste Cycle... 
+30-Aug-2023 12:01:16  STATUS : End of Waste Cycle 
+30-Aug-2023 12:01:17  STATUS : Sampling Protocol Completed 
+30-Aug-2023 12:01:17  WARNING : Maximum Velocity Exceeded For 425 Events 
+30-Aug-2023 12:01:20  STATUS : Quick Clean Protocol Started 
+30-Aug-2023 12:01:20  STATUS : Filling Pump 
+30-Aug-2023 12:01:28  STATUS : End of Filling Pump 
+30-Aug-2023 12:01:29  STATUS : Waste Cycle 
+30-Aug-2023 12:01:34  STATUS : End of Waste Cycle 
+30-Aug-2023 12:01:35  STATUS : Cleaning System... 
+30-Aug-2023 12:02:05  STATUS : End of Cleaning 
+30-Aug-2023 12:02:06  STATUS : Waste Cycle 
+30-Aug-2023 12:02:07  STATUS : Quick Clean Protocol Completed 
+30-Aug-2023 12:02:08  ACTION : Data File Closed: D:/fcm/B3_14_dil.fcs 
+30-Aug-2023 12:02:08  STATUS : Session Closed 
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-27.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-27.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-28.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-27.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-28.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-29.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-27.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-28.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-29.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-30.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-27.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-28.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-29.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-30.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-31.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-27.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-28.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-29.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-30.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-31.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-32.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-1.fcs
+30-Aug-2023 12:21:38  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-2.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-3.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-4.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-5.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-6.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-7.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-8.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-9.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-10.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-11.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-12.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-13.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-14.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-15.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-16.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-17.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-18.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-19.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-20.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-21.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-22.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-23.fcs
+30-Aug-2023 12:21:39  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-24.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-25.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-26.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-27.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-28.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-29.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-30.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-31.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-32.fcs
+30-Aug-2023 12:21:40  ACTION : Exported FCS 3.0 file name: D:/fcm/B3_14_dil/B3_14_dil-33.fcs

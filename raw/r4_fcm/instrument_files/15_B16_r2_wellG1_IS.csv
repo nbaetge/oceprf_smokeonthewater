@@ -1,0 +1,9 @@
+Current Date: 30-Aug-2023
+Instrument Serial Number: 8470H50282
+Software Name: InCyte
+Version Number: 3.4
+
+
+,,,,,,,,,,,,Gains,,,,,High Calibration,,,,
+ Sample Number, Sample ID, Number of Events,  Termination Count, Count Gate, Dilution Factor, Original Volume, Cells/µL,  Total Volume (µL), Acquisition Time (s), Date of Acquisition, Time of Acquisition, FSC Gain, SSC, GRN-B, YEL-B, RED-B,  SSC,  GRN-B,  YEL-B,  RED-B, YEL-B - %GRN-B, RED-B - %GRN-B, GRN-B - %YEL-B, RED-B - %YEL-B, GRN-B - %RED-B, YEL-B - %RED-B, Threshold Parameter, Threshold Value, Flow Rate (µL/s), High Concentration Warning Trigger, # of Errors & Warnings, User Login Name, User Full Name, WorkList,
+ 1, B16-V2-4-4, 10000, 10000, All Events, 1, 0.2, 272.080670748071, 36.7538053052632, 62.2945852631579, 30-AUG-2023 , 17:28:47 , 39.7394499863515, 4.55515453902677, 4, 3.36358566101486, 6.16884330163176, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B, 30, 0.59, 500, 1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B16_r2_map.csv,

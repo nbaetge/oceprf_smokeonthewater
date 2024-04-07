@@ -1,0 +1,862 @@
+FCS3.0    000000580000869900008700000116750001167600032529/$PAR/8/$BEGINDATA/000000008700/$ENDDATA/000000011675/$BEGINANALYSIS/000000011676/$ENDANALYSIS/000000032529/$BEGINSTEXT/000000000000/$ENDSTEXT/000000000000/$NEXTDATA/000000000000/GTI$BEGINLOG/       32530/GTI$ENDLOG/       63734/GTI$ANALYSISSETUPBEGIN/000000000000/GTI$ANALYSISSETUPEND/000000000000/$BTIM/15:56:13 /$BYTEORD/1,2,3,4/$COMMENT/No Comments/$CYT/Guava EasyCyte3L, InCyte 3.4/$CYTSN/8470H50282/$DATATYPE/F/$DATE/29-AUG-2023 /$ETIM/15:59:43 /$FIL/D:\fcm\B15.fcs/$MODE/L/$P10G/0.000000/$P10V/0/$P11G/0.000000/$P11V/0/$P12G/0.000000/$P12V/0/$P13G/0.000000/$P13V/0/$P14G/0.000000/$P14V/0/$P1B/32/$P1E/0.0,0.0/$P1G/39.739449/$P1N/FSC-HLin/$P1R/100000/$P1S/Forward Scatter (FSC-HLin)/$P1V/0/$P2B/32/$P2E/0.0,0.0/$P2G/45.551544/$P2N/SSC-HLin/$P2R/100000/$P2S/Side Scatter (SSC-HLin)/$P2V/150/$P3B/32/$P3E/0.0,0.0/$P3G/40.000000/$P3N/GRN-B-HLin/$P3R/100000/$P3S/Green-B Fluorescence (GRN-B-HLin)/$P3V/457/$P4B/32/$P4E/0.0,0.0/$P4G/33.635857/$P4N/YEL-B-HLin/$P4R/100000/$P4S/Yellow-B Fluorescence (YEL-B-HLin)/$P4V/442/$P5B/32/$P5E/0.0,0.0/$P5G/61.688431/$P5N/RED-B-HLin/$P5R/100000/$P5S/Red-B Fluorescence (RED-B-HLin)/$P5V/605/$P6B/32/$P6E/0.0,0.0/$P6G/0.000000/$P6N/GRN-B-ALin/$P6R/100000/$P6S/Green-B Fluorescence Area (GRN-B-ALin)/$P6V/0/$P7B/32/$P7E/0.0,0.0/$P7G/0.000000/$P7N/GRN-B-W/$P7R/100000/$P7S/Green-B Width (GRN-B-W)/$P7V/0/$P8B/32/$P8E/0.0,0.0/$P8G/0.000000/$P8N/TIME/$P8R/100000/$P8S/Time/$P8V/0/$P9G/0.000000/$P9V/0/$PLATEID/{c4633fd5-f7e0-47df-8d3c-a4bad78d5c65}/$PLATENAME/96-Well Plate/$SMNO/2/$SYS/Microsoft Windows NT x86/$TIMESTEP/0.000017/$TOT/93/$TR/GRN-B-HLin,30/GTI$ACCESSRIGHTS/Administrator/GTI$ANALYSISDATE/29-AUG-2023/GTI$ANALYSISTIME/15:59:43/GTI$AREAMODEENABLED/No/GTI$AREASCALE/500/GTI$ASSAYTYPE/INCYTE/GTI$CHANNEL0BASELINE/0/GTI$CHANNEL0FINEGAIN/100/GTI$CHANNEL10BASELINE/0/GTI$CHANNEL10FINEGAIN/100/GTI$CHANNEL11BASELINE/0/GTI$CHANNEL11FINEGAIN/100/GTI$CHANNEL12BASELINE/0/GTI$CHANNEL12FINEGAIN/100/GTI$CHANNEL13BASELINE/0/GTI$CHANNEL13FINEGAIN/100/GTI$CHANNEL1BASELINE/0/GTI$CHANNEL1FINEGAIN/100/GTI$CHANNEL2BASELINE/0/GTI$CHANNEL2FINEGAIN/100/GTI$CHANNEL3BASELINE/0/GTI$CHANNEL3FINEGAIN/100/GTI$CHANNEL4BASELINE/0/GTI$CHANNEL4FINEGAIN/100/GTI$CHANNEL5BASELINE/0/GTI$CHANNEL5FINEGAIN/100/GTI$CHANNEL6BASELINE/0/GTI$CHANNEL6FINEGAIN/100/GTI$CHANNEL7BASELINE/0/GTI$CHANNEL7FINEGAIN/100/GTI$CHANNEL8BASELINE/0/GTI$CHANNEL8FINEGAIN/100/GTI$CHANNEL9BASELINE/0/GTI$CHANNEL9FINEGAIN/100/GTI$CHANNELFORAREAWIDTH/9/GTI$CHANNELMASK/248/GTI$COMPENSATIONPM10PM1/0.0000/GTI$COMPENSATIONPM10PM11/0.0000/GTI$COMPENSATIONPM10PM12/0.0000/GTI$COMPENSATIONPM10PM13/0.0000/GTI$COMPENSATIONPM10PM2/0.0000/GTI$COMPENSATIONPM10PM3/0.0000/GTI$COMPENSATIONPM10PM4/0.0000/GTI$COMPENSATIONPM10PM5/0.0000/GTI$COMPENSATIONPM10PM6/0.0000/GTI$COMPENSATIONPM10PM7/0.0000/GTI$COMPENSATIONPM10PM8/0.0000/GTI$COMPENSATIONPM10PM9/0.0000/GTI$COMPENSATIONPM11PM1/0.0000/GTI$COMPENSATIONPM11PM10/0.0000/GTI$COMPENSATIONPM11PM12/0.0000/GTI$COMPENSATIONPM11PM13/0.0000/GTI$COMPENSATIONPM11PM2/0.0000/GTI$COMPENSATIONPM11PM3/0.0000/GTI$COMPENSATIONPM11PM4/0.0000/GTI$COMPENSATIONPM11PM5/0.0000/GTI$COMPENSATIONPM11PM6/0.0000/GTI$COMPENSATIONPM11PM7/0.0000/GTI$COMPENSATIONPM11PM8/0.0000/GTI$COMPENSATIONPM11PM9/0.0000/GTI$COMPENSATIONPM12PM1/0.0000/GTI$COMPENSATIONPM12PM10/0.0000/GTI$COMPENSATIONPM12PM11/0.0000/GTI$COMPENSATIONPM12PM13/0.0000/GTI$COMPENSATIONPM12PM2/0.0000/GTI$COMPENSATIONPM12PM3/0.0000/GTI$COMPENSATIONPM12PM4/0.0000/GTI$COMPENSATIONPM12PM5/0.0000/GTI$COMPENSATIONPM12PM6/0.0000/GTI$COMPENSATIONPM12PM7/0.0000/GTI$COMPENSATIONPM12PM8/0.0000/GTI$COMPENSATIONPM12PM9/0.0000/GTI$COMPENSATIONPM13PM1/0.0000/GTI$COMPENSATIONPM13PM10/0.0000/GTI$COMPENSATIONPM13PM11/0.0000/GTI$COMPENSATIONPM13PM12/0.0000/GTI$COMPENSATIONPM13PM2/0.0000/GTI$COMPENSATIONPM13PM3/0.0000/GTI$COMPENSATIONPM13PM4/0.0000/GTI$COMPENSATIONPM13PM5/0.0000/GTI$COMPENSATIONPM13PM6/0.0000/GTI$COMPENSATIONPM13PM7/0.0000/GTI$COMPENSATIONPM13PM8/0.0000/GTI$COMPENSATIONPM13PM9/0.0000/GTI$COMPENSATIONPM1PM10/0.0000/GTI$COMPENSATIONPM1PM11/0.0000/GTI$COMPENSATIONPM1PM12/0.0000/GTI$COMPENSATIONPM1PM13/0.0000/GTI$COMPENSATIONPM1PM2/0.0000/GTI$COMPENSATIONPM1PM3/0.0000/GTI$COMPENSATIONPM1PM4/0.0000/GTI$COMPENSATIONPM1PM5/0.0000/GTI$COMPENSATIONPM1PM6/0.0000/GTI$COMPENSATIONPM1PM7/0.0000/GTI$COMPENSATIONPM1PM8/0.0000/GTI$COMPENSATIONPM1PM9/0.0000/GTI$COMPENSATIONPM2PM1/0.0000/GTI$COMPENSATIONPM2PM10/0.0000/GTI$COMPENSATIONPM2PM11/0.0000/GTI$COMPENSATIONPM2PM12/0.0000/GTI$COMPENSATIONPM2PM13/0.0000/GTI$COMPENSATIONPM2PM3/0.0000/GTI$COMPENSATIONPM2PM4/0.0000/GTI$COMPENSATIONPM2PM5/0.0000/GTI$COMPENSATIONPM2PM6/0.0000/GTI$COMPENSATIONPM2PM7/0.0000/GTI$COMPENSATIONPM2PM8/0.0000/GTI$COMPENSATIONPM2PM9/0.0000/GTI$COMPENSATIONPM3PM1/0.0000/GTI$COMPENSATIONPM3PM10/0.0000/GTI$COMPENSATIONPM3PM11/0.0000/GTI$COMPENSATIONPM3PM12/0.0000/GTI$COMPENSATIONPM3PM13/0.0000/GTI$COMPENSATIONPM3PM2/0.0000/GTI$COMPENSATIONPM3PM4/0.0000/GTI$COMPENSATIONPM3PM5/0.0000/GTI$COMPENSATIONPM3PM6/0.0000/GTI$COMPENSATIONPM3PM7/0.0000/GTI$COMPENSATIONPM3PM8/0.0000/GTI$COMPENSATIONPM3PM9/0.0000/GTI$COMPENSATIONPM4PM1/0.0000/GTI$COMPENSATIONPM4PM10/0.0000/GTI$COMPENSATIONPM4PM11/0.0000/GTI$COMPENSATIONPM4PM12/0.0000/GTI$COMPENSATIONPM4PM13/0.0000/GTI$COMPENSATIONPM4PM2/0.0000/GTI$COMPENSATIONPM4PM3/0.0000/GTI$COMPENSATIONPM4PM5/0.0000/GTI$COMPENSATIONPM4PM6/0.0000/GTI$COMPENSATIONPM4PM7/0.0000/GTI$COMPENSATIONPM4PM8/0.0000/GTI$COMPENSATIONPM4PM9/0.0000/GTI$COMPENSATIONPM5PM1/0.0000/GTI$COMPENSATIONPM5PM10/0.0000/GTI$COMPENSATIONPM5PM11/0.0000/GTI$COMPENSATIONPM5PM12/0.0000/GTI$COMPENSATIONPM5PM13/0.0000/GTI$COMPENSATIONPM5PM2/0.0000/GTI$COMPENSATIONPM5PM3/0.0000/GTI$COMPENSATIONPM5PM4/0.0000/GTI$COMPENSATIONPM5PM6/0.0000/GTI$COMPENSATIONPM5PM7/0.0000/GTI$COMPENSATIONPM5PM8/0.0000/GTI$COMPENSATIONPM5PM9/0.0000/GTI$COMPENSATIONPM6PM1/0.0000/GTI$COMPENSATIONPM6PM10/0.0000/GTI$COMPENSATIONPM6PM11/0.0000/GTI$COMPENSATIONPM6PM12/0.0000/GTI$COMPENSATIONPM6PM13/0.0000/GTI$COMPENSATIONPM6PM2/0.0000/GTI$COMPENSATIONPM6PM3/0.0000/GTI$COMPENSATIONPM6PM4/0.0000/GTI$COMPENSATIONPM6PM5/0.0000/GTI$COMPENSATIONPM6PM7/0.0000/GTI$COMPENSATIONPM6PM8/0.0000/GTI$COMPENSATIONPM6PM9/0.0000/GTI$COMPENSATIONPM7PM1/0.0000/GTI$COMPENSATIONPM7PM10/0.0000/GTI$COMPENSATIONPM7PM11/0.0000/GTI$COMPENSATIONPM7PM12/0.0000/GTI$COMPENSATIONPM7PM13/0.0000/GTI$COMPENSATIONPM7PM2/0.0000/GTI$COMPENSATIONPM7PM3/0.0000/GTI$COMPENSATIONPM7PM4/0.0000/GTI$COMPENSATIONPM7PM5/0.0000/GTI$COMPENSATIONPM7PM6/0.0000/GTI$COMPENSATIONPM7PM8/0.0000/GTI$COMPENSATIONPM7PM9/0.0000/GTI$COMPENSATIONPM8PM1/0.0000/GTI$COMPENSATIONPM8PM10/0.0000/GTI$COMPENSATIONPM8PM11/0.0000/GTI$COMPENSATIONPM8PM12/0.0000/GTI$COMPENSATIONPM8PM13/0.0000/GTI$COMPENSATIONPM8PM2/0.0000/GTI$COMPENSATIONPM8PM3/0.0000/GTI$COMPENSATIONPM8PM4/0.0000/GTI$COMPENSATIONPM8PM5/0.0000/GTI$COMPENSATIONPM8PM6/0.0000/GTI$COMPENSATIONPM8PM7/0.0000/GTI$COMPENSATIONPM8PM9/0.0000/GTI$COMPENSATIONPM9PM1/0.0000/GTI$COMPENSATIONPM9PM10/0.0000/GTI$COMPENSATIONPM9PM11/0.0000/GTI$COMPENSATIONPM9PM12/0.0000/GTI$COMPENSATIONPM9PM13/0.0000/GTI$COMPENSATIONPM9PM2/0.0000/GTI$COMPENSATIONPM9PM3/0.0000/GTI$COMPENSATIONPM9PM4/0.0000/GTI$COMPENSATIONPM9PM5/0.0000/GTI$COMPENSATIONPM9PM6/0.0000/GTI$COMPENSATIONPM9PM7/0.0000/GTI$COMPENSATIONPM9PM8/0.0000/GTI$COUNTGATE/ /GTI$DATASETNAME/D:\fcm\B15.fcs/GTI$ERRORCOUNT/3/GTI$FLOWRATECAL/0.118000/GTI$FULLUSERNAME/Unknown/GTI$GREENLASERPOSITION/-1/GTI$HIGHCONCTRIGGER/500/GTI$HIGHGAIN.BLUV/1/GTI$HIGHGAIN.GRN/1/GTI$HIGHGAIN.NIR/1/GTI$HIGHGAIN.RED/1/GTI$HIGHGAIN.RED2/1/GTI$HIGHGAIN.SSC/1/GTI$HIGHGAIN.YEL/1/GTI$INSTRUMENTTYPE/9/GTI$LASERACTIVATIONMASK/1/GTI$NGATES/0/GTI$NREGIONS/0/GTI$NUMPLOTS/0/GTI$ORIGINALRUNGUID/{d7a19f48-f6b7-4718-bf1f-fd7c6b32e8f9}/GTI$PARAM1CHANNEL/13/GTI$PARAM1TYPE/0/GTI$PARAM2CHANNEL/12/GTI$PARAM2TYPE/0/GTI$PARAM3CHANNEL/9/GTI$PARAM3TYPE/0/GTI$PARAM4CHANNEL/11/GTI$PARAM4TYPE/0/GTI$PARAM5CHANNEL/10/GTI$PARAM5TYPE/0/GTI$PARAM6CHANNEL/9/GTI$PARAM6TYPE/3/GTI$PARAM7CHANNEL/9/GTI$PARAM7TYPE/2/GTI$PARAM8CHANNEL/-1/GTI$PARAM8TYPE/1/GTI$PUMPSAMPLESPEED/5/GTI$REFRESHRATE/0/GTI$RUNGUID/{d7a19f48-f6b7-4718-bf1f-fd7c6b32e8f9}/GTI$TERMCOUNT/10000/GTI$TOTALNUMREADINGS/12448696/GTI$USERNAME/DESKTOP-R0UF04H\User/GTI$WIDTHSCALE/500/GTI$WORKLIST/D://fcm//B15_map.csv/GTI$SAMPLEID/B15-1.2T-0-4/GTI$DILUTIONFACTOR/1/GTI$ORIGINALVOLUME/0.2/GTI$QUANTITY/0/$WELLID/D02/GTI$WELL/D02/GTI$TIMESCALE/60/$SPILLOVER/3,GRN-B-HLin,YEL-B-HLin,RED-B-HLin,1,0,0,0,1,0,0,0,1/GTI$SPILLOVERUUID/{c5a3a4e1-b53f-4d27-9c73-08ec97f79d8c}/GTI$SUBREGIONLIST/<InCyteSubRegionList appName="InCyte" version="1.0" appVersion="3.4">
+ <subRegionManager objectName="" class="TSubRegionManager"//>
+<//InCyteSubRegionList>
+/…âL¬ü∫p¡äB÷øÄ–™@s7‘Aª√¯E‡ÅÀHÜ2’¡ø0ñ@˙:ˆAN4ÜøÙ˝àAOO·AÀÍ£FÄ±ÀHﬂG<¿òTëAl	BzÕç¿Q»ñ?Ï†ËA+ÇF‡T˛HŸƒ¬¡Ôº;¬åîˇA‰ Q@ﬁ˝3øTf§A!„∆@I·
+BÄÜ¿QÜ¯Ag@z@{’∞ø€B*™§G 3IcÓAﬂ"ˇ¡täBXÛ@»áæÕ•ˆAF⁄˘F@˘eI ÒAát∫A ¥ˇA◊’íøÆÅ¿Œ@≥A
+4ƒÄ´vI˚•¬Ec@D~ BNv˘>∞?®¿2’«Aª√¯E–ë}Iì<∂A´qB:cBË¨>Ô@Õæ√ã‹A3@F ;îIÒß˝Aõ©CB&.@
+ó;A?høAxBbEêŸ≠I&úA…	)A‹u˚A«ˇøEcñ@n¨A¬#û≈rµI€éß¡&≥ B]à˝A¡≈ø”A@‰V¬AxBbEÿ©ºI˛1;¬7ˆ9¡∂æ˙A‰ —¿÷Éø˘E≥A
+4ƒ@è◊IeU∏@é‹¬≥Bç @≥ô@ñ}Bi:ÜGêﬂÿIŒA@®äB—5ˇA‚˜>¸)ò@˚cÀAª√¯EIÂI∫÷¿Tóà¬74¯Aˇ˜¯@˛$ø÷ˆîA`¥V∆Ã†JpA1ÛBÒ	Bq¸ù@x†-AÃã‡A3@FûJ
+{@s∆¬ Ï BÔ@Õ?ùS@AH¸ACØ7GòøJeˆÒ?Sü¡òÛBwΩ?¸Á2¡	Õ≈A
+4ƒlJ∏©uAE%ü¡]Bfü¿æÈf¿_§A!„∆H˘)J”dBÀS1¬ÉˇB”A@‚A‘®A!„∆ùIJ|¿Í œA˛î˝A[Ç¿—ò3@Ù$ØA
+4ƒƒQJƒóAµ€€@}ﬂBAæ?"~ù@	ÆA¬#û≈–nhJ?øÕ¡ßã‡A#ÑB.Ñ◊?)¶æøŒ…Aª√¯E`jJË¨øx‰â¬!zˆAâ°ö@öAìlÆA
+4ƒPÿ~JÑ‰ó¡¨Œ¬S3¸Al}Y@]Î±@§{™A¬#û≈˛√ÇJëùAÖÕ‚B•B¬ü"øt≠ø]DﬂA+ÇF,UéJIòAö¢B»cCÔü@{’∞=±KãBˆf«LDíJ\•óA⁄¶¬B)âôFwú¿@ËA$‹KF¬#û≈XDíJÇ6B	eA÷ÒbCN’ø@6¨xø!7ãBˆf«bDíJ–NrAcÏBåîˇAwA…h˝ø≥ÍÿA+ÇF¥iìJ»CyAP~’Azl	B∞û|=ƒäd¿{˙‚A3@FtiîJÜÚBÕ°ÓAk˘ B◊’í?ùøæ>¡AxBbE∏°JtkqAtÏ•¬ Ä¯AÆ≥:¿Ì&AóA¶A¬#û≈Ç°JYëÒ>≤©ÓB	ìB]@l‹ü@˝À‚A3@F¥Ò§JMè•A•\¬¬0Ã!BÄÌ@Lã∑¿∆‰‹A¬#û≈hBßJ -¬¶É=Bïƒ¸A∫w?!Y¡ª¯∏A
+4ƒÍßJoÏÂ¿Ù{5¬zn B7U«øÓó~@é±A
+4ƒ™]©Jõ«“¡ÙΩöB4EB
+Ÿ @√e`¿/<≠A¬#û≈`™J¸)¿•æCé˙Aºb√¿∑π¿14øAxBbEﬁ‘ÆJx 
+BE•¬¡√BÉÅ@É˝—@ÔÿA3@F"„∞JŸÂë¡[|lB¶ÊˇAIò`@‹q∆@°{¿AxBbEéú≥JøÓ∞@'\A£Bk»¿C◊(AlΩ¨A¬#û≈Ä€∫J5á-Abˇ@Jﬁ˙A±"«@&∆@Is„AÀÍ£F‰¬J”ˇBeYÌAê&B·äø.°8AÏÃ¨A!„∆
+÷∆Jèb“¿b‰{B÷≤B`à@ 4@d∏ºA
+4ƒ·ÀJ	≤%BË÷FA√•BçJ<˝Nú?’Ø∫A¬#û≈‘ªÃJ}π@Ô°B˝˛A å@´…@+–¥A
+4ƒÏÆœJÁîöAV‰Ì¬g%BÌ—¿¿ﬂdù¿0SøA
+4ƒˆ·œJ é¿ﬂ√q¿à:¯Abˇ?ë¨⁄?%—A3@Fåw◊J!∏Ì¿“}Ç¬´üB.„ùæÄ–™¿‡˜A¢∏ FæûﬁJjÒÎ¿p4˜¬ûŸBÌU¿–Ôd@5§—Aª√¯E.‡JVÅ´¡·
+B‰üB6¨xø†Ñ=¬µ∂A¬#û≈§ZÔJ›¬Z€2AFgBc¨È>∞û|>ËN·A3@FÃJ≤˙Ae¡AèdB`@Æq’@õn‚Ak”≈FâÛJÀïñ¡˚!<A‰B˝Aü[„>è Ì¿r˛B„óYG¯J)¶æø~ÂvAM˙Ab…AÉ˝Q¿uæAxBbEæ∆˚JãNÂA1u7B(‡ Bä%s@AKª¿X;øAxBbEˆÿ¸J)c¿!˘≥B“¯AÔüìøæA£◊¬Aª√¯Eƒ˛JõJBiP2¡+œ˜A° o@”‚;¿‰‘ÈAk”≈FƒKêÍQBl‹ü¡’çBˇò$@»C2A4≥A
+4ƒÙïKjíóA®¢¬^– Bq∫8?Q»@}"B O√G"∞K™˙%@	eA„>Bq[r@±‡A˘tÃAª√¯E∏]Kêjı@sH‰¬{0	BÏ¨ºøÑGZ@>˜	BºÁFNÙKPg¡ø—œ¡/BuNI@6¨1AÓ5ˇAï£HG‚K◊ˆ®¡ÔŒ
+C˙¸˛A>}Ë?C@çÒAÀÍ£FCÜKz,‚ø;»¡¬¬˘AÏ0á@"~ù@FΩ≤A
+4ƒ≠KTñ˜@‰pC®—˙A€/·@lø>A¸O•A¬#û≈W–	KŒ£@‰_^¡a ¸Awú@¸)@œº™A¬#û≈,‰Kk˘Ä@Ê≠çA™B¯pÉ?«ˇ?Ó3œA3@F!K
+{?¨ÇCÂÙASÌ@ŸDü@CK∂AxBbEM+KÂ±Aà~¬Ò+BÃ∫öæÿõâA©•¡AxBbE“EKõ«R¿cÏêBgBS≥ÿ?–Ôdø‹0˜A™+‘F¨ﬁK*®A«øgAÃ[B4Ê:@ó>A"”’AxBbEÛ”KÅı.¡ÒàC-
+BLã∑?y®	A
+ùƒA
+4ƒ‹K“1¡äÀAßI˚A⁄
+›>FÁ'A§î¶A¬#û≈
+ÄKuN…ø±Å¡É¡
+B=ˇ@”Éuø´'Bk”≈FD K”‚;A[°)¡üùBS–π@ìg@≥m¶A!„∆KÒ#K¸;AGN¬A™Bfü@øA™ÅA#Ω"Bi:ÜGe	$Kœ)'@g`*C1±˛AÌ¶¿∞˝¬@	X˜Ak”≈FÄo%K√iBMè%¬ÏˇAÂ%U@Ölﬁ@Ñ˘´A¬#û≈«9/K¯ëôA7◊ö¬ÆqB·ä@ÙX(¡OT⁄AxBbE"—0K9]#A“˚Æ¡.¬B3Ô?YtÇ¿K”AxBbEîÕ1K≈àAﬂddAR¯AXs@U˝‡¿Á”A3@F…Z2Ko.À@
+ˆ¡]©BoÍøc∞@WÏA+ÇFΩ†3K∑9@Æœ√BF©˜A«øúKdA	<÷A+ÇFÊ¢3KLã7@ÕB–ÛBÙX®@¯≤ˆ@$‚˘A+ÇF J6KbáûAxÒ¬©ˆ˛A«ˇ>AœÖ@Õ-ªAxBbEF†8KFJ£A‡€B®.BN¿3
+Ai0ßA!„∆Å9K«ª˘¡Ü$B≠i˘APH@Ã[‘? ´A¬#û≈SP9K+2,¡º=?¡Ø˝AÜ®æˆCÍ¿*wûA!„∆È%:K•—¡8ÿ9CF©˜Ax‚Ÿ?≠i≤?aVÃA3@F∫ø;K÷4 ¡¿£¡ùÙ˘AC∫«@ .≠AWsªAxBbE?)=K<GuavaInCyteMethod version="2.0">
+ <analysisMethod objectName="" metric="kPercent" logDisplay="false" class="TAnalysisMethod" analysisName="Method-3" statGate="" controlGate="" meanParamString="" requiredParams="">
+  <gateManager objectName="" class="TGateManager">
+   <regionManager objectName="regionManager" class="TRegionManager"/>
+  </gateManager>
+  <plotSetup objectName="" version="2" layoutType="k2x2" class="TPlotSetup">
+   <plotSettings xsPar="FSC-HLog" objectName="" ysPar="SSC-HLog" class="TPlotSettings2" worldRect.right="5" histoCount="100" worldRect.top="5" worldRect.left="0" visible="true" type="dotPlot" name="P01" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double dotPlot.dotPercent="100"/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="SSC-HLog" objectName="" ysPar="GRN-B-HLog" class="TPlotSettings2" worldRect.right="5" histoCount="100" worldRect.top="5" worldRect.left="0" visible="true" type="dotPlot" name="P02" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double dotPlot.dotPercent="100"/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="GRN-B-HLog" objectName="" ysPar="" class="TPlotSettings2" worldRect.right="5" histoCount="100" worldRect.top="100" worldRect.left="0" visible="true" type="histPlot" name="P03" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double histPlot.smoothing="1.5"/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="GRN-B-HLin" objectName="" ysPar="RED-B-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P04" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P05" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P06" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P07" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P08" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P09" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P10" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P11" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P12" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P13" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P14" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P15" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P16" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P17" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P18" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P19" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P20" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P21" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P22" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P23" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+   <plotSettings xsPar="FSC-HLin" objectName="" ysPar="SSC-HLin" class="TPlotSettings2" worldRect.right="100000" histoCount="100" worldRect.top="100000" worldRect.left="0" visible="false" type="dotPlot" name="P24" gate="" worldRect.bottom="0" backgroundGate="">
+    <overlayModel objectName="" class="TOverlayModel">
+     <overlayItemBase baseItem="baseItem" fill="true" wellLocation="-1,-1" fillColor="80ff0000" lineColor="ff000000" lineStyle="1" show="true"/>
+     <visualItem visualOrder="0"/>
+    </overlayModel>
+    <properties>
+     <bool/>
+     <double/>
+     <int/>
+    </properties>
+   </plotSettings>
+  </plotSetup>
+  <statTemplate>
+   <showStat showItem.2="1" showItem.3="1" showItem.4="1" showItem.5="1" showItem.6="1" showItem.7="1" showItem.8="1" showItem.0="1" showItem.1="1"/>
+   <visualItem visualOrder="0,1,2,3,4,5,6,7,8"/>
+  </statTemplate>
+  <Template TemplateName="" PairedAppName="" SupportedDecades="4" TemplateVersion="" PairedAppVersion="">
+   <Workspace OriginalFormHeight="647" OriginalFormWidth="684">
+    <Items>
+     <Item OriginalY="10" ResizableVertically="true" AxisLocked.2Ebool="false" OriginalWidth="326" ShowNewRegionTool.2Ebool="true" AnchorBottom="false" QuadLabelUL="" PlotSettings="&lt;Root>&#xa; &lt;plotSettings xsPar=&quot;FSC-HLog&quot; objectName=&quot;&quot; ysPar=&quot;SSC-HLog&quot; class=&quot;TPlotSettings2&quot; worldRect.right=&quot;5&quot; histoCount=&quot;100&quot; worldRect.top=&quot;5&quot; worldRect.left=&quot;0&quot; visible=&quot;true&quot; type=&quot;dotPlot&quot; name=&quot;P01&quot; gate=&quot;&quot; worldRect.bottom=&quot;0&quot; backgroundGate=&quot;&quot;>&#xa;  &lt;overlayModel objectName=&quot;&quot; class=&quot;TOverlayModel&quot;>&#xa;   &lt;overlayItemBase baseItem=&quot;baseItem&quot; fill=&quot;true&quot; wellLocation=&quot;-1,-1&quot; fillColor=&quot;80ff0000&quot; lineColor=&quot;ff000000&quot; lineStyle=&quot;1&quot; show=&quot;true&quot;/>&#xa;   &lt;visualItem visualOrder=&quot;0&quot;/>&#xa;  &lt;/overlayModel>&#xa;  &lt;properties>&#xa;   &lt;bool/>&#xa;   &lt;double dotPlot.dotPercent=&quot;100&quot;/>&#xa;   &lt;int/>&#xa;  &lt;/properties>&#xa; &lt;/plotSettings>&#xa; &lt;plotSettingsVersion major=&quot;2&quot; minor=&quot;6&quot;/>&#xa;&lt;/Root>" ItemType="Plot" AnchorTop="false" ShowPlotZoomTool.2Ebool="true" FixedAspectRatioAlignment="33" QuadLabelLL="" QuadLabelLR="" ShowStatTool.2Ebool="true" QuadLabelUR="" AnchorLeft="false" ItemLocked="false" AnchorRight="false" ShowPlotTypeTool.2Ebool="true" ShowOverlayTool.2Ebool="true" PlotName="P01" ShowZoomTool.2Ebool="true" ShowGateTool.2Ebool="true" ResizableHorizontally="true" OriginalX="10" OriginalHeight="308"/>
+     <Item OriginalY="10" ResizableVertically="true" AxisLocked.2Ebool="false" OriginalWidth="326" ShowNewRegionTool.2Ebool="true" AnchorBottom="false" QuadLabelUL="" PlotSettings="&lt;Root>&#xa; &lt;plotSettings xsPar=&quot;SSC-HLog&quot; objectName=&quot;&quot; ysPar=&quot;GRN-B-HLog&quot; class=&quot;TPlotSettings2&quot; worldRect.right=&quot;5&quot; histoCount=&quot;100&quot; worldRect.top=&quot;5&quot; worldRect.left=&quot;0&quot; visible=&quot;true&quot; type=&quot;dotPlot&quot; name=&quot;P02&quot; gate=&quot;&quot; worldRect.bottom=&quot;0&quot; backgroundGate=&quot;&quot;>&#xa;  &lt;overlayModel objectName=&quot;&quot; class=&quot;TOverlayModel&quot;>&#xa;   &lt;overlayItemBase baseItem=&quot;baseItem&quot; fill=&quot;true&quot; wellLocation=&quot;-1,-1&quot; fillColor=&quot;80ff0000&quot; lineColor=&quot;ff000000&quot; lineStyle=&quot;1&quot; show=&quot;true&quot;/>&#xa;   &lt;visualItem visualOrder=&quot;0&quot;/>&#xa;  &lt;/overlayModel>&#xa;  &lt;properties>&#xa;   &lt;bool/>&#xa;   &lt;double dotPlot.dotPercent=&quot;100&quot;/>&#xa;   &lt;int/>&#xa;  &lt;/properties>&#xa; &lt;/plotSettings>&#xa; &lt;plotSettingsVersion major=&quot;2&quot; minor=&quot;6&quot;/>&#xa;&lt;/Root>" ItemType="Plot" AnchorTop="false" ShowPlotZoomTool.2Ebool="true" FixedAspectRatioAlignment="33" QuadLabelLL="" QuadLabelLR="" ShowStatTool.2Ebool="true" QuadLabelUR="" AnchorLeft="false" ItemLocked="false" AnchorRight="false" ShowPlotTypeTool.2Ebool="true" ShowOverlayTool.2Ebool="true" PlotName="P02" ShowZoomTool.2Ebool="true" ShowGateTool.2Ebool="true" ResizableHorizontally="true" OriginalX="346" OriginalHeight="308"/>
+     <Item AnchorTop="false" FixedAspectRatioAlignment="33" AnchorBottom="false" OriginalWidth="326" OriginalX="10" ItemLocked="false" OriginalY="328" OriginalHeight="308" ResizableVertically="true" AnchorRight="false" AnchorLeft="false" ItemType="PlateTable" ResizableHorizontally="true"/>
+     <Item OriginalY="328" ResizableVertically="true" AxisLocked.2Ebool="false" OriginalWidth="326" ShowNewRegionTool.2Ebool="true" AnchorBottom="false" QuadLabelUL="" PlotSettings="&lt;Root>&#xa; &lt;plotSettings xsPar=&quot;GRN-B-HLog&quot; objectName=&quot;&quot; ysPar=&quot;&quot; class=&quot;TPlotSettings2&quot; worldRect.right=&quot;5&quot; histoCount=&quot;100&quot; worldRect.top=&quot;100&quot; worldRect.left=&quot;0&quot; visible=&quot;true&quot; type=&quot;histPlot&quot; name=&quot;P03&quot; gate=&quot;&quot; worldRect.bottom=&quot;0&quot; backgroundGate=&quot;&quot;>&#xa;  &lt;overlayModel objectName=&quot;&quot; class=&quot;TOverlayModel&quot;>&#xa;   &lt;overlayItemBase baseItem=&quot;baseItem&quot; fill=&quot;true&quot; wellLocation=&quot;-1,-1&quot; fillColor=&quot;80ff0000&quot; lineColor=&quot;ff000000&quot; lineStyle=&quot;1&quot; show=&quot;true&quot;/>&#xa;   &lt;visualItem visualOrder=&quot;0&quot;/>&#xa;  &lt;/overlayModel>&#xa;  &lt;properties>&#xa;   &lt;bool/>&#xa;   &lt;double histPlot.smoothing=&quot;1.5&quot;/>&#xa;   &lt;int/>&#xa;  &lt;/properties>&#xa; &lt;/plotSettings>&#xa; &lt;plotSettingsVersion major=&quot;2&quot; minor=&quot;6&quot;/>&#xa;&lt;/Root>" ItemType="Plot" AnchorTop="false" ShowPlotZoomTool.2Ebool="true" FixedAspectRatioAlignment="33" QuadLabelLL="" QuadLabelLR="" ShowStatTool.2Ebool="true" QuadLabelUR="" AnchorLeft="false" ItemLocked="false" AnchorRight="false" ShowPlotTypeTool.2Ebool="true" ShowOverlayTool.2Ebool="true" PlotName="P03" ShowZoomTool.2Ebool="true" ShowGateTool.2Ebool="true" ResizableHorizontally="true" OriginalX="346" OriginalHeight="308"/>
+    </Items>
+   </Workspace>
+   <Formulas/>
+  </Template>
+ </analysisMethod>
+</GuavaInCyteMethod>
+29-Aug-2023 15:50:22  STATUS : Acquisition Session Started 
+29-Aug-2023 15:50:22  STATUS : User: DESKTOP-R0UF04H\User, Fullname: Unknown, Access Rights: Administrator 
+29-Aug-2023 15:50:22  STATUS : Assay Name: InCyte, Version: 3.4 
+29-Aug-2023 15:50:22  ACTION : Data File Created: D:/fcm/B15.fcs 
+29-Aug-2023 15:50:22  ACTION : Retrieve settings from file: D:/fcm/sybr.gst 
+29-Aug-2023 15:52:52  STATUS : Washing capillary and mixer. 
+29-Aug-2023 15:52:59  STATUS : Mixing Well F07, for 3 sec, Speed: medium (1) 
+29-Aug-2023 15:53:07  STATUS : AdjustSettings Protocol Started 
+29-Aug-2023 15:53:07  STATUS : Waste Cycle 
+29-Aug-2023 15:53:07  STATUS : End of Waste Cycle 
+29-Aug-2023 15:53:08  STATUS : Establishing Steady Flow 
+29-Aug-2023 15:53:18  STATUS : Adjust Settings... 
+29-Aug-2023 15:53:32  ACTION : Next Step button clicked 
+29-Aug-2023 15:53:32  STATUS : End of Settings 
+29-Aug-2023 15:53:33  STATUS : Waste Cycle 
+29-Aug-2023 15:53:34  STATUS : End of Waste Cycle 
+29-Aug-2023 15:53:35  STATUS : AdjustSettings Protocol Completed 
+29-Aug-2023 15:53:37  ACTION : Adjust settings button clicked 
+29-Aug-2023 15:53:46  STATUS : Washing capillary and mixer. 
+29-Aug-2023 15:53:53  STATUS : Mixing Well E07, for 3 sec, Speed: medium (1) 
+29-Aug-2023 15:54:01  STATUS : AdjustSettings Protocol Started 
+29-Aug-2023 15:54:01  STATUS : Waste Cycle 
+29-Aug-2023 15:54:01  STATUS : End of Waste Cycle 
+29-Aug-2023 15:54:02  STATUS : Establishing Steady Flow 
+29-Aug-2023 15:54:12  STATUS : Adjust Settings... 
+29-Aug-2023 15:54:24  ACTION : Next Step button clicked 
+29-Aug-2023 15:54:24  STATUS : End of Settings 
+29-Aug-2023 15:54:25  STATUS : Waste Cycle 
+29-Aug-2023 15:54:25  STATUS : End of Waste Cycle 
+29-Aug-2023 15:54:26  STATUS : AdjustSettings Protocol Completed 
+29-Aug-2023 15:54:31  ACTION : Resume worklist button clicked 
+29-Aug-2023 15:54:31  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 15:54:31  STATUS : Begin Well D01 
+29-Aug-2023 15:54:37  STATUS : Mixing Well D01 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 15:54:43  STATUS : Washing capillary and mixer. 
+29-Aug-2023 15:54:48  STATUS : Loading Well D01 
+29-Aug-2023 15:54:51  STATUS : Mixing Well D03 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 15:54:51  STATUS : Sampling Protocol Started for Sample # 1 
+29-Aug-2023 15:54:51  STATUS : Loading Sample... 
+29-Aug-2023 15:54:52  STATUS : Purging System... 
+29-Aug-2023 15:54:53  STATUS : Purging System... 
+29-Aug-2023 15:54:57  STATUS : Establishing Steady Flow... 
+29-Aug-2023 15:55:01  STATUS : Setting Thresholds... 
+29-Aug-2023 15:55:03  STATUS : Thresholds Set 
+29-Aug-2023 15:55:03  STATUS : Acquiring... 
+29-Aug-2023 15:55:37  STATUS : Acquisition Complete 
+29-Aug-2023 15:55:38  STATUS : Calculating... 
+29-Aug-2023 15:55:39  STATUS : Waste Cycle... 
+29-Aug-2023 15:55:39  STATUS : End of Waste Cycle 
+29-Aug-2023 15:55:41  STATUS : Sampling Protocol Completed 
+29-Aug-2023 15:55:41  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 15:55:41  WARNING : Maximum Velocity Exceeded For 1921 Events 
+29-Aug-2023 15:55:41  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 15:55:41  STATUS : Begin Well D02 
+29-Aug-2023 15:55:46  STATUS : Mixing Well D02 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 15:55:53  STATUS : Washing capillary and mixer. 
+29-Aug-2023 15:55:59  STATUS : Loading Well D02 
+29-Aug-2023 15:56:00  STATUS : Mixing Well D04 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 15:56:01  STATUS : Sampling Protocol Started for Sample # 2 
+29-Aug-2023 15:56:01  STATUS : Loading Sample... 
+29-Aug-2023 15:56:02  STATUS : Purging System... 
+29-Aug-2023 15:56:03  STATUS : Purging System... 
+29-Aug-2023 15:56:07  STATUS : Establishing Steady Flow... 
+29-Aug-2023 15:56:11  STATUS : Setting Thresholds... 
+29-Aug-2023 15:56:13  STATUS : Thresholds Set 
+29-Aug-2023 15:56:13  STATUS : Acquiring... 
+29-Aug-2023 15:59:43  WARNING : The run timed out before enough events were acquired. 
+29-Aug-2023 15:59:43  STATUS : Acquisition Complete 
+29-Aug-2023 15:59:44  STATUS : Calculating... 
+29-Aug-2023 15:59:46  STATUS : Waste Cycle... 
+29-Aug-2023 15:59:48  STATUS : End of Waste Cycle 
+29-Aug-2023 15:59:49  STATUS : Sampling Protocol Completed 
+29-Aug-2023 15:59:49  WARNING : Less than 10 particles/µL. Sample is too dilute. Accuracy may be compromised. 
+29-Aug-2023 15:59:49  WARNING : Maximum Velocity Exceeded For 88 Events 
+29-Aug-2023 15:59:49  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 15:59:49  STATUS : Begin Well D03 
+29-Aug-2023 15:59:56  STATUS : Mixing Well D03 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:00:01  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:00:06  STATUS : Loading Well D03 
+29-Aug-2023 16:00:09  STATUS : Mixing Well D05 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:00:09  STATUS : Sampling Protocol Started for Sample # 3 
+29-Aug-2023 16:00:09  STATUS : Loading Sample... 
+29-Aug-2023 16:00:10  STATUS : Purging System... 
+29-Aug-2023 16:00:11  STATUS : Purging System... 
+29-Aug-2023 16:00:15  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:00:19  STATUS : Setting Thresholds... 
+29-Aug-2023 16:00:21  STATUS : Thresholds Set 
+29-Aug-2023 16:00:21  STATUS : Acquiring... 
+29-Aug-2023 16:01:48  STATUS : Acquisition Complete 
+29-Aug-2023 16:01:49  STATUS : Calculating... 
+29-Aug-2023 16:01:50  STATUS : Waste Cycle... 
+29-Aug-2023 16:01:52  STATUS : End of Waste Cycle 
+29-Aug-2023 16:01:53  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:01:53  WARNING : Maximum Velocity Exceeded For 1930 Events 
+29-Aug-2023 16:01:53  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:01:53  STATUS : Begin Well D04 
+29-Aug-2023 16:02:00  STATUS : Mixing Well D04 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:02:04  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:02:10  STATUS : Loading Well D04 
+29-Aug-2023 16:02:12  STATUS : Mixing Well D06 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:02:13  STATUS : Sampling Protocol Started for Sample # 4 
+29-Aug-2023 16:02:13  STATUS : Loading Sample... 
+29-Aug-2023 16:02:14  STATUS : Purging System... 
+29-Aug-2023 16:02:15  STATUS : Purging System... 
+29-Aug-2023 16:02:19  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:02:23  STATUS : Setting Thresholds... 
+29-Aug-2023 16:02:25  STATUS : Thresholds Set 
+29-Aug-2023 16:02:25  STATUS : Acquiring... 
+29-Aug-2023 16:03:32  STATUS : Acquisition Complete 
+29-Aug-2023 16:03:33  STATUS : Calculating... 
+29-Aug-2023 16:03:35  STATUS : Waste Cycle... 
+29-Aug-2023 16:03:35  STATUS : End of Waste Cycle 
+29-Aug-2023 16:03:37  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:03:37  WARNING : Maximum Velocity Exceeded For 2855 Events 
+29-Aug-2023 16:03:37  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:03:37  STATUS : Begin Well D05 
+29-Aug-2023 16:03:43  STATUS : Mixing Well D05 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:03:49  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:03:54  STATUS : Loading Well D05 
+29-Aug-2023 16:03:57  STATUS : Mixing Well D07 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:03:57  STATUS : Sampling Protocol Started for Sample # 5 
+29-Aug-2023 16:03:57  STATUS : Loading Sample... 
+29-Aug-2023 16:03:58  STATUS : Purging System... 
+29-Aug-2023 16:03:59  STATUS : Purging System... 
+29-Aug-2023 16:04:03  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:04:07  STATUS : Setting Thresholds... 
+29-Aug-2023 16:04:09  STATUS : Thresholds Set 
+29-Aug-2023 16:04:09  STATUS : Acquiring... 
+29-Aug-2023 16:05:04  STATUS : Acquisition Complete 
+29-Aug-2023 16:05:05  STATUS : Calculating... 
+29-Aug-2023 16:05:06  STATUS : Waste Cycle... 
+29-Aug-2023 16:05:06  STATUS : End of Waste Cycle 
+29-Aug-2023 16:05:07  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:05:07  WARNING : Maximum Velocity Exceeded For 2322 Events 
+29-Aug-2023 16:05:08  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:05:08  STATUS : Begin Well D06 
+29-Aug-2023 16:05:13  STATUS : Mixing Well D06 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:05:19  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:05:26  STATUS : Loading Well D06 
+29-Aug-2023 16:05:27  STATUS : Mixing Well D08 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:05:28  STATUS : Sampling Protocol Started for Sample # 6 
+29-Aug-2023 16:05:28  STATUS : Loading Sample... 
+29-Aug-2023 16:05:29  STATUS : Purging System... 
+29-Aug-2023 16:05:30  STATUS : Purging System... 
+29-Aug-2023 16:05:34  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:05:38  STATUS : Setting Thresholds... 
+29-Aug-2023 16:05:40  STATUS : Thresholds Set 
+29-Aug-2023 16:05:40  STATUS : Acquiring... 
+29-Aug-2023 16:06:36  STATUS : Acquisition Complete 
+29-Aug-2023 16:06:37  STATUS : Calculating... 
+29-Aug-2023 16:06:38  STATUS : Waste Cycle... 
+29-Aug-2023 16:06:39  STATUS : End of Waste Cycle 
+29-Aug-2023 16:06:40  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:06:40  WARNING : Maximum Velocity Exceeded For 2664 Events 
+29-Aug-2023 16:06:40  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:06:40  STATUS : Begin Well D07 
+29-Aug-2023 16:06:47  STATUS : Mixing Well D07 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:06:52  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:06:57  STATUS : Loading Well D07 
+29-Aug-2023 16:07:00  STATUS : Mixing Well D09 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:07:00  STATUS : Sampling Protocol Started for Sample # 7 
+29-Aug-2023 16:07:00  STATUS : Loading Sample... 
+29-Aug-2023 16:07:01  STATUS : Purging System... 
+29-Aug-2023 16:07:02  STATUS : Purging System... 
+29-Aug-2023 16:07:06  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:07:10  STATUS : Setting Thresholds... 
+29-Aug-2023 16:07:12  STATUS : Thresholds Set 
+29-Aug-2023 16:07:12  STATUS : Acquiring... 
+29-Aug-2023 16:08:02  STATUS : Acquisition Complete 
+29-Aug-2023 16:08:03  STATUS : Calculating... 
+29-Aug-2023 16:08:04  STATUS : Waste Cycle... 
+29-Aug-2023 16:08:05  STATUS : End of Waste Cycle 
+29-Aug-2023 16:08:06  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:08:06  WARNING : Maximum Velocity Exceeded For 1773 Events 
+29-Aug-2023 16:08:06  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:08:06  STATUS : Begin Well D08 
+29-Aug-2023 16:08:12  STATUS : Mixing Well D08 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:08:17  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:08:23  STATUS : Loading Well D08 
+29-Aug-2023 16:08:26  STATUS : Mixing Well D10 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:08:26  STATUS : Sampling Protocol Started for Sample # 8 
+29-Aug-2023 16:08:26  STATUS : Loading Sample... 
+29-Aug-2023 16:08:27  STATUS : Purging System... 
+29-Aug-2023 16:08:28  STATUS : Purging System... 
+29-Aug-2023 16:08:32  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:08:36  STATUS : Setting Thresholds... 
+29-Aug-2023 16:08:38  STATUS : Thresholds Set 
+29-Aug-2023 16:08:38  STATUS : Acquiring... 
+29-Aug-2023 16:09:29  STATUS : Acquisition Complete 
+29-Aug-2023 16:09:31  STATUS : Calculating... 
+29-Aug-2023 16:09:32  STATUS : Waste Cycle... 
+29-Aug-2023 16:09:32  STATUS : End of Waste Cycle 
+29-Aug-2023 16:09:34  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:09:34  WARNING : Maximum Velocity Exceeded For 1875 Events 
+29-Aug-2023 16:09:34  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:09:34  STATUS : Begin Well D09 
+29-Aug-2023 16:09:39  STATUS : Mixing Well D09 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:09:45  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:09:50  STATUS : Loading Well D09 
+29-Aug-2023 16:09:53  STATUS : Mixing Well D11 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:09:53  STATUS : Sampling Protocol Started for Sample # 9 
+29-Aug-2023 16:09:53  STATUS : Loading Sample... 
+29-Aug-2023 16:09:54  STATUS : Purging System... 
+29-Aug-2023 16:09:55  STATUS : Purging System... 
+29-Aug-2023 16:09:59  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:10:03  STATUS : Setting Thresholds... 
+29-Aug-2023 16:10:05  STATUS : Thresholds Set 
+29-Aug-2023 16:10:05  STATUS : Acquiring... 
+29-Aug-2023 16:10:36  STATUS : Acquisition Complete 
+29-Aug-2023 16:10:37  STATUS : Calculating... 
+29-Aug-2023 16:10:38  STATUS : Waste Cycle... 
+29-Aug-2023 16:10:38  STATUS : End of Waste Cycle 
+29-Aug-2023 16:10:39  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:10:39  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:10:39  WARNING : Maximum Velocity Exceeded For 1465 Events 
+29-Aug-2023 16:10:40  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:10:40  STATUS : Begin Well D10 
+29-Aug-2023 16:10:45  STATUS : Mixing Well D10 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:10:52  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:10:58  STATUS : Loading Well D10 
+29-Aug-2023 16:10:59  STATUS : Mixing Well D12 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:11:00  STATUS : Sampling Protocol Started for Sample # 10 
+29-Aug-2023 16:11:00  STATUS : Loading Sample... 
+29-Aug-2023 16:11:01  STATUS : Purging System... 
+29-Aug-2023 16:11:02  STATUS : Purging System... 
+29-Aug-2023 16:11:06  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:11:10  STATUS : Setting Thresholds... 
+29-Aug-2023 16:11:12  STATUS : Thresholds Set 
+29-Aug-2023 16:11:12  STATUS : Acquiring... 
+29-Aug-2023 16:11:43  STATUS : Acquisition Complete 
+29-Aug-2023 16:11:44  STATUS : Calculating... 
+29-Aug-2023 16:11:45  STATUS : Waste Cycle... 
+29-Aug-2023 16:11:46  STATUS : End of Waste Cycle 
+29-Aug-2023 16:11:47  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:11:47  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:11:47  WARNING : Maximum Velocity Exceeded For 1444 Events 
+29-Aug-2023 16:11:47  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:11:47  STATUS : Begin Well D11 
+29-Aug-2023 16:11:53  STATUS : Mixing Well D11 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:11:59  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:12:06  STATUS : Loading Well D11 
+29-Aug-2023 16:12:08  STATUS : Sampling Protocol Started for Sample # 11 
+29-Aug-2023 16:12:08  STATUS : Loading Sample... 
+29-Aug-2023 16:12:09  STATUS : Purging System... 
+29-Aug-2023 16:12:10  STATUS : Purging System... 
+29-Aug-2023 16:12:13  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:12:17  STATUS : Setting Thresholds... 
+29-Aug-2023 16:12:20  STATUS : Thresholds Set 
+29-Aug-2023 16:12:20  STATUS : Acquiring... 
+29-Aug-2023 16:12:49  STATUS : Acquisition Complete 
+29-Aug-2023 16:12:50  STATUS : Calculating... 
+29-Aug-2023 16:12:51  STATUS : Waste Cycle... 
+29-Aug-2023 16:12:52  STATUS : End of Waste Cycle 
+29-Aug-2023 16:12:53  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:12:53  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:12:53  WARNING : Maximum Velocity Exceeded For 1416 Events 
+29-Aug-2023 16:12:53  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:12:53  STATUS : Begin Well D12 
+29-Aug-2023 16:12:56  STATUS : Loading Well D12 
+29-Aug-2023 16:12:59  STATUS : Sampling Protocol Started for Sample # 12 
+29-Aug-2023 16:12:59  STATUS : Loading Sample... 
+29-Aug-2023 16:13:00  STATUS : Purging System... 
+29-Aug-2023 16:13:01  STATUS : Purging System... 
+29-Aug-2023 16:13:04  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:13:08  STATUS : Setting Thresholds... 
+29-Aug-2023 16:13:10  STATUS : Thresholds Set 
+29-Aug-2023 16:13:11  STATUS : Acquiring... 
+29-Aug-2023 16:13:41  STATUS : Acquisition Complete 
+29-Aug-2023 16:13:43  STATUS : Calculating... 
+29-Aug-2023 16:13:44  STATUS : Waste Cycle... 
+29-Aug-2023 16:13:44  STATUS : End of Waste Cycle 
+29-Aug-2023 16:13:45  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:13:45  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:13:45  WARNING : Maximum Velocity Exceeded For 1458 Events 
+29-Aug-2023 16:13:46  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:13:46  STATUS : Begin Well E01 
+29-Aug-2023 16:13:48  STATUS : Mixing Well E01 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:13:54  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:14:00  STATUS : Loading Well E01 
+29-Aug-2023 16:14:02  STATUS : Mixing Well E03 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:14:03  STATUS : Sampling Protocol Started for Sample # 13 
+29-Aug-2023 16:14:03  STATUS : Loading Sample... 
+29-Aug-2023 16:14:04  STATUS : Purging System... 
+29-Aug-2023 16:14:05  STATUS : Purging System... 
+29-Aug-2023 16:14:09  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:14:13  STATUS : Setting Thresholds... 
+29-Aug-2023 16:14:15  STATUS : Thresholds Set 
+29-Aug-2023 16:14:15  STATUS : Acquiring... 
+29-Aug-2023 16:14:38  STATUS : Acquisition Complete 
+29-Aug-2023 16:14:39  STATUS : Calculating... 
+29-Aug-2023 16:14:40  STATUS : Waste Cycle... 
+29-Aug-2023 16:14:40  STATUS : End of Waste Cycle 
+29-Aug-2023 16:14:41  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:14:41  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:14:41  WARNING : Maximum Velocity Exceeded For 1304 Events 
+29-Aug-2023 16:14:42  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:14:42  STATUS : Begin Well E02 
+29-Aug-2023 16:14:48  STATUS : Mixing Well E02 ,for 3 sec, Speed: medium (1) rpm 
+29-Aug-2023 16:14:54  STATUS : Washing capillary and mixer. 
+29-Aug-2023 16:15:00  STATUS : Loading Well E02 
+29-Aug-2023 16:15:02  STATUS : Mixing Well E04 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:15:03  STATUS : Sampling Protocol Started for Sample # 14 
+29-Aug-2023 16:15:03  STATUS : Loading Sample... 
+29-Aug-2023 16:15:04  STATUS : Purging System... 
+29-Aug-2023 16:15:05  STATUS : Purging System... 
+29-Aug-2023 16:15:09  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:15:13  STATUS : Setting Thresholds... 
+29-Aug-2023 16:15:15  STATUS : Thresholds Set 
+29-Aug-2023 16:15:15  STATUS : Acquiring... 
+29-Aug-2023 16:15:38  STATUS : Acquisition Complete 
+29-Aug-2023 16:15:39  STATUS : Calculating... 
+29-Aug-2023 16:15:40  STATUS : Waste Cycle... 
+29-Aug-2023 16:15:40  STATUS : End of Waste Cycle 
+29-Aug-2023 16:15:41  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:15:41  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:15:41  WARNING : Maximum Velocity Exceeded For 1329 Events 
+29-Aug-2023 16:15:42  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:15:42  STATUS : Begin Well E03 
+29-Aug-2023 16:15:48  STATUS : Loading Well E03 
+29-Aug-2023 16:15:49  STATUS : Mixing Well E05 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:15:50  STATUS : Sampling Protocol Started for Sample # 15 
+29-Aug-2023 16:15:50  STATUS : Loading Sample... 
+29-Aug-2023 16:15:51  STATUS : Purging System... 
+29-Aug-2023 16:15:52  STATUS : Purging System... 
+29-Aug-2023 16:15:56  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:16:00  STATUS : Setting Thresholds... 
+29-Aug-2023 16:16:02  STATUS : Thresholds Set 
+29-Aug-2023 16:16:02  STATUS : Acquiring... 
+29-Aug-2023 16:16:21  STATUS : Acquisition Complete 
+29-Aug-2023 16:16:22  STATUS : Calculating... 
+29-Aug-2023 16:16:23  STATUS : Waste Cycle... 
+29-Aug-2023 16:16:23  STATUS : End of Waste Cycle 
+29-Aug-2023 16:16:24  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:16:24  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:16:24  WARNING : Maximum Velocity Exceeded For 1168 Events 
+29-Aug-2023 16:16:25  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:16:25  STATUS : Begin Well E04 
+29-Aug-2023 16:16:31  STATUS : Loading Well E04 
+29-Aug-2023 16:16:32  STATUS : Mixing Well E06 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:16:33  STATUS : Sampling Protocol Started for Sample # 16 
+29-Aug-2023 16:16:33  STATUS : Loading Sample... 
+29-Aug-2023 16:16:34  STATUS : Purging System... 
+29-Aug-2023 16:16:35  STATUS : Purging System... 
+29-Aug-2023 16:16:39  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:16:43  STATUS : Setting Thresholds... 
+29-Aug-2023 16:16:45  STATUS : Thresholds Set 
+29-Aug-2023 16:16:45  STATUS : Acquiring... 
+29-Aug-2023 16:17:04  STATUS : Acquisition Complete 
+29-Aug-2023 16:17:05  STATUS : Calculating... 
+29-Aug-2023 16:17:06  STATUS : Waste Cycle... 
+29-Aug-2023 16:17:07  STATUS : End of Waste Cycle 
+29-Aug-2023 16:17:08  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:17:08  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:17:08  WARNING : Maximum Velocity Exceeded For 1394 Events 
+29-Aug-2023 16:17:08  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:17:08  STATUS : Begin Well E05 
+29-Aug-2023 16:17:15  STATUS : Loading Well E05 
+29-Aug-2023 16:17:16  STATUS : Mixing Well E07 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:17:17  STATUS : Sampling Protocol Started for Sample # 17 
+29-Aug-2023 16:17:17  STATUS : Loading Sample... 
+29-Aug-2023 16:17:18  STATUS : Purging System... 
+29-Aug-2023 16:17:19  STATUS : Purging System... 
+29-Aug-2023 16:17:23  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:17:27  STATUS : Setting Thresholds... 
+29-Aug-2023 16:17:29  STATUS : Thresholds Set 
+29-Aug-2023 16:17:29  STATUS : Acquiring... 
+29-Aug-2023 16:17:49  STATUS : Acquisition Complete 
+29-Aug-2023 16:17:50  STATUS : Calculating... 
+29-Aug-2023 16:17:51  STATUS : Waste Cycle... 
+29-Aug-2023 16:17:51  STATUS : End of Waste Cycle 
+29-Aug-2023 16:17:52  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:17:52  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:17:52  WARNING : Maximum Velocity Exceeded For 1307 Events 
+29-Aug-2023 16:17:53  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:17:53  STATUS : Begin Well E06 
+29-Aug-2023 16:17:59  STATUS : Loading Well E06 
+29-Aug-2023 16:18:00  STATUS : Mixing Well E08 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:18:01  STATUS : Sampling Protocol Started for Sample # 18 
+29-Aug-2023 16:18:01  STATUS : Loading Sample... 
+29-Aug-2023 16:18:02  STATUS : Purging System... 
+29-Aug-2023 16:18:03  STATUS : Purging System... 
+29-Aug-2023 16:18:07  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:18:11  STATUS : Setting Thresholds... 
+29-Aug-2023 16:18:13  STATUS : Thresholds Set 
+29-Aug-2023 16:18:13  STATUS : Acquiring... 
+29-Aug-2023 16:18:34  STATUS : Acquisition Complete 
+29-Aug-2023 16:18:35  STATUS : Calculating... 
+29-Aug-2023 16:18:36  STATUS : Waste Cycle... 
+29-Aug-2023 16:18:37  STATUS : End of Waste Cycle 
+29-Aug-2023 16:18:38  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:18:38  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:18:38  WARNING : Maximum Velocity Exceeded For 1252 Events 
+29-Aug-2023 16:18:38  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:18:38  STATUS : Begin Well E07 
+29-Aug-2023 16:18:45  STATUS : Loading Well E07 
+29-Aug-2023 16:18:46  STATUS : Mixing Well E09 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:18:47  STATUS : Sampling Protocol Started for Sample # 19 
+29-Aug-2023 16:18:47  STATUS : Loading Sample... 
+29-Aug-2023 16:18:48  STATUS : Purging System... 
+29-Aug-2023 16:18:49  STATUS : Purging System... 
+29-Aug-2023 16:18:53  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:18:57  STATUS : Setting Thresholds... 
+29-Aug-2023 16:18:59  STATUS : Thresholds Set 
+29-Aug-2023 16:18:59  STATUS : Acquiring... 
+29-Aug-2023 16:19:16  STATUS : Acquisition Complete 
+29-Aug-2023 16:19:17  STATUS : Calculating... 
+29-Aug-2023 16:19:18  STATUS : Waste Cycle... 
+29-Aug-2023 16:19:19  STATUS : End of Waste Cycle 
+29-Aug-2023 16:19:20  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:19:20  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:19:20  WARNING : Maximum Velocity Exceeded For 1065 Events 
+29-Aug-2023 16:19:20  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:19:20  STATUS : Begin Well E08 
+29-Aug-2023 16:19:27  STATUS : Loading Well E08 
+29-Aug-2023 16:19:28  STATUS : Mixing Well E10 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:19:29  STATUS : Sampling Protocol Started for Sample # 20 
+29-Aug-2023 16:19:29  STATUS : Loading Sample... 
+29-Aug-2023 16:19:30  STATUS : Purging System... 
+29-Aug-2023 16:19:31  STATUS : Purging System... 
+29-Aug-2023 16:19:35  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:19:39  STATUS : Setting Thresholds... 
+29-Aug-2023 16:19:41  STATUS : Thresholds Set 
+29-Aug-2023 16:19:41  STATUS : Acquiring... 
+29-Aug-2023 16:19:59  STATUS : Acquisition Complete 
+29-Aug-2023 16:20:00  STATUS : Calculating... 
+29-Aug-2023 16:20:01  STATUS : Waste Cycle... 
+29-Aug-2023 16:20:02  STATUS : End of Waste Cycle 
+29-Aug-2023 16:20:03  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:20:03  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:20:03  WARNING : Maximum Velocity Exceeded For 1014 Events 
+29-Aug-2023 16:20:03  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:20:03  STATUS : Begin Well E09 
+29-Aug-2023 16:20:10  STATUS : Loading Well E09 
+29-Aug-2023 16:20:11  STATUS : Mixing Well E11 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:20:12  STATUS : Sampling Protocol Started for Sample # 21 
+29-Aug-2023 16:20:12  STATUS : Loading Sample... 
+29-Aug-2023 16:20:13  STATUS : Purging System... 
+29-Aug-2023 16:20:14  STATUS : Purging System... 
+29-Aug-2023 16:20:18  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:20:22  STATUS : Setting Thresholds... 
+29-Aug-2023 16:20:24  STATUS : Thresholds Set 
+29-Aug-2023 16:20:24  STATUS : Acquiring... 
+29-Aug-2023 16:20:42  STATUS : Acquisition Complete 
+29-Aug-2023 16:20:43  STATUS : Calculating... 
+29-Aug-2023 16:20:44  STATUS : Waste Cycle... 
+29-Aug-2023 16:20:44  STATUS : End of Waste Cycle 
+29-Aug-2023 16:20:45  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:20:45  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:20:45  WARNING : Maximum Velocity Exceeded For 1277 Events 
+29-Aug-2023 16:20:46  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:20:46  STATUS : Begin Well E10 
+29-Aug-2023 16:20:52  STATUS : Loading Well E10 
+29-Aug-2023 16:20:53  STATUS : Mixing Well E12 ,for 3 sec, Speed: medium rpm 
+29-Aug-2023 16:20:54  STATUS : Sampling Protocol Started for Sample # 22 
+29-Aug-2023 16:20:54  STATUS : Loading Sample... 
+29-Aug-2023 16:20:55  STATUS : Purging System... 
+29-Aug-2023 16:20:56  STATUS : Purging System... 
+29-Aug-2023 16:21:00  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:21:04  STATUS : Setting Thresholds... 
+29-Aug-2023 16:21:06  STATUS : Thresholds Set 
+29-Aug-2023 16:21:06  STATUS : Acquiring... 
+29-Aug-2023 16:21:27  STATUS : Acquisition Complete 
+29-Aug-2023 16:21:28  STATUS : Calculating... 
+29-Aug-2023 16:21:29  STATUS : Waste Cycle... 
+29-Aug-2023 16:21:30  STATUS : End of Waste Cycle 
+29-Aug-2023 16:21:31  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:21:31  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:21:31  WARNING : Maximum Velocity Exceeded For 1251 Events 
+29-Aug-2023 16:21:31  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:21:31  STATUS : Begin Well E11 
+29-Aug-2023 16:21:38  STATUS : Loading Well E11 
+29-Aug-2023 16:21:40  STATUS : Sampling Protocol Started for Sample # 23 
+29-Aug-2023 16:21:40  STATUS : Loading Sample... 
+29-Aug-2023 16:21:41  STATUS : Purging System... 
+29-Aug-2023 16:21:42  STATUS : Purging System... 
+29-Aug-2023 16:21:45  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:21:49  STATUS : Setting Thresholds... 
+29-Aug-2023 16:21:52  STATUS : Thresholds Set 
+29-Aug-2023 16:21:52  STATUS : Acquiring... 
+29-Aug-2023 16:22:08  STATUS : Acquisition Complete 
+29-Aug-2023 16:22:09  STATUS : Calculating... 
+29-Aug-2023 16:22:10  STATUS : Waste Cycle... 
+29-Aug-2023 16:22:10  STATUS : End of Waste Cycle 
+29-Aug-2023 16:22:11  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:22:11  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:22:11  WARNING : Maximum Velocity Exceeded For 1041 Events 
+29-Aug-2023 16:22:12  STATUS : Washing capillary and mixer. 
+
+29-Aug-2023 16:22:12  STATUS : Begin Well E12 
+29-Aug-2023 16:22:15  STATUS : Loading Well E12 
+29-Aug-2023 16:22:17  STATUS : Sampling Protocol Started for Sample # 24 
+29-Aug-2023 16:22:17  STATUS : Loading Sample... 
+29-Aug-2023 16:22:18  STATUS : Purging System... 
+29-Aug-2023 16:22:19  STATUS : Purging System... 
+29-Aug-2023 16:22:22  STATUS : Establishing Steady Flow... 
+29-Aug-2023 16:22:27  STATUS : Setting Thresholds... 
+29-Aug-2023 16:22:29  STATUS : Thresholds Set 
+29-Aug-2023 16:22:29  STATUS : Acquiring... 
+29-Aug-2023 16:22:46  STATUS : Acquisition Complete 
+29-Aug-2023 16:22:47  STATUS : Calculating... 
+29-Aug-2023 16:22:49  STATUS : Waste Cycle... 
+29-Aug-2023 16:22:49  STATUS : End of Waste Cycle 
+29-Aug-2023 16:22:50  STATUS : Sampling Protocol Completed 
+29-Aug-2023 16:22:50  WARNING : More than 500 particles/µL. Sample is too concentrated. Please dilute or accuracy may be compromised. 
+29-Aug-2023 16:22:50  WARNING : Maximum Velocity Exceeded For 1076 Events 
+29-Aug-2023 16:22:53  STATUS : Quick Clean Protocol Started 
+29-Aug-2023 16:22:54  STATUS : Filling Pump 
+29-Aug-2023 16:23:02  STATUS : End of Filling Pump 
+29-Aug-2023 16:23:03  STATUS : Waste Cycle 
+29-Aug-2023 16:23:07  STATUS : End of Waste Cycle 
+29-Aug-2023 16:23:09  STATUS : Cleaning System... 
+29-Aug-2023 16:23:39  STATUS : End of Cleaning 
+29-Aug-2023 16:23:40  STATUS : Waste Cycle 
+29-Aug-2023 16:23:41  STATUS : Quick Clean Protocol Completed 
+29-Aug-2023 16:23:42  ACTION : Data File Closed: D:/fcm/B15.fcs 
+29-Aug-2023 16:23:42  STATUS : Session Closed 
+29-Aug-2023 16:26:52  ACTION : Exported FCS 3.0 file name: D:/fcm/B15/B15-1.fcs
+29-Aug-2023 16:26:52  ACTION : Exported FCS 3.0 file name: D:/fcm/B15/B15-1.fcs
+29-Aug-2023 16:26:52  ACTION : Exported FCS 3.0 file name: D:/fcm/B15/B15-2.fcs

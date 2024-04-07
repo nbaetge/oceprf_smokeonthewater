@@ -1,0 +1,2 @@
+work_list,sample_number,exp,btl,tp,dil,total_volume_ul,acquisition_time_s,name,Population,Parent,Count,ParentCount,cells_ml
+B3_14_dil,1,B14,2,4,4,29.64549524,50.24660211,B3_14_dil-1.fcs,/Cells,root,7924,10000,1069168

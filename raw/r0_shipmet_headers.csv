@@ -1,0 +1,107 @@
+number ,parameter,description,units
+0,AT,air temp,deg_c
+1,BP,barometric pressure,mb
+2,BC,barometric pressure temp,deg_c
+3,SW,short wave radiation,w_m2
+4,LW,long wave radiation,w_m2
+5,LD,lwr dome temperature,deg_k
+6,LB,lwr body temperature,deg_k
+7,LT,lwr thermopile,volts
+8,PR,precipitation,mm
+9,PT,precipitation,mm_hr
+10,RH,relative humidity,%RH
+11,RT,air temp,deg_c
+12,DP,dew point,deg_c
+13,WS,rel wind speed,m_s
+14,WK,rel wind speed,knots
+15,TW,true wind speed,m_s
+16,TK,true wind speed,knots
+17,WD,rel wind direction,deg
+18,TI,true wind direction,deg
+19,ST,sst,deg_c
+20,TT,thermosalinograph temperature,deg_c
+21,TC,thermosalinograph conductivity with slope offset correction,mS_cm
+22,SA,salinity,psu
+23,SD,sigma-t,kg_m3
+24,SV,sound vel,m_s
+25,OX,oxygen,ml_l
+26,OG,oxygen,mg_l
+27,OC,oxygen current,ua
+28,OT,oxygen temperature,deg_c
+29,OS,oxygen saturation value,ml_l
+30,PH,alkalinity,
+31,FL,fluorometer,ug_l
+32,TB,turbidity,ntu
+33,TR,transmissometer,%
+34,BA,beam attenuation,
+35,PA,surface PAR,uE_s_m2
+36,FM,usw flow meter,gpm
+37,FI,usw flow meter,lpm
+38,VT,volts,volts
+39,MA,current,m/a
+40,WT,auxiliary water temp,deg_c
+41,AX,auxiliary air temp,deg_c
+42,PS,pressure,psi
+43,XX,unspecified,
+44,LA,latitude decimal,deg
+45,LO,longitude decimal,deg
+46,CR,ships course,deg
+47,SP,ships speed,knots
+48,SL,ships speed log -longitudinal,knots
+49,SX,speed log -transverse,knots
+50,GY,ships heading,deg
+51,GT,gps time of day,gmt_secs_0-86400
+52,TS,time server time of day,gmt_secs_0-86400
+53,ZD,gps datetime,gmt_secs_since_00:00:00_01_01_1970
+54,GA,gps altitude,m_above_below_sealevel
+55,GS,gps status/number satellites,1st_digit_status_last2digits_satellites
+56,SY,system datetime,gmt_secs_since_00:00:00_01_01_1970
+57,BT,bottom depth,m
+58,SH,ashtech heading,deg
+59,SM,ashtech pitch,deg
+60,SR,ashtech roll,deg
+61,ZO,winch wire out,m
+62,ZS,winch speed,mpm
+63,ZT,winch tension,lbs
+64,VP,vru pitch,deg
+65,VR,vru roll,deg
+66,VH,vru heave,m
+67,VY,ships list,deg
+68,VX,ships trim,deg
+69,RX,accelerometer x,m_s
+70,RY,accelerometer y,m_s
+71,RZ,accelerometer z,m_s
+72,IP,ctd depth,m
+73,IT,ctd temp,deg_c
+74,IS,ctd salinity,psu
+75,IA,ctd altimiter,m
+76,IV,ctd velocity,m_s
+77,IX,instrumentation aux,
+78,PZ,ucw pump status,on_off
+79,TG,thermosalinograph conductivity without slope offset correction,mS_cm
+80,MB,multibeam depth,m
+81,BS,barometric pressure sealevel corrected to sealevel,mb
+82,PC,pco2,uatm
+83,AF,air temp,deg_f
+84,WC,wind chill ,deg_c
+85,WF,wind chill ,deg_f
+86,LF,depth sounder 3.5 khz,m
+87,HF,depth sounder 12 khz,m
+88,MG,magnetometer,nanoTesla
+89,MD,magnetometer depth,m
+90,MS,magnetometer status > 80 is good,signal_strength
+91,GV,gravity,mGal
+92,GC,gravity counts,counts
+93,FB,fluorometer optical brighteners,ppb
+94,FO,fluorometer oil,ppb
+95,FF,fluorometer fuel,ppb
+96,FT,fluorometer temperature,deg_c
+97,SF,sst,deg_f
+98,TF,thermosalinograph temperature,deg_f
+99,RF,air temp rh module,deg_f
+100,DF,dew point,deg_f
+101,WB,wet bulb temperature,deg_c
+102,WF,wet bulb temperature,deg_f
+103,ZI,winch id,LAN_numbers_1_thru_9
+104,OM,oxygen,um_kg3
+105,OF,ucw overflow,normal_0_overflow_1

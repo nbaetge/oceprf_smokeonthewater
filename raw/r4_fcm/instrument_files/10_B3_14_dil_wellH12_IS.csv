@@ -1,0 +1,9 @@
+Current Date: 30-Aug-2023,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Instrument Serial Number: 8470H50282,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Software Name: InCyte,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Version Number: 3.4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,Gains,,,,,High Calibration,,,,,,,,,,,,,,,,,
+ Sample Number, Sample ID, Number of Events,  Termination Count, Count Gate, Dilution Factor, Original Volume, Cells/µL,  Total Volume (µL), Acquisition Time (s), Date of Acquisition, Time of Acquisition, FSC Gain, SSC, GRN-B, YEL-B, RED-B,  SSC,  GRN-B,  YEL-B,  RED-B, YEL-B - %GRN-B, RED-B - %GRN-B, GRN-B - %YEL-B, RED-B - %YEL-B, GRN-B - %RED-B, YEL-B - %RED-B, Threshold Parameter, Threshold Value, Flow Rate (µL/s), High Concentration Warning Trigger, # of Errors & Warnings, User Login Name, User Full Name, WorkList
+1, B14-2-4-4,10000,10000, All Events,1,0.2,337.3193775,29.64549524,50.24660211, 30-AUG-2023 , 12:28:41 ,39.73944999,4.555154539,4,3.363585661,6.168843302, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B,30,0.59,500,1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B3_14_dil_map.csv

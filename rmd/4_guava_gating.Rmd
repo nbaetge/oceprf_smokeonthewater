@@ -1,0 +1,164 @@
+---
+title: "Gating guava flow cytometry data"
+author: "Nick Baetge"
+date: "compiled most recently on `r format(Sys.time(), '%d %B, %Y')`"
+output: github_document
+
+knit: (function(inputFile, encoding) {
+      out_dir <- "../knitted";
+      rmarkdown::render(inputFile,
+                        encoding=encoding,
+                        output_dir=file.path(dirname(inputFile), out_dir))})
+---
+
+```{r load packages, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(hms)
+library(lubridate)
+library(purrr)
+library(patchwork)
+library(janitor)
+
+library(flowCore) # data structures and functions for flow cytometry data
+library(openCyto) # automate gating methods
+library(ggcyto) # plot flow cytometry data with ggplot
+library(flowGate) # interactive gating
+```
+
+# FCM fcs file processing
+
+17 FCM plates were run, each resulting in an instrument settings file and individual well data stored in individual fcs files. To process the fcm data (i.e., calculating cell abundances), we will repeat lines of code for each FCM plate dataset. 
+
+## import fcs files and metadata
+
+```{r define paths to data}
+file_number <-
+  1 #change this for each data set! (should go from 1:17, files are all numbered to correspond)
+
+fcs_file_names <-
+  list.files("/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/fcs_files/")
+fcs_path <-
+  paste(
+    "/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/fcs_files/",
+    fcs_file_names[file_number],
+    sep = ""
+  )
+
+instrument_file_names <-
+  list.files("/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/instrument_files/")
+instrument_path <-
+  paste(
+    "/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/instrument_files/",
+    instrument_file_names[file_number],
+    sep = ""
+  )
+
+gating_savepath <-
+  paste(
+    "/Users/nicholasbaetge/github/oceprf_ash/prod/p4_fcm_gating_sets/",
+    fcs_file_names[file_number], ".gs",
+    sep = ""
+  )
+results_savepath <-
+  paste(
+    "/Users/nicholasbaetge/github/oceprf_ash/prod/p4_fcm_plate_data/",
+    fcs_file_names[file_number],
+    ".csv",
+    sep = ""
+  )
+```
+
+```{r read in fcs files, message=FALSE, warning=FALSE}
+fs <-
+  flowCore::read.flowSet(path = fcs_path,
+                         pattern = ".fcs",
+                         emptyValue = F)
+```
+
+## gate 
+
+```{r list channels}
+colnames(fs)
+```
+
+```{r log transform data, warning=FALSE}
+logTrans <-
+  logTransform(
+    transformationId = "log10-transformation",
+    logbase = 10,
+    r = 1,
+    d = 1
+  )
+trans <-
+  transformList(c("FSC-HLin", "SSC-HLin", "GRN-B-HLin"), logTrans)
+dataTransform <- transform(fs, trans)
+```
+
+```{r create data set to gate on}
+gs <- flowWorkspace::GatingSet(dataTransform)
+```
+
+```{r gate}
+gs_gate_interactive(gs,
+                    sample = 22,
+                    filterId = "Cells",
+                    dims = list("SSC-HLin", "GRN-B-HLin"))
+```
+
+```{r plot, fig.asp=0.8, fig.width=8, warning=FALSE}
+ggcyto(gs[[70]], aes("SSC-HLin", "GRN-B-HLin")) +
+  geom_hex(bins = 91) +
+  geom_gate("/Cells") +
+  custom.theme +
+  labs(x = "SSC (log-transformed)", y = "GRN (log-transformed)") +
+  theme(legend.key.width = unit(2, "cm")) 
+```
+
+```{r get populations, wrapper = TRUE}
+gs_get_pop_paths(gs)
+```
+
+## save gates
+
+```{r save gating set, wrapper = TRUE}
+save_gs(gs, gating_savepath)
+gs <- load_gs(gating_savepath)
+```
+
+```{r get population counts, wrapper = TRUE}
+gated <- gs_pop_get_count_fast(gs)
+```
+
+## calculate abundances
+
+```{r merge metadata and calculate cell abundances, message=FALSE, warning=FALSE}
+results <-
+  read_csv(instrument_path,
+           skip = 7,
+           locale = locale(encoding = "latin1")) %>%
+  select(1, 2, 9, 10, 35) %>%
+  clean_names() %>%
+  rename(total_volume_ul = total_volume_m_l) %>%
+  mutate(
+    work_list = gsub("D:/fcm/",
+                     "",
+                     work_list),
+    work_list = gsub("_map.csv", "", work_list),
+    work_list = gsub(".csv", "", work_list),
+  ) %>%
+  separate(sample_id,
+           into = c("exp", "btl", "tp", "dil"),
+           sep = "-") %>%
+  select(work_list, everything()) %>%
+  mutate(name = paste(work_list, "-", sample_number, ".fcs", sep = "")) %>%
+  mutate_at(vars(tp, dil), as.numeric) %>%
+  mutate(dil = ifelse(dil == 0 | is.na(dil) == T, 1, dil)) %>%
+  left_join(., gated) %>% #%>% mutate(name = gsub("_wellG1", "", name))
+  mutate(cells_ml = round((Count / total_volume_ul) * 1000) * dil)
+```
+
+## save calcs
+
+```{r write csv}
+write_csv(results, results_savepath)
+```

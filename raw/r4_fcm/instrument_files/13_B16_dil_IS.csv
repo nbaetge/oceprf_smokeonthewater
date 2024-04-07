@@ -1,0 +1,14 @@
+Current Date: 29-Aug-2023
+Instrument Serial Number: 8470H50282
+Software Name: InCyte
+Version Number: 3.4
+
+
+,,,,,,,,,,,,Gains,,,,,High Calibration,,,,
+ Sample Number, Sample ID, Number of Events,  Termination Count, Count Gate, Dilution Factor, Original Volume, Cells/µL,  Total Volume (µL), Acquisition Time (s), Date of Acquisition, Time of Acquisition, FSC Gain, SSC, GRN-B, YEL-B, RED-B,  SSC,  GRN-B,  YEL-B,  RED-B, YEL-B - %GRN-B, RED-B - %GRN-B, GRN-B - %YEL-B, RED-B - %YEL-B, GRN-B - %RED-B, YEL-B - %RED-B, Threshold Parameter, Threshold Value, Flow Rate (µL/s), High Concentration Warning Trigger, # of Errors & Warnings, User Login Name, User Full Name, WorkList,
+ 1, B16-2-3-4, 10000, 10000, All Events, 1, 0.2, 341.209431613702, 29.3075134315789, 49.6737515789474, 29-AUG-2023 , 17:29:29 , 39.7394499863515, 4.55515453902677, 4, 3.36358566101486, 6.16884330163176, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B, 30, 0.59, 500, 1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B16_map.csv,
+ 2, B16-V2-3-4, 10000, 10000, All Events, 1, 0.2, 291.593750221918, 34.2942878315789, 58.1259115789474, 29-AUG-2023 , 17:31:05 , 39.7394499863515, 4.55515453902677, 4, 3.36358566101486, 6.16884330163176, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B, 30, 0.59, 500, 1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B16_map.csv,
+ 3, B16-2-4-4, 10000, 10000, All Events, 1, 0.2, 336.121980549024, 29.751104, 50.4256, 29-AUG-2023 , 17:32:32 , 39.7394499863515, 4.55515453902677, 4, 3.36358566101486, 6.16884330163176, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B, 30, 0.59, 500, 1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B16_map.csv,
+ 4, B16-V2-4-4, 10000, 10000, All Events, 1, 0.2, 370.421767870905, 26.9962536421053, 45.7563621052632, 29-AUG-2023 , 17:33:55 , 39.7394499863515, 4.55515453902677, 4, 3.36358566101486, 6.16884330163176, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B, 30, 0.59, 500, 1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B16_map.csv,
+ 5, B16-2-5-4, 10000, 10000, All Events, 1, 0.2, 343.441573198982, 29.1170341052632, 49.3509052631579, 29-AUG-2023 , 17:35:21 , 39.7394499863515, 4.55515453902677, 4, 3.36358566101486, 6.16884330163176, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B, 30, 0.59, 500, 1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B16_map.csv,
+ 6, B16-V2-5-4, 10000, 10000, All Events, 1, 0.2, 300.22282980862, 33.3085928421053, 56.4552421052632, 29-AUG-2023 , 17:36:51 , 39.7394499863515, 4.55515453902677, 4, 3.36358566101486, 6.16884330163176, Yes, Yes, Yes, Yes, ---, ---, ---, ---, ---, ---, GRN-B, 30, 0.59, 500, 1, DESKTOP-R0UF04H\User, Unknown, D:/fcm/B16_map.csv,
