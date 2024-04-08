@@ -1,7 +1,7 @@
 1: Tidy Matlab product from Inline Analysis
 ================
 Nick Baetge
-compiled most recently on 04 April, 2024
+compiled most recently on 08 April, 2024
 
 ``` r
 library(tidyverse)
@@ -20,24 +20,24 @@ add in FRR and influx data
 
 ``` r
 acs_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r1_acs/"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r1_acs/"
 bb_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r1_bb3/"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r1_bb3/"
 frr_data_path <- 
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r1_frr/frr_data.txt"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r1_frr/frr_data.txt"
 frr_blank_path <- 
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r1_frr/frr_blanks.txt"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r1_frr/frr_blanks.txt"
 influx_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r6_phyto.xlsx"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r6_phyto.xlsx"
 # data contains cells in units of per L 
 shipmet_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p0_shipmet.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p0_shipmet.csv"
 exploc_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r1_exploc.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r1_exploc.csv"
 prod_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p1_insitu_biooptics.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_biooptics.csv"
 index_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p1_insitu_index.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
 ```
 
 ``` r
@@ -395,8 +395,8 @@ summary <- tidy %>%
     sd_chl_ap676lh,
     mean_gamma_cp,
     sd_gamma_cp,
-    mean_bbb_660,
-    sd_bbb_660,
+    mean_bbb_532,
+    sd_bbb_532,
     mean_poc_cp_660,
     sd_poc_cp_660,
     mean_nano_syn,
@@ -412,13 +412,13 @@ zscores <- summary %>%
     stn,
     mean_chl_ap676lh,
     mean_gamma_cp,
-    mean_bbb_660,
+    mean_bbb_532,
     mean_poc_cp_660,
     mean_nano_syn,
   ) %>%
   rename_all( ~ stringr::str_replace(., "mean_", "")) %>%
   mutate(across(c(2:6), ~ (. - mean(., na.rm = T)) / sd(., na.rm = T),  .names = "z_{col}")) %>%
-  mutate_at(vars(z_gamma_cp, z_bbb_660), ~ . * -1) %>% # reverse these z-scores as they are inversely related to particle size
+  mutate_at(vars(z_gamma_cp, z_bbb_532), ~ . * -1) %>% # reverse these z-scores as they are inversely related to particle size
   mutate(composite_z = rowSums(across(c(7:10))),
          biomass = ifelse(composite_z < 0, "Lower", "Higher")) %>% 
    left_join(read_csv(exploc_path), .) %>% 

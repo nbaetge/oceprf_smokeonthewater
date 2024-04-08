@@ -1,7 +1,7 @@
 Ash leachate
 ================
 Nick Baetge
-compiled most recently on 05 April, 2024
+compiled most recently on 08 April, 2024
 
 ``` r
 library(tidyverse)
@@ -17,19 +17,19 @@ library(staRdom)
 
 ``` r
 data_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r3_leachate_nuts_doc_tm.xlsx"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r3_leachate_nuts_doc_tm.xlsx"
 
 cdom_abs_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r3_cdom_abs"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r3_cdom_abs"
 
 cdom_eems_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r3_cdom_eems"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r3_cdom_eems"
 
 prod1_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p3_ash_leachate_nuts_tm_doc.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p3_ash_leachate_nuts_tm_doc.csv"
 
 prod2_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p3_ash_leachate_cdom.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p3_ash_leachate_cdom.csv"
 ```
 
 ## Leachate DOC from high temperature combustion (units = µmol/L )
@@ -629,7 +629,7 @@ eems_plot <- ggplot() +
     ## Warning: Removed 3132 rows containing missing values or values outside the scale range
     ## (`geom_raster()`).
 
-![](/Users/nicholasbaetge/github/oceprf_ash/knitted/3_ash_leachate_files/figure-gfm/Figure2-1.png)<!-- -->
+![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/3_ash_leachate_files/figure-gfm/Figure2-1.png)<!-- -->
 
 # SAVE
 

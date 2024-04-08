@@ -1,7 +1,7 @@
 Phytoplankton & zooplankton dilution experiments
 ================
 Nick Baetge
-compiled most recently on 05 April, 2024
+compiled most recently on 08 April, 2024
 
 ``` r
 library(tidyverse)
@@ -14,7 +14,7 @@ library(janitor)
 
 ``` r
 prod_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p6_dilution_exps.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p6_dilution_exps.csv"
 ```
 
 # Influx flow cytometry data
@@ -23,7 +23,7 @@ prod_path <-
 
 ``` r
 influx_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r6_phyto.xlsx"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r6_phyto.xlsx"
 # data contains cells in units of per L 
 ```
 
@@ -34,7 +34,7 @@ ids <- readxl::read_xlsx(influx_path, sheet = 1) %>%
 ```
 
 ``` r
-context_path <- "/Users/nicholasbaetge/github/oceprf_ash/prod/p1_insitu_index.csv"
+context_path <- "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
 
 context <- read_csv(context_path) %>% 
   select(stn, exp, lat, lon, biomass, composite_z)
@@ -283,4 +283,4 @@ boxes <- ggplot(p_rates, aes(x = factor(amend, levels = plot_levels), y = val)) 
   theme(plot.tag = element_text(size = 28))
 ```
 
-![](/Users/nicholasbaetge/github/oceprf_ash/knitted/6_dilution_exps_files/figure-gfm/Figure4-1.png)<!-- -->
+![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/6_dilution_exps_files/figure-gfm/Figure4-1.png)<!-- -->

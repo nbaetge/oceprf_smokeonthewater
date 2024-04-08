@@ -36,32 +36,32 @@ file_number <-
   1 #change this for each data set! (should go from 1:17, files are all numbered to correspond)
 
 fcs_file_names <-
-  list.files("/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/fcs_files/")
+  list.files("/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r4_fcm/fcs_files/")
 fcs_path <-
   paste(
-    "/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/fcs_files/",
+    "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r4_fcm/fcs_files/",
     fcs_file_names[file_number],
     sep = ""
   )
 
 instrument_file_names <-
-  list.files("/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/instrument_files/")
+  list.files("/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r4_fcm/instrument_files/")
 instrument_path <-
   paste(
-    "/Users/nicholasbaetge/github/oceprf_ash/raw/r4_fcm/instrument_files/",
+    "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r4_fcm/instrument_files/",
     instrument_file_names[file_number],
     sep = ""
   )
 
 gating_savepath <-
   paste(
-    "/Users/nicholasbaetge/github/oceprf_ash/prod/p4_fcm_gating_sets/",
+    "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p4_fcm_gating_sets/",
     fcs_file_names[file_number], ".gs",
     sep = ""
   )
 results_savepath <-
   paste(
-    "/Users/nicholasbaetge/github/oceprf_ash/prod/p4_fcm_plate_data/",
+    "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p4_fcm_plate_data/",
     fcs_file_names[file_number],
     ".csv",
     sep = ""

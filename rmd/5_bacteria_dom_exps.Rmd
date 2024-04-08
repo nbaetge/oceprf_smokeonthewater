@@ -22,7 +22,7 @@ library(janitor)
 
 ```{r define path to save data}
 prod_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p5_bacteria_dom_exps.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p5_bacteria_dom_exps.csv"
 ```
 
 # Bacterial cell data
@@ -31,11 +31,11 @@ prod_path <-
 
 ```{r define paths to fcm data}
 fcm_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p4_fcm_plate_data"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p4_fcm_plate_data"
 filter_vols <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r5_filter_vols.xlsx"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_filter_vols.xlsx"
 time_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r5_bact_dom_sampletimes.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_bact_dom_sampletimes.csv"
 ```
 
 ```{r import and tidy sample time data, message = F}
@@ -302,7 +302,7 @@ sd(fcm_gf75_dna$dna_percent_retention)
 ## Import and tidy data
 
 ```{r define paths to boc data}
-chn_path <- "/Users/nicholasbaetge/github/oceprf_ash/raw/r5_chn.csv"
+chn_path <- "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_chn.csv"
 ```
 
 ```{r import data, message = F, warning = F}
@@ -388,7 +388,7 @@ n_blank = 7.1 +/- 1, n = 9
 ## Import and tidy data
 
 ```{r define paths to doc data}
-doc_path <- "//Users/nicholasbaetge/github/oceprf_ash/raw/r5_doc.xlsx"
+doc_path <- "//Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_doc.xlsx"
 ```
 
 ```{r tidy and derive bge and doc bioav, message = F}
@@ -492,7 +492,7 @@ p5_bge_bioav <- doc %>%
 
 ```{r define paths to context data, message = F}
 context_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p1_insitu_index.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
 
 p5_prod <- read_csv(context_path) %>% 
   select(stn, exp, lat, lon, biomass, composite_z) %>% 
@@ -634,7 +634,7 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
   ggh4x::facet_nested(
     factor(var, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(
       composite_z,
-      levels = c("-4.39", "-2.94", "-0.07", "-0.03", "0.69", "1.39")
+       levels = c("-5.90", "-3.48", "-0.77", "0.09", "0.94", "0.96")
     ),
     scales = "free_y",
     labeller = label_parsed
@@ -691,7 +691,7 @@ metrics <- ggplot(metric_data,
                   aes(
                     x = factor(
                       composite_z,
-                      levels = c("-4.39", "-2.94", "-0.07", "-0.03", "0.69", "1.39")
+                      levels = c("-5.90", "-3.48", "-0.77", "0.09", "0.94", "0.96")
                     ),
                     y = val,
                     fill = factor(trt, levels = plot_levels),

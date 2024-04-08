@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 05 April, 2024
+compiled most recently on 08 April, 2024
 
 ``` r
 library(tidyverse)
@@ -14,7 +14,7 @@ library(janitor)
 
 ``` r
 prod_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p5_bacteria_dom_exps.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p5_bacteria_dom_exps.csv"
 ```
 
 # Bacterial cell data
@@ -23,11 +23,11 @@ prod_path <-
 
 ``` r
 fcm_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p4_fcm_plate_data"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p4_fcm_plate_data"
 filter_vols <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r5_filter_vols.xlsx"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_filter_vols.xlsx"
 time_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r5_bact_dom_sampletimes.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_bact_dom_sampletimes.csv"
 ```
 
 ``` r
@@ -372,7 +372,7 @@ sd(fcm_gf75_dna$dna_percent_retention)
 ## Import and tidy data
 
 ``` r
-chn_path <- "/Users/nicholasbaetge/github/oceprf_ash/raw/r5_chn.csv"
+chn_path <- "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_chn.csv"
 ```
 
 ``` r
@@ -457,7 +457,7 @@ c_blank = 15.3 +/- 5.1, n = 9 n_blank = 7.1 +/- 1, n = 9
 ## Import and tidy data
 
 ``` r
-doc_path <- "//Users/nicholasbaetge/github/oceprf_ash/raw/r5_doc.xlsx"
+doc_path <- "//Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_doc.xlsx"
 ```
 
 ``` r
@@ -561,7 +561,7 @@ p5_bge_bioav <- doc %>%
 
 ``` r
 context_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p1_insitu_index.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
 
 p5_prod <- read_csv(context_path) %>% 
   select(stn, exp, lat, lon, biomass, composite_z) %>% 
@@ -705,7 +705,7 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
   ggh4x::facet_nested(
     factor(var, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(
       composite_z,
-      levels = c("-4.39", "-2.94", "-0.07", "-0.03", "0.69", "1.39")
+       levels = c("-5.90", "-3.48", "-0.77", "0.09", "0.94", "0.96")
     ),
     scales = "free_y",
     labeller = label_parsed
@@ -762,7 +762,7 @@ metrics <- ggplot(metric_data,
                   aes(
                     x = factor(
                       composite_z,
-                      levels = c("-4.39", "-2.94", "-0.07", "-0.03", "0.69", "1.39")
+                      levels = c("-5.90", "-3.48", "-0.77", "0.09", "0.94", "0.96")
                     ),
                     y = val,
                     fill = factor(trt, levels = plot_levels),
@@ -806,4 +806,4 @@ metrics <- ggplot(metric_data,
   theme(plot.tag = element_text(size = 28))
 ```
 
-![](/Users/nicholasbaetge/github/oceprf_ash/knitted/5_bacteria_dom_exps_files/figure-gfm/Figure3-1.png)<!-- -->
+![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/figure-gfm/Figure3-1.png)<!-- -->

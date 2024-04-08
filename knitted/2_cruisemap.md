@@ -1,7 +1,7 @@
 Cruise map with satellite chl and ship sst
 ================
 Nick Baetge
-compiled most recently on 07 April, 2024
+compiled most recently on 08 April, 2024
 
 ``` r
 library(tidyverse)
@@ -22,18 +22,18 @@ binning coinciding with the cruise legs (7/28/23 - 8/9/23 (11 d),
 
 ``` r
 index_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p1_insitu_index.csv"
-meta_path <- "/Users/nicholasbaetge/github/oceprf_ash/prod/p1_insitu_biooptics.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
+meta_path <- "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_biooptics.csv"
 metdata_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r0_shipmet.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r0_shipmet.csv"
 v1_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r2_viirs_scene1_20230728_20230731_chl.nc"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r2_viirs_scene1_20230728_20230731_chl.nc"
 v2_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r2_viirs_scene2_20230801_20230809_chl.nc"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r2_viirs_scene2_20230801_20230809_chl.nc"
 v3_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r2_viirs_scene3_20230812_20230819_chl.nc"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r2_viirs_scene3_20230812_20230819_chl.nc"
 table_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/knitted/2_cruisemap_files/Table1.html"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/Table1.html"
 ```
 
 ## viirs chl data (for ggplot raster)
@@ -296,7 +296,7 @@ leg2 <- basemap(data = region, bathymetry = F) +
 (leg1) + (leg2 + guides(color = "none", fill = "none"))  + plot_layout(guides = "collect")
 ```
 
-![](/Users/nicholasbaetge/github/oceprf_ash/knitted/2_cruisemap_files/figure-gfm/Figure1-1.png)<!-- -->
+![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/figure-gfm/Figure1-1.png)<!-- -->
 
 # table
 
@@ -313,7 +313,7 @@ table_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn
     ## ── Column specification ────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr  (3): date, exp, biomass
-    ## dbl (16): stn, lat, lon, chl_ap676lh, gamma_cp, bbb_660, poc_cp_660, nano_sy...
+    ## dbl (16): stn, lat, lon, chl_ap676lh, gamma_cp, bbb_532, poc_cp_660, nano_sy...
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -343,7 +343,7 @@ table <-
     cells_n = html("Flow cytometry estimates"),
     chl_ap676lh = html("Chl<sub>a<sub>p</sub>(676)lh"),
     gamma_cp = html("&gamma;"),
-    bbb_660 = html("bb<sub>p</sub>/b<sub>p</sub>(660)"),
+    bbb_532 = html("b<sub>bp</sub>/b<sub>p</sub>(532)"),
     poc_cp_660 = html("POC<sub>c<sub>p</sub>(660)"),
     nano_syn = html("Nanoeukaryotes:<br><i>Synechococcus</i>"),
     composite_z = md("**Biomass index**") 
@@ -357,8 +357,8 @@ table <-
     col_uncert = sd_gamma_cp
   ) |>
   cols_merge_uncert(
-    col_val = bbb_660,
-    col_uncert = sd_bbb_660
+    col_val = bbb_532,
+    col_uncert = sd_bbb_532
   )|>
   cols_merge_uncert(
     col_val = poc_cp_660,
@@ -377,8 +377,8 @@ table <-
     col_pct = z_gamma_cp
   )|>
   cols_merge_n_pct(
-    col_n = bbb_660,
-    col_pct = z_bbb_660
+    col_n = bbb_532,
+    col_pct = z_bbb_532
   )|>
   cols_merge_n_pct(
     col_n = poc_cp_660,
@@ -394,15 +394,15 @@ table <-
   ) |>
   tab_spanner(
     label = html("Dimensionless"),
-    columns = c(gamma_cp, bbb_660, nano_syn, composite_z)
+    columns = c(gamma_cp, bbb_532, nano_syn, composite_z)
   ) |>
   tab_spanner(
     label = html("Station mean &plusmn standard deviation (z-score)"),
-    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_660, nano_syn)
+    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_532, nano_syn)
   ) |>
   tab_spanner(
     label = html("Inline bio-optics"),
-    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_660)
+    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_532)
   ) |>
   tab_spanner(
     label = html("Flow cytometry"),

@@ -1,7 +1,7 @@
 Shipmet for Inline Analysis
 ================
 Nick Baetge
-compiled most recently on 04 April, 2024
+compiled most recently on 08 April, 2024
 
 ``` r
 library(tidyverse)
@@ -14,11 +14,11 @@ library(patchwork)
 
 ``` r
 metdata_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/raw/r0_shipmet.csv"
-r0_tsg_path <-
-  "/Users/nicholasbaetge/github/oceprf_ash/InLineData/raw/TSG/tsg_081923.txt"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r0_shipmet.csv"
+# r0_tsg_path <-
+#   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/InLineData/raw/TSG/tsg_081923.txt"
 p0_shipmet <-
-  "/Users/nicholasbaetge/github/oceprf_ash/prod/p0_shipmet.csv"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p0_shipmet.csv"
 ```
 
 ## shipmet for inline analysis
@@ -45,6 +45,6 @@ shipmet <- read_csv(metdata_path) %>%
 # Save data
 
 ``` r
-write_tsv(shipmet, r0_tsg_path)
+# write_tsv(shipmet, r0_tsg_path)
 write_csv(shipmet, p0_shipmet)
 ```
