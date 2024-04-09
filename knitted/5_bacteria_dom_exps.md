@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 08 April, 2024
+compiled most recently on 09 April, 2024
 
 ``` r
 library(tidyverse)
@@ -705,7 +705,7 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
   ggh4x::facet_nested(
     factor(var, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(
       composite_z,
-       levels = c("-5.90", "-3.48", "-0.77", "0.09", "0.94", "0.96")
+       levels = c("-5.9", "-3.48", "-0.77", "0.09", "0.94", "0.96")
     ),
     scales = "free_y",
     labeller = label_parsed
@@ -762,7 +762,7 @@ metrics <- ggplot(metric_data,
                   aes(
                     x = factor(
                       composite_z,
-                      levels = c("-5.90", "-3.48", "-0.77", "0.09", "0.94", "0.96")
+                      levels = c("-5.9", "-3.48", "-0.77", "0.09", "0.94", "0.96")
                     ),
                     y = val,
                     fill = factor(trt, levels = plot_levels),
