@@ -1,7 +1,7 @@
 Phytoplankton & zooplankton dilution experiments
 ================
 Nick Baetge
-compiled most recently on 08 April, 2024
+compiled most recently on 09 April, 2024
 
 ``` r
 library(tidyverse)
@@ -118,8 +118,8 @@ rates <- apparent_gr %>%
    mutate(
     biomass = ifelse(
       biomass == "Lower",
-      "bold(Lower~biomass)",
-      "bold(Higher~biomass)"
+      "bold(Lower~biomass~index)",
+      "bold(Higher~biomass~index)"
     )
   ) %>% 
   select(exp:trt, ash, everything())
@@ -171,8 +171,8 @@ plot_levels = c(
   "DOC",
   "bold(Leachate)",
   "bold(Amendment)",
-  "bold(Lower~biomass)",
-  "bold(Higher~biomass)",
+  "bold(Lower~biomass~index)",
+  "bold(Higher~biomass~index)",
   "bold(Growth~(d^-1))",
   "bold(Grazing~(d^-1))",
   "bold(Accumulation~(d^-1))",

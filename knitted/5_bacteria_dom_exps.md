@@ -219,7 +219,7 @@ fcm_exp_means <- fcm_exp %>%
          sd_cells_ml = round(sd(cells_ml))) %>%
   select(-cells_ml) %>%
   distinct() %>% 
-  ungroup()
+  ungroup() 
 ```
 
 ## Estimate growth rates (d-1) in exponential phase
@@ -624,8 +624,8 @@ plot_levels = c(
   "DOC",
   "bold(Leachate)",
   "bold(Amendment)",
-  "bold(Lower~biomass)",
-  "bold(Higher~biomass)",
+  "bold(Lower~biomass~index)",
+  "bold(Higher~biomass~index)",
   "bold(TOC~(µmol~C~L^-1))",
   "bold(Bacterial~C~(µmol~C~L^-1))",
   "bold(Cells~(L^-1))",
@@ -672,8 +672,8 @@ fig4_data <- p5_prod %>%
   mutate(
     biomass = ifelse(
       biomass == "Lower",
-      "bold(Lower~biomass)",
-      "bold(Higher~biomass)"
+      "bold(Lower~biomass~index)",
+      "bold(Higher~biomass~index)"
     )
   ) 
 ```
@@ -752,8 +752,8 @@ metric_data <- p5_prod %>%
   ) %>%
   mutate(biomass = ifelse(
     biomass == "Lower",
-    "bold(Lower~biomass)",
-    "bold(Higher~biomass)"
+    "bold(Lower~biomass~index)",
+    "bold(Higher~biomass~index)"
   ))
 ```
 

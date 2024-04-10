@@ -1,7 +1,7 @@
 Cruise map with satellite chl and ship sst
 ================
 Nick Baetge
-compiled most recently on 08 April, 2024
+compiled most recently on 10 April, 2024
 
 ``` r
 library(tidyverse)
@@ -266,7 +266,7 @@ leg2 <- basemap(data = region, bathymetry = F) +
     color = expression(SST ~ ("˚C"))
   ) +
   ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Lower"),
+    data = index %>% filter(viirs == 2),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
@@ -280,7 +280,7 @@ leg2 <- basemap(data = region, bathymetry = F) +
     seed = 1
   ) +
   geom_point(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Lower") %>% drop_na(exp),
+    data = index %>% filter(viirs == 2) %>% drop_na(exp),
     aes(x = lon, y = lat),
     size = 8,
     shape = 21,
@@ -302,11 +302,11 @@ leg2 <- basemap(data = region, bathymetry = F) +
 
 ``` r
 table_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn, contains("sd"))) %>% 
-  select(exp,date, lat, lon, everything(), -biomass, -stn) %>% 
+  select(exp, stn, date, lat, lon, everything(), -biomass, -stn) %>% 
   mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "nano_syn"))), round, 2) %>% 
   mutate_at(vars(contains("bbb")), round, 4) %>% 
   arrange(composite_z) %>% 
-  select(exp,exp,date, lat, lon, acs_n, cells_n, chl_ap676lh, poc_cp_660, everything()) 
+  select(exp, date, lat, lon, acs_n, cells_n, chl_ap676lh, poc_cp_660, everything()) 
 ```
 
     ## Rows: 14 Columns: 19
@@ -332,10 +332,10 @@ gt_tbl <- gt(table_data )
 table <- 
   gt_tbl |>
   tab_header(
-    title = md("**In situ conditions**"),
+    title = md("**In situ field conditions**"),
   ) |>
   cols_label(
-    exp = html("Experiment"),
+    exp = html("Experiment/station"),
     date = html("Date"),
     lat = html("Latitude, <br>&deg;N"),
     lon = html("Longitude, <br>&deg;W"),

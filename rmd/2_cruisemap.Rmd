@@ -265,7 +265,7 @@ leg2 <- basemap(data = region, bathymetry = F) +
     color = expression(SST ~ ("˚C"))
   ) +
   ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Lower"),
+    data = index %>% filter(viirs == 2),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
@@ -279,7 +279,7 @@ leg2 <- basemap(data = region, bathymetry = F) +
     seed = 1
   ) +
   geom_point(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Lower") %>% drop_na(exp),
+    data = index %>% filter(viirs == 2) %>% drop_na(exp),
     aes(x = lon, y = lat),
     size = 8,
     shape = 21,
