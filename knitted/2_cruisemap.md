@@ -327,24 +327,24 @@ leg2 <- basemap(data = region, bathymetry = F) +
 ``` r
 table_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn, contains("sd"))) %>% 
   select(exp, stn, date, lat, lon, everything(), -biomass, -stn) %>% 
-  mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "nano_syn"))), round, 2) %>% 
+  mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "nano_syn", "pico_syn"))), round, 2) %>% 
   mutate_at(vars(contains("bbb")), round, 4) %>% 
   arrange(composite_z) %>% 
   select(exp, date, lat, lon, acs_n, cells_n, chl_ap676lh, poc_cp_660, everything()) 
 ```
 
-    ## Rows: 14 Columns: 19
+    ## Rows: 14 Columns: 21
     ## ── Column specification ────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr  (3): date, exp, biomass
-    ## dbl (16): stn, lat, lon, chl_ap676lh, gamma_cp, bbb_532, poc_cp_660, nano_sy...
+    ## dbl (18): stn, lat, lon, chl_ap676lh, gamma_cp, bbb_532, poc_cp_660, nano_sy...
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    ## Rows: 14 Columns: 11
+    ## Rows: 14 Columns: 13
     ## ── Column specification ────────────────────────────────────────────────────────
     ## Delimiter: ","
-    ## dbl (11): stn, mean_chl_ap676lh, sd_chl_ap676lh, mean_gamma_cp, sd_gamma_cp,...
+    ## dbl (13): stn, mean_chl_ap676lh, sd_chl_ap676lh, mean_gamma_cp, sd_gamma_cp,...
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -359,7 +359,7 @@ table <-
     title = md("**In situ field conditions**"),
   ) |>
   cols_label(
-    exp = html("Experiment/station"),
+    exp = html("Experimental site"),
     date = html("Date"),
     lat = html("Latitude, <br>&deg;N"),
     lon = html("Longitude, <br>&deg;W"),
@@ -369,7 +369,8 @@ table <-
     gamma_cp = html("&gamma;"),
     bbb_532 = html("b<sub>bp</sub>/b<sub>p</sub>(532)"),
     poc_cp_660 = html("POC<sub>c<sub>p</sub>(660)"),
-    nano_syn = html("Nanoeukaryotes:<br><i>Synechococcus</i>"),
+    nano_syn = html("nanoeukaryotes:<br><i>Synechococcus</i>"),
+    pico_syn = html("picoeukaryotes:<br><i>Synechococcus</i>"),
     composite_z = md("**Biomass index**") 
   ) |>
   cols_merge_uncert(
@@ -392,6 +393,10 @@ table <-
     col_val = nano_syn,
     col_uncert = sd_nano_syn
   )|>
+  cols_merge_uncert(
+    col_val = pico_syn,
+    col_uncert = sd_pico_syn
+  )|>
   cols_merge_n_pct(
     col_n = chl_ap676lh,
     col_pct = z_chl_ap676lh
@@ -412,17 +417,21 @@ table <-
     col_n = nano_syn,
     col_pct = z_nano_syn
   ) |>
+   cols_merge_n_pct(
+    col_n = pico_syn,
+    col_pct = z_pico_syn
+  ) |>
   tab_spanner(
     label = html("mg m<sup>-3"),
     columns = c(chl_ap676lh, poc_cp_660)
   ) |>
   tab_spanner(
     label = html("Dimensionless"),
-    columns = c(gamma_cp, bbb_532, nano_syn, composite_z)
+    columns = c(gamma_cp, bbb_532, nano_syn, pico_syn, composite_z)
   ) |>
   tab_spanner(
-    label = html("Station mean &plusmn standard deviation (z-score)"),
-    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_532, nano_syn)
+    label = html("Experimental site mean &plusmn standard deviation (z-score)"),
+    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_532, nano_syn, pico_syn)
   ) |>
   tab_spanner(
     label = html("Inline bio-optics"),
@@ -430,7 +439,7 @@ table <-
   ) |>
   tab_spanner(
     label = html("Flow cytometry"),
-    columns = c(nano_syn)
+    columns = c(nano_syn, pico_syn)
   ) |>
   tab_spanner(
     label = html("<i>n"),

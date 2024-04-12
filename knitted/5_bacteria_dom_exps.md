@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 09 April, 2024
+compiled most recently on 12 April, 2024
 
 ``` r
 library(tidyverse)
@@ -705,13 +705,12 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
   ggh4x::facet_nested(
     factor(var, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(
       composite_z,
-       levels = c("-5.9", "-3.48", "-0.77", "0.09", "0.94", "0.96")
+      levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
     ),
     scales = "free_y",
     labeller = label_parsed
   ) +
-  labs(
-    y = "",
+  labs(y = "", 
     x = expression(Day),
     fill = "",
     color = "",
@@ -762,7 +761,7 @@ metrics <- ggplot(metric_data,
                   aes(
                     x = factor(
                       composite_z,
-                      levels = c("-5.9", "-3.48", "-0.77", "0.09", "0.94", "0.96")
+                      levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
                     ),
                     y = val,
                     fill = factor(trt, levels = plot_levels),
@@ -771,14 +770,14 @@ metrics <- ggplot(metric_data,
   geom_errorbar(aes(ymin = val - sd,
                     ymax = val + sd),
                 width = .1,
-                position = position_dodge(.4)) +
-  geom_linerange(
-    aes(ymin = 0, ymax = val),
-    position = position_dodge(width = 0.4),
-    linewidth = 1,
-    alpha = 0.8
-  ) +
-  geom_point(position = position_dodge(width = 0.4),
+                position = position_dodge(.2)) +
+  # geom_linerange(
+  #   aes(ymin = 0, ymax = val),
+  #   position = position_dodge(width = 0.4),
+  #   linewidth = 1,
+  #   alpha = 0.8
+  # ) +
+  geom_point(position = position_dodge(width = 0.2),
              size = 10,
              alpha = 0.8) +
   ggh4x::facet_nested_wrap(

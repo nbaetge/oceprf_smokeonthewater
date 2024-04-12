@@ -1,7 +1,7 @@
 Phytoplankton & zooplankton dilution experiments
 ================
 Nick Baetge
-compiled most recently on 09 April, 2024
+compiled most recently on 12 April, 2024
 
 ``` r
 library(tidyverse)
@@ -226,22 +226,25 @@ p_rates_summary <- rates %>%
 ```
 
 ``` r
-dots <- ggplot(p_rates_summary , aes(
-  x = composite_z,
-  # x = factor(exp, levels = plot_levels),
-  y = val,
-  fill = factor(trt, levels = plot_levels),
-  color = factor(trt, levels = plot_levels)
-)) +
+dots <- ggplot(p_rates_summary ,
+               aes(
+                 x = composite_z,
+                 # x = factor(exp, levels = plot_levels),
+                 y = val,
+                 fill = factor(trt, levels = plot_levels),
+                 color = factor(trt, levels = plot_levels)
+               )) +
   geom_errorbar(aes(ymin = val - sd,
                     ymax = val + sd),
-                width = .1,
+                width = .2,
                 position = position_dodge(.3)) +
-  geom_linerange(aes(ymin = 0, ymax = val),
-                 position = position_dodge(width = 0.05),
-                 linewidth = 1, alpha =0.8) +
-  geom_point(position = position_dodge(width = 0.3), size = 10, alpha = 0.8) +
-  # geom_smooth(se = F, method = "loess") +
+  # geom_linerange(aes(ymin = 0, ymax = val),
+  #                position = position_dodge(width = 0.05),
+  #                linewidth = 1, alpha =0.8) +
+  geom_point(position = position_dodge(width = 0.3),
+             size = 10,
+             alpha = 0.8) +
+  stat_smooth(method = "gam", formula = y ~ s(x, bs = "cs"), alpha = 0.2) +
   facet_grid(
     # ggh4x::facet_nested_wrap(
     factor(rate, levels = plot_levels) ~  factor(phyto, levels = plot_levels),
@@ -260,20 +263,48 @@ dots <- ggplot(p_rates_summary , aes(
 ```
 
 ``` r
-boxes <- ggplot(p_rates, aes(x = factor(amend, levels = plot_levels), y = val)) +
-  geom_boxplot(aes(fill = factor(amend, levels = plot_levels)), alpha = 0.7, outlier.shape = NA, width = 0.5, position = position_dodge(0.4) ) +
-  geom_jitter(aes(color = factor(trt, levels = plot_levels)), size = 7, position = position_jitterdodge(), alpha = 0.5) +
-   ggh4x::facet_nested(factor(rate, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(phyto, levels = plot_levels), labeller = label_parsed, scales = "free") +
+boxes <-
+  ggplot(p_rates, aes(x = factor(amend, levels = plot_levels), y = val)) +
+  geom_boxplot(
+    aes(fill = factor(amend, levels = plot_levels)),
+    alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.5,
+    position = position_dodge(0.4)
+  ) +
+  geom_jitter(
+    aes(color = factor(trt, levels = plot_levels)),
+    size = 7,
+    position = position_jitterdodge(),
+    alpha = 0.5
+  ) +
+  ggh4x::facet_nested(
+    factor(rate, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(phyto, levels = plot_levels),
+    labeller = label_parsed,
+    scales = "free"
+  ) +
   
-   scale_fill_manual(values = pal2) +
+  scale_fill_manual(values = pal2) +
   scale_color_manual(values = pal4) +
-  labs(y = expression(""), x = expression(""), fill = "", color = "") +
+  labs(
+    y = expression(""),
+    x = expression(""),
+    fill = "",
+    color = ""
+  ) +
   theme_linedraw() +
   custom.theme +
   guides(fill = "none") +
   # guides(color= "none",fill = guide_legend(override.aes = list(shape = 21))) +
   theme(axis.text.x = element_blank()) +
-  ggpubr::geom_pwc(label = "{p.format}{p.signif}", hide.ns = TRUE, vjust = 0.2, size = 0.6, label.size = 7)
+  ggpubr::geom_pwc(
+     method = "wilcoxon",
+    label = "{p.format}{p.signif}",
+    hide.ns = TRUE,
+    vjust = 0.2,
+    size = 0.6,
+    label.size = 7
+  )
 ```
 
 ``` r

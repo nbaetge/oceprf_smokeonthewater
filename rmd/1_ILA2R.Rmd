@@ -255,11 +255,12 @@ cells <- readxl::read_xlsx(influx_path, sheet = 2) %>%
   rename(syn = 2, 
          pico = 3, 
          nano = 4) %>% 
-  mutate(nano_syn = nano/syn) %>% 
-  select(stn, nano_syn) %>% 
+  mutate(nano_syn = nano/syn,
+         pico_syn = pico/syn) %>% 
+  select(stn, nano_syn, pico_syn) %>% 
   group_by(stn) %>% 
   summarize(across(
-    .cols = nano_syn,
+    .cols = c(nano_syn, pico_syn),
     .fns = list(mean = mean, sd = sd),
     na.rm = TRUE,
     .names = "{fn}_{col}"
@@ -275,8 +276,9 @@ cells_n <- readxl::read_xlsx(influx_path, sheet = 2) %>%
   rename(syn = 2, 
          pico = 3, 
          nano = 4) %>% 
-  mutate(nano_syn = nano/syn) %>% 
-  select(stn, nano_syn) %>%
+  mutate(nano_syn = nano/syn,
+         pico_syn = pico/syn) %>% 
+  select(stn, nano_syn, pico_syn) %>%
   group_by(stn) %>% 
   summarise(cells_n = n()) %>% 
   ungroup()
@@ -392,6 +394,8 @@ summary <- tidy %>%
     sd_poc_cp_660,
     mean_nano_syn,
     sd_nano_syn,
+    mean_pico_syn,
+    sd_pico_syn,
   )  
 ```
 
@@ -407,15 +411,17 @@ zscores <- summary %>%
     mean_bbb_532,
     mean_poc_cp_660,
     mean_nano_syn,
+    mean_pico_syn,
   ) %>%
   rename_all( ~ stringr::str_replace(., "mean_", "")) %>%
-  mutate(across(c(2:6), ~ (. - mean(., na.rm = T)) / sd(., na.rm = T),  .names = "z_{col}")) %>%
+  mutate(across(c(2:7), ~ (. - mean(., na.rm = T)) / sd(., na.rm = T),  .names = "z_{col}")) %>%
   mutate_at(vars(z_gamma_cp, z_bbb_532), ~ . * -1) %>% # reverse these z-scores as they are inversely related to particle size
-  mutate(composite_z = rowSums(across(c(7:10))),
+  mutate(composite_z = rowSums(across(c(7:11))),
          biomass = ifelse(composite_z < 0, "Lower", "Higher")) %>% 
    left_join(read_csv(exploc_path), .) %>% 
   left_join(., acs_n) %>% 
-  left_join(., cells_n)
+  left_join(., cells_n) %>% 
+  arrange(composite_z)
 ```
 
 
