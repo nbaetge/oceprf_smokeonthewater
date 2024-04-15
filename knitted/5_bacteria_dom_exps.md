@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 12 April, 2024
+compiled most recently on 15 April, 2024
 
 ``` r
 library(tidyverse)
@@ -625,7 +625,10 @@ plot_levels = c(
   "bold(Leachate)",
   "bold(Amendment)",
   "bold(Lower~biomass~index)",
+  "bold(Biomass~index~'<'~-1)",
   "bold(Higher~biomass~index)",
+  "bold(-1~'<'~biomass~index~'<'~1)",
+  "bold(Biomass~index~'>'~1)",
   "bold(TOC~(µmol~C~L^-1))",
   "bold(Bacterial~C~(µmol~C~L^-1))",
   "bold(Cells~(L^-1))",
@@ -675,7 +678,10 @@ fig4_data <- p5_prod %>%
       "bold(Lower~biomass~index)",
       "bold(Higher~biomass~index)"
     )
-  ) 
+  ) %>% 
+   mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
+                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
 ```
 
 ``` r
@@ -702,8 +708,16 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
   ) +
   scale_color_manual(values = pal4) +
   scale_fill_manual(values = pal4) +
+  # ggh4x::facet_nested(
+  #   factor(var, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(
+  #     composite_z,
+  #     levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
+  #   ),
+  #   scales = "free_y",
+  #   labeller = label_parsed
+  # ) +
   ggh4x::facet_nested(
-    factor(var, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(
+    factor(var, levels = plot_levels) ~  factor(biomass2, levels = plot_levels) + factor(
       composite_z,
       levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
     ),

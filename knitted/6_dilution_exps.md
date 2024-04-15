@@ -176,7 +176,10 @@ plot_levels = c(
   "bold(Leachate)",
   "bold(Amendment)",
   "bold(Lower~biomass~index)",
+  "bold(Biomass~index~'<'~-1)",
   "bold(Higher~biomass~index)",
+  "bold(-1~'<'~biomass~index~'<'~1)",
+  "bold(Biomass~index~'>'~1)",
   "bold(Growth~(d^-1))",
   "bold(Grazing~(d^-1))",
   "bold(Accumulation~(d^-1))",
@@ -211,7 +214,10 @@ p_rates <- rates %>%
       rate == "r" ~ "bold(Accumulation~(d^-1))"
     )
   ) %>%
-  distinct()
+  distinct() %>% 
+ mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
+                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
 
 p_rates_summary <- rates %>%
   select(exp:phyto, biomass, composite_z, ave_mu, ave_g, ave_r) %>%
@@ -244,7 +250,10 @@ p_rates_summary <- rates %>%
           rate == "sd_r" ~ "bold(Accumulation~(d^-1))"
         )
       )
-  )
+  ) %>% 
+  mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
+                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
 ```
 
 ``` r
@@ -309,7 +318,7 @@ boxes <-
     alpha = 0.5
   ) +
   ggh4x::facet_nested(
-    factor(rate, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(phyto, levels = plot_levels),
+    factor(rate, levels = plot_levels) ~  factor(biomass2, levels = plot_levels) + factor(phyto, levels = plot_levels),
     labeller = label_parsed,
     scales = "free"
   ) +
