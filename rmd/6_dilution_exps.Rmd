@@ -246,7 +246,7 @@ dots <- ggplot(p_rates_summary ,
                     ymax = val + sd),
                 width = .2,
                 position = position_dodge(.3)) +
-  stat_smooth(aes(fill = factor(amend, levels = plot_levels)),method = "gam", formula = y ~ s(x, bs = "cs"), alpha = 0.25, size = 2) +
+  stat_smooth(aes(fill = factor(amend, levels = plot_levels)),method = "gam", formula = y ~ s(x, bs = "tp"), alpha = 0.25, size = 2) +
    geom_point(aes(color = factor(trt, levels = plot_levels)), position = position_dodge(width = 0.3),
              size = 10,
              alpha = 0.8) +
