@@ -289,6 +289,7 @@ dots <- ggplot(p_rates_summary ,
     scales = "free",
     # nrow = 2
   ) +
+  scale_x_continuous(breaks = c(-6, -3, -1, 0 , 1, 3, 6)) +
   scale_fill_manual(values = pal4) +
   scale_color_manual(values = pal4) +
   labs(
@@ -322,7 +323,6 @@ boxes <-
     labeller = label_parsed,
     scales = "free"
   ) +
-  
   scale_fill_manual(values = pal2) +
   scale_color_manual(values = pal4) +
   labs(
