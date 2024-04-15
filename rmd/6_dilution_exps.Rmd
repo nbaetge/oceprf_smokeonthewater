@@ -51,33 +51,35 @@ context <- read_csv(context_path) %>%
 
 ```{r caluclate rates, message=F, warning = F}
 apparent_gr  <- readxl::read_xlsx(influx_path, sheet = 2) %>%
-  select(influx_id:nano_tf) %>% 
+  select(influx_id:nano_tf) %>%
   mutate(syn_100 = syn_t0[syn_dil == 1],
          pico_100 = pico_t0[pico_dil == 1],
-         nano_100 = nano_t0[nano_dil == 1]) %>% 
-  group_by(influx_id, trt) %>% 
-  fill(c(syn_100:nano_100)) %>% 
-  select(-contains("dil")) %>% 
-  mutate(syn_d = 1 - (syn_t0/syn_100),
-         pico_d = 1 - (pico_t0/pico_100),
-         nano_d = 1 - (nano_t0/nano_100),
-         syn_k = log(syn_tf / syn_t0),
-         pico_k = log(pico_tf / pico_t0),
-         nano_k = log(nano_tf / nano_t0)) %>% 
-  select(influx_id, trt, contains(c("_d", "_k"))) %>% 
+         nano_100 = nano_t0[nano_dil == 1]) %>%
+  group_by(influx_id, trt) %>%
+  fill(c(syn_100:nano_100)) %>%
+  select(-contains("dil")) %>%
+  mutate(
+    syn_d = 1 - (syn_t0 / syn_100),
+    pico_d = 1 - (pico_t0 / pico_100),
+    nano_d = 1 - (nano_t0 / nano_100),
+    syn_k = log(syn_tf / syn_t0),
+    pico_k = log(pico_tf / pico_t0),
+    nano_k = log(nano_tf / nano_t0)
+  ) %>%
+  select(influx_id, trt, contains(c("_d", "_k"))) %>%
   ungroup()
-  
+
 rates <- apparent_gr %>%
   select(influx_id:syn_d, syn_k) %>%
   rename(d = syn_d,
          k = syn_k) %>%
-  mutate(phyto = "syn", .after = "trt") %>% 
+  mutate(phyto = "syn", .after = "trt") %>%
   bind_rows(
     .,
     apparent_gr %>%
       select(influx_id:trt, pico_d, pico_k) %>%
       rename(d = pico_d,
-             k = pico_k) %>% 
+             k = pico_k) %>%
       mutate(phyto = "pico", .after = "trt")
   ) %>%
   bind_rows(
@@ -85,28 +87,30 @@ rates <- apparent_gr %>%
     apparent_gr %>%
       select(influx_id:trt, nano_d, nano_k) %>%
       rename(d = nano_d,
-             k = nano_k) %>% 
+             k = nano_k) %>%
       mutate(phyto = "nano", .after = "trt")
-  ) %>% 
-  group_by(influx_id, trt, phyto) %>% 
-  mutate(g = ifelse(d != 0, (k - k[d == 0])/d, NA),
-         theory_violated = ifelse(g < 0, T, F),
-         g_corr = ifelse(theory_violated == T, 0, g),
-         ave_g = mean(g_corr, na.rm = T),
-         sd_g = sd(g_corr, na.rm = T),
-         mu = g_corr + k[d == 0],
-         ave_mu = mean(mu, na.rm = T),
-         sd_mu = sd(mu, na.rm = T),
-         r = mu - g_corr,
-         ave_r = mean(r, na.rm = T),
-         sd_r = sd(r, na.rm = T)) %>% 
-  ungroup() %>% 
-  left_join(ids, .) %>% 
-  left_join(., context) %>% 
-   mutate(amend = ifelse(trt == "CTL", "Control", "Ash leachate"),
+  ) %>%
+  group_by(influx_id, trt, phyto) %>%
+  mutate(
+    g = ifelse(d != 0, (k - k[d == 0]) / d, NA),
+    theory_violated = ifelse(g < 0, T, F),
+    g_corr = ifelse(theory_violated == T, 0, g),
+    ave_g = mean(g_corr, na.rm = T),
+    sd_g = sd(g_corr, na.rm = T),
+    mu = g_corr + k[d == 0],
+    ave_mu = mean(mu, na.rm = T),
+    sd_mu = sd(mu, na.rm = T),
+    r = mu - g_corr,
+    ave_r = mean(r, na.rm = T),
+    sd_r = sd(r, na.rm = T)
+  ) %>%
+  ungroup() %>%
+  left_join(ids, .) %>%
+  left_join(., context) %>%
+  mutate(amend = ifelse(trt == "CTL", "Control", "Ash leachate"),
          .after = trt) %>%
   mutate(
-     ash = case_when(
+    ash = case_when(
       trt == "CTL" ~ "Control",
       trt == "TFA" ~ "Thomas Fire Ash",
       trt == "LTA" ~ "Lab Ash",
@@ -124,13 +128,13 @@ rates <- apparent_gr %>%
       phyto == "nano" ~ "Nanoeukaryotes"
     )
   ) %>%
-   mutate(
+  mutate(
     biomass = ifelse(
       biomass == "Lower",
       "bold(Lower~biomass~index)",
       "bold(Higher~biomass~index)"
     )
-  ) %>% 
+  ) %>%
   select(exp:trt, ash, everything())
 
 ```
@@ -208,48 +212,78 @@ plot_levels = c(
 
 
 ```{r pivot data for plotting, message=F, warning = F}
-p_rates <- rates %>% 
-  select(exp:phyto, biomass, composite_z, mu, g_corr, r) %>% 
-  pivot_longer(c(mu, g_corr, r), names_to = "rate", values_to = "val") %>% 
-  mutate(rate = case_when(rate == "mu" ~ "bold(Growth~(d^-1))",
-                          rate == "g_corr" ~ "bold(Grazing~(d^-1))",
-                          rate == "r" ~ "bold(Accumulation~(d^-1))"
-                          )) %>% 
-  distinct() 
+p_rates <- rates %>%
+  select(exp:phyto, biomass, composite_z, mu, g_corr, r) %>%
+  pivot_longer(c(mu, g_corr, r), names_to = "rate", values_to = "val") %>%
+  mutate(
+    rate = case_when(
+      rate == "mu" ~ "bold(Growth~(d^-1))",
+      rate == "g_corr" ~ "bold(Grazing~(d^-1))",
+      rate == "r" ~ "bold(Accumulation~(d^-1))"
+    )
+  ) %>%
+  distinct()
 
-p_rates_summary <- rates %>% 
-  select(exp:phyto, biomass, composite_z, ave_mu, ave_g, ave_r) %>% 
-  distinct() %>% 
-  pivot_longer(c(ave_mu, ave_g, ave_r), names_to = "rate", values_to = "val") %>% 
-  mutate(rate = case_when(rate == "ave_mu" ~ "bold(Growth~(d^-1))",
-                          rate == "ave_g" ~ "bold(Grazing~(d^-1))",
-                          rate == "ave_r" ~ "bold(Accumulation~(d^-1))"
-                          )) %>% 
-  distinct() %>% 
-  left_join(., rates %>% 
-  select(exp:phyto, biomass,composite_z, sd_mu, sd_g, sd_r) %>% 
-  distinct() %>% 
-  pivot_longer(c(sd_mu, sd_g, sd_r), names_to = "rate", values_to = "sd") %>% 
-  mutate(rate = case_when(rate == "sd_mu" ~ "bold(Growth~(d^-1))",
-                          rate == "sd_g" ~ "bold(Grazing~(d^-1))",
-                          rate == "sd_r" ~ "bold(Accumulation~(d^-1))"
-                          )) )
+p_rates_summary <- rates %>%
+  select(exp:phyto, biomass, composite_z, ave_mu, ave_g, ave_r) %>%
+  distinct() %>%
+  pivot_longer(c(ave_mu, ave_g, ave_r),
+               names_to = "rate",
+               values_to = "val") %>%
+  mutate(
+    rate = case_when(
+      rate == "ave_mu" ~ "bold(Growth~(d^-1))",
+      rate == "ave_g" ~ "bold(Grazing~(d^-1))",
+      rate == "ave_r" ~ "bold(Accumulation~(d^-1))"
+    )
+  ) %>%
+  distinct() %>%
+  left_join(
+    .,
+    rates %>%
+      select(exp:phyto, biomass, composite_z, sd_mu, sd_g, sd_r) %>%
+      distinct() %>%
+      pivot_longer(
+        c(sd_mu, sd_g, sd_r),
+        names_to = "rate",
+        values_to = "sd"
+      ) %>%
+      mutate(
+        rate = case_when(
+          rate == "sd_mu" ~ "bold(Growth~(d^-1))",
+          rate == "sd_g" ~ "bold(Grazing~(d^-1))",
+          rate == "sd_r" ~ "bold(Accumulation~(d^-1))"
+        )
+      )
+  )
 ```
 
 ```{r fig.width=32, fig.asp = 0.7, warning = F, message = F}
 dots <- ggplot(p_rates_summary ,
-               aes(
-                 x = composite_z,
-                 y = val,
-               )) +
-  geom_errorbar(aes(color = factor(trt, levels = plot_levels), ymin = val - sd,
-                    ymax = val + sd),
-                width = .2,
-                position = position_dodge(.3)) +
-  stat_smooth(aes(fill = factor(amend, levels = plot_levels)),method = "gam", formula = y ~ s(x, bs = "tp"), alpha = 0.25, size = 2) +
-   geom_point(aes(color = factor(trt, levels = plot_levels)), position = position_dodge(width = 0.3),
-             size = 10,
-             alpha = 0.8) +
+               aes(x = composite_z,
+                   y = val,)) +
+  geom_errorbar(
+    aes(
+      color = factor(trt, levels = plot_levels),
+      ymin = val - sd,
+      ymax = val + sd
+    ),
+    width = .2
+    # position = position_dodge(.3)
+  ) +
+  stat_smooth(
+    aes(fill = factor(amend, levels = plot_levels)),
+    method = "gam",
+    formula = y ~ s(x, bs = "tp"),
+    alpha = 0.25,
+    size = 2
+  ) +
+  geom_point(
+    aes(color = factor(trt, levels = plot_levels)),
+    # position = position_dodge(width = 0.3),
+    size = 10,
+    alpha = 0.8
+  ) +
   facet_grid(
     # ggh4x::facet_nested_wrap(
     factor(rate, levels = plot_levels) ~  factor(phyto, levels = plot_levels),
@@ -259,10 +293,12 @@ dots <- ggplot(p_rates_summary ,
   ) +
   scale_fill_manual(values = pal4) +
   scale_color_manual(values = pal4) +
-  labs(y = expression(""),
-       x = expression("Biomass index"),
-       fill = "GAM",
-       color = "") +
+  labs(
+    y = expression(""),
+    x = expression("Biomass index"),
+    fill = "GAM",
+    color = ""
+  ) +
   theme_linedraw() +
   custom.theme
 ```
@@ -303,7 +339,7 @@ boxes <-
   # guides(color= "none",fill = guide_legend(override.aes = list(shape = 21))) +
   theme(axis.text.x = element_blank()) +
   ggpubr::geom_pwc(
-     method = "wilcoxon",
+    method = "wilcoxon",
     label = "{p.format}{p.signif}",
     hide.ns = TRUE,
     vjust = 0.2,
@@ -314,7 +350,7 @@ boxes <-
 
 ```{r Figure4, fig.width=32, fig.asp= 1.42, warning = F, message=F}
 (
- dots
+  dots
 ) /(boxes + guides(color = "none", fill = "none")) + plot_layout(heights = c(1,1)) + plot_annotation(tag_levels = 'A')  &
   theme(plot.tag = element_text(size = 28))
 ```
