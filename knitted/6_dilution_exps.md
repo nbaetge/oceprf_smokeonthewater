@@ -1,7 +1,7 @@
 Phytoplankton & zooplankton dilution experiments
 ================
 Nick Baetge
-compiled most recently on 12 April, 2024
+compiled most recently on 15 April, 2024
 
 ``` r
 library(tidyverse)
@@ -229,22 +229,16 @@ p_rates_summary <- rates %>%
 dots <- ggplot(p_rates_summary ,
                aes(
                  x = composite_z,
-                 # x = factor(exp, levels = plot_levels),
                  y = val,
-                 fill = factor(trt, levels = plot_levels),
-                 color = factor(trt, levels = plot_levels)
                )) +
-  geom_errorbar(aes(ymin = val - sd,
+  geom_errorbar(aes(color = factor(trt, levels = plot_levels), ymin = val - sd,
                     ymax = val + sd),
                 width = .2,
                 position = position_dodge(.3)) +
-  # geom_linerange(aes(ymin = 0, ymax = val),
-  #                position = position_dodge(width = 0.05),
-  #                linewidth = 1, alpha =0.8) +
-  geom_point(position = position_dodge(width = 0.3),
+  stat_smooth(aes(fill = factor(amend, levels = plot_levels)),method = "gam", formula = y ~ s(x, bs = "cs"), alpha = 0.25, size = 2) +
+   geom_point(aes(color = factor(trt, levels = plot_levels)), position = position_dodge(width = 0.3),
              size = 10,
              alpha = 0.8) +
-  stat_smooth(method = "gam", formula = y ~ s(x, bs = "cs"), alpha = 0.2) +
   facet_grid(
     # ggh4x::facet_nested_wrap(
     factor(rate, levels = plot_levels) ~  factor(phyto, levels = plot_levels),
@@ -256,10 +250,10 @@ dots <- ggplot(p_rates_summary ,
   scale_color_manual(values = pal4) +
   labs(y = expression(""),
        x = expression("Biomass index"),
+       fill = "GAM",
        color = "") +
   theme_linedraw() +
-  custom.theme +
-  guides(fill = "none") 
+  custom.theme
 ```
 
 ``` r

@@ -344,9 +344,9 @@ tidy <- acs %>%
     bbb_470 = bbp_470 / bp_470,
     bbb_532 = bbp_532 / bp_532,
     bbb_660 = bbp_660 / bp_660,
-    chl_poc_cp = chl_ap676lh / poc_cp_660
+    poc_chl = poc_cp_660 / chl_ap676lh, 
   ) %>%
-  select(dt, contains(c("gamma", "bbb", "poc", "cphyto", "ap676", "chl_poc"))) %>%
+  select(dt, contains(c("gamma", "bbb", "poc", "cphyto", "ap676", "poc_chl"))) %>%
   rename(m_dt = dt) %>%
   mutate(dt = matlab2POS(m_dt), .before = m_dt) %>%
   select(-m_dt) %>%
@@ -401,6 +401,8 @@ summary <- tidy %>%
     sd_bbb_532,
     mean_poc_cp_660,
     sd_poc_cp_660,
+    mean_poc_chl,
+    sd_poc_chl,
     mean_nano_syn,
     sd_nano_syn,
     mean_pico_syn,

@@ -327,7 +327,7 @@ leg2 <- basemap(data = region, bathymetry = F) +
 ``` r
 table_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn, contains("sd"))) %>% 
   select(exp, stn, date, lat, lon, everything(), -biomass, -stn) %>% 
-  mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "nano_syn", "pico_syn"))), round, 2) %>% 
+  mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "poc_chl", "nano_syn", "pico_syn"))), round, 2) %>% 
   mutate_at(vars(contains("bbb")), round, 4) %>% 
   arrange(composite_z) %>% 
   select(exp, date, lat, lon, acs_n, cells_n, chl_ap676lh, poc_cp_660, everything()) 
@@ -341,10 +341,10 @@ table_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    ## Rows: 14 Columns: 13
+    ## Rows: 14 Columns: 15
     ## ── Column specification ────────────────────────────────────────────────────────
     ## Delimiter: ","
-    ## dbl (13): stn, mean_chl_ap676lh, sd_chl_ap676lh, mean_gamma_cp, sd_gamma_cp,...
+    ## dbl (15): stn, mean_chl_ap676lh, sd_chl_ap676lh, mean_gamma_cp, sd_gamma_cp,...
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
