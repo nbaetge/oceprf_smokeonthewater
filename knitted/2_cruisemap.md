@@ -1,7 +1,7 @@
 Cruise map with satellite chl and ship sst
 ================
 Nick Baetge
-compiled most recently on 12 April, 2024
+compiled most recently on 17 April, 2024
 
 ``` r
 library(tidyverse)
@@ -327,10 +327,10 @@ leg2 <- basemap(data = region, bathymetry = F) +
 ``` r
 table_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn, contains("sd"))) %>% 
   select(exp, stn, date, lat, lon, everything(), -biomass, -stn) %>% 
-  mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "poc_chl", "nano_syn", "pico_syn"))), round, 2) %>% 
+  mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "nano_syn", "pico_syn"))), round, 2) %>% 
   mutate_at(vars(contains("bbb")), round, 4) %>% 
   arrange(composite_z) %>% 
-  select(exp, date, lat, lon, acs_n, cells_n, chl_ap676lh, poc_cp_660, everything()) 
+  select(exp, date, lat, lon, acs_n, cells_n, chl_ap676lh, poc_cp_660, everything(), -contains("poc_chl")) 
 ```
 
     ## Rows: 14 Columns: 21

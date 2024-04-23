@@ -1,7 +1,7 @@
 Ash leachate
 ================
 Nick Baetge
-compiled most recently on 08 April, 2024
+compiled most recently on 17 April, 2024
 
 ``` r
 library(tidyverse)
@@ -510,12 +510,12 @@ nuts <- ggplot(data = conc, aes(
                     ymax = val + sd),
                 width = .2,
                 position = position_dodge(.4)) +
-  geom_linerange(
-    aes(ymin = 0, ymax = val),
-    position = position_dodge(width = 0.4),
-    linewidth = 1,
-    alpha = 0.8
-  ) +
+  # geom_linerange(
+  #   aes(ymin = 0, ymax = val),
+  #   position = position_dodge(width = 0.4),
+  #   linewidth = 1,
+  #   alpha = 0.8
+  # ) +
   geom_point(position = position_dodge(width = 0.4),
              size = 10,
              alpha = 0.8) +
@@ -564,12 +564,12 @@ slope_plot <-
     y = slope,
     color = factor(trt, levels = plot_levels)
   )) +
-  geom_linerange(
-    aes(ymin = 0, ymax = slope),
-    position = position_dodge(width = 0.4),
-    linewidth = 1.5,
-    alpha = 0.8
-  ) +
+  # geom_linerange(
+  #   aes(ymin = 0, ymax = slope),
+  #   position = position_dodge(width = 0.4),
+  #   linewidth = 1.5,
+  #   alpha = 0.8
+  # ) +
   geom_point(position = position_dodge(width = 0.4),
              size = 10,
              alpha = 0.8) +
