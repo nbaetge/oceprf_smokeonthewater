@@ -1,7 +1,7 @@
 Cruise map with satellite chl and ship sst
 ================
 Nick Baetge
-compiled most recently on 17 April, 2024
+compiled most recently on 26 April, 2024
 
 ``` r
 library(tidyverse)
@@ -114,7 +114,10 @@ index <- read_csv(index_path) %>%
   ) ~ 1,
   between(
     date, ymd("2023-08-13"), ymd("2023-08-21")
-  ) ~ 2))
+  ) ~ 2)) %>% 
+   mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
+                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
 ```
 
 # Plot data
@@ -189,21 +192,33 @@ leg1 <- basemap(data = region, bathymetry = F) +
     color = expression(SST ~ ("˚C"))
   ) +
   ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 1) %>% filter(biomass == "Higher"),
+    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'>'~1)"),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
-    color = "#ff0000",
+    color = "#b51963",
     size = 10,
     box.padding = 0.4,
     min.segment.length = 1,
     segment.size = 1,
-    segment.linetype = 2,
     xlim = c(-120, -116),
     ylim = c(35, 36)
   ) +
   ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 1) %>% filter(biomass == "Lower"),
+    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)"),
+    aes(x = lon, y = lat, label = exp),
+    alpha = 0.75,
+    fontface = 'bold',
+    color = "#0073E6",
+    size = 10,
+    box.padding = 0.4,
+    min.segment.length = 1,
+    segment.size = 1,
+    xlim = c(-119, -116),
+    ylim = c(34, 34.5)
+  ) +
+  ggrepel::geom_label_repel(
+    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)"),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
@@ -212,20 +227,30 @@ leg1 <- basemap(data = region, bathymetry = F) +
     box.padding = 0.4,
     min.segment.length = 1,
     segment.size = 1,
-    xlim = c(-120, -116),
-    ylim = c(34.5, 35)
+    xlim = c(-119, -113),
+    ylim = c(33.5, 35)
   ) +
   geom_point(
-    data = index %>% filter(viirs == 1) %>% filter(biomass == "Higher") %>% drop_na(exp),
+    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'>'~1)") %>% drop_na(exp),
     aes(x = lon, y = lat),
-    color = "#ff0000",
+    color = "#b51963",
     size = 8,
     shape = 21,
     stroke = 3
   ) +
   geom_point(
-    data = index %>% filter(viirs == 1) %>% filter(biomass == "Lower") %>% drop_na(exp),
+    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)") %>% drop_na(exp),
     aes(x = lon, y = lat),
+    color = "#0073E6",
+    size = 8,
+    shape = 21,
+    stroke = 3
+  ) +
+   geom_point(
+    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)") %>%
+      drop_na(exp),
+    aes(x = lon, y = lat),
+    color = "black",
     size = 8,
     shape = 21,
     stroke = 3
@@ -267,21 +292,7 @@ leg2 <- basemap(data = region, bathymetry = F) +
   ) +
     
    ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Higher"),
-    aes(x = lon, y = lat, label = exp),
-    alpha = 0.75,
-    fontface = 'bold',
-    color = "#ff0000",
-    size = 10,
-    box.padding = 0.8,
-    min.segment.length = 1,
-    segment.size = 1,
-    segment.linetype = 2,
-     xlim = c(-120, -116),
-    ylim = c(34.5, 36)
-  ) +
-  ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Lower"),
+    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)"),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
@@ -290,22 +301,36 @@ leg2 <- basemap(data = region, bathymetry = F) +
     box.padding = 0.8,
     min.segment.length = 1,
     segment.size = 1,
-    xlim = c(-120, -115),
+     xlim = c(-119, -114),
+    ylim = c(34.7, 36)
+  ) +
+  ggrepel::geom_label_repel(
+    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)") ,
+    aes(x = lon, y = lat, label = exp),
+    alpha = 0.75,
+    fontface = 'bold',
+    color = "#0073E6",
+    size = 10,
+    box.padding = 0.8,
+    min.segment.length = 1,
+    segment.size = 1,
+    xlim = c(-120, -116),
     ylim = c(34, 36),
     seed = 1
   ) +
   
    geom_point(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Higher") %>% drop_na(exp),
+    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)") %>% drop_na(exp),
     aes(x = lon, y = lat),
-    color = "#ff0000",
+    color = "black",
     size = 8,
     shape = 21,
     stroke = 3
   ) +
   geom_point(
-    data = index %>% filter(viirs == 2) %>% filter(biomass == "Lower") %>% drop_na(exp),
+    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)")  %>% drop_na(exp),
     aes(x = lon, y = lat),
+    color = "#0073E6",
     size = 8,
     shape = 21,
     stroke = 3

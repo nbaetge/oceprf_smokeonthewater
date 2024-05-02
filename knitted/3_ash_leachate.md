@@ -1,7 +1,7 @@
 Ash leachate
 ================
 Nick Baetge
-compiled most recently on 17 April, 2024
+compiled most recently on 01 May, 2024
 
 ``` r
 library(tidyverse)
@@ -611,7 +611,7 @@ eems_plot <- ggplot() +
     data = nelson,
     aes(x = ex, y = em, label = peak),
     alpha = 0.7,
-    size = 5
+    size = 12
   ) +
   facet_wrap( ~ factor(trt, levels = plot_levels), scales = "free") +
   theme_test() +

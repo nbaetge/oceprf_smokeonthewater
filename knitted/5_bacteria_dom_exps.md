@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 15 April, 2024
+compiled most recently on 01 May, 2024
 
 ``` r
 library(tidyverse)
@@ -629,9 +629,10 @@ plot_levels = c(
   "bold(Higher~biomass~index)",
   "bold(-1~'<'~biomass~index~'<'~1)",
   "bold(Biomass~index~'>'~1)",
+  "bold(Cells~(L^-1))",
   "bold(TOC~(µmol~C~L^-1))",
   "bold(Bacterial~C~(µmol~C~L^-1))",
-  "bold(Cells~(L^-1))",
+  "bold(DOC~(µmol~C~L^-1))",
   "bold(Growth~rate~(d^-1))",
   "bold(BGE~(dimensionless))",
   "bold(+DOC~bioav.~('%'))",
@@ -661,6 +662,14 @@ fig4_data <- p5_prod %>%
       select(exp, trt, biomass, days,  composite_z, sd_toc) %>%
       mutate(var = "bold(TOC~(µmol~C~L^-1))") %>%
       rename(sd = sd_toc)
+  ) %>%
+   bind_rows(
+    .,
+    p5_prod %>%
+      select(exp, trt, biomass, days,  composite_z, doc, sd_toc) %>%
+      mutate(var = "bold(DOC~(µmol~C~L^-1))") %>%
+      rename(val = doc,
+             sd = sd_toc)
   ) %>%
   bind_rows(
     .,
@@ -720,7 +729,7 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
     factor(var, levels = plot_levels) ~  factor(biomass2, levels = plot_levels) + factor(
       composite_z,
       levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
-    ),
+    ) + exp,
     scales = "free_y",
     labeller = label_parsed
   ) +
