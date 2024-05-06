@@ -1,7 +1,7 @@
 Phytoplankton & zooplankton dilution experiments
 ================
 Nick Baetge
-compiled most recently on 15 April, 2024
+compiled most recently on 06 May, 2024
 
 ``` r
 library(tidyverse)
@@ -178,7 +178,7 @@ plot_levels = c(
   "bold(Lower~biomass~index)",
   "bold(Biomass~index~'<'~-1)",
   "bold(Higher~biomass~index)",
-  "bold(-1~'<'~biomass~index~'<'~1)",
+  "bold(-1~'<'~Biomass~index~'<'~1)",
   "bold(Biomass~index~'>'~1)",
   "bold(Growth~(d^-1))",
   "bold(Grazing~(d^-1))",
@@ -216,8 +216,8 @@ p_rates <- rates %>%
   ) %>%
   distinct() %>% 
  mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
-                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
+                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)")) 
 
 p_rates_summary <- rates %>%
   select(exp:phyto, biomass, composite_z, ave_mu, ave_g, ave_r) %>%
@@ -252,8 +252,9 @@ p_rates_summary <- rates %>%
       )
   ) %>% 
   mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
-                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
+                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)")) %>% 
+  left_join(., p_rates %>% select(phyto, rate) %>% distinct() %>%  mutate(flabel = 1:n()))
 ```
 
 ``` r
@@ -299,7 +300,8 @@ dots <- ggplot(p_rates_summary ,
     color = ""
   ) +
   theme_linedraw() +
-  custom.theme
+  custom.theme +
+  geom_label(aes(x = 6, y = -0.5, label = flabel), size = 14)
 ```
 
 ``` r
@@ -312,6 +314,8 @@ boxes <-
     width = 0.5,
     position = position_dodge(0.4)
   ) +
+  geom_rect(data = subset(p_rates, biomass2 == "bold(-1~'<'~Biomass~index~'<'~1)"), fill = "light grey",xmin = -Inf,xmax = Inf,
+            ymin = -Inf,ymax = Inf, alpha = 0.01) +
   geom_jitter(
     aes(color = factor(trt, levels = plot_levels)),
     size = 7,

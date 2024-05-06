@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 01 May, 2024
+compiled most recently on 06 May, 2024
 
 ``` r
 library(tidyverse)
@@ -627,7 +627,7 @@ plot_levels = c(
   "bold(Lower~biomass~index)",
   "bold(Biomass~index~'<'~-1)",
   "bold(Higher~biomass~index)",
-  "bold(-1~'<'~biomass~index~'<'~1)",
+  "bold(-1~'<'~Biomass~index~'<'~1)",
   "bold(Biomass~index~'>'~1)",
   "bold(Cells~(L^-1))",
   "bold(TOC~(µmol~C~L^-1))",
@@ -689,7 +689,7 @@ fig4_data <- p5_prod %>%
     )
   ) %>% 
    mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
                               composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
 ```
 
@@ -702,6 +702,8 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
                    color = factor(trt, levels = plot_levels),
                    fill = factor(trt, levels = plot_levels)
                  )) +
+   geom_rect(data = subset(fig4_data[!is.na(fig4_data$val), ], biomass2 == "bold(-1~'<'~Biomass~index~'<'~1)"), fill = "light grey",xmin = -Inf,xmax = Inf,
+            ymin = -Inf,ymax = Inf, alpha = 0.01) +
   geom_errorbar(
     aes(ymin = val - sd, ymax = val + sd),
     width = 0.2,

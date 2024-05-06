@@ -556,7 +556,7 @@ plot_levels = c(
   "bold(Lower~biomass~index)",
   "bold(Biomass~index~'<'~-1)",
   "bold(Higher~biomass~index)",
-  "bold(-1~'<'~biomass~index~'<'~1)",
+  "bold(-1~'<'~Biomass~index~'<'~1)",
   "bold(Biomass~index~'>'~1)",
   "bold(Cells~(L^-1))",
   "bold(TOC~(µmol~C~L^-1))",
@@ -618,7 +618,7 @@ fig4_data <- p5_prod %>%
     )
   ) %>% 
    mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
+                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
                               composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
 ```
 
@@ -631,6 +631,8 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
                    color = factor(trt, levels = plot_levels),
                    fill = factor(trt, levels = plot_levels)
                  )) +
+   geom_rect(data = subset(fig4_data[!is.na(fig4_data$val), ], biomass2 == "bold(-1~'<'~Biomass~index~'<'~1)"), fill = "light grey",xmin = -Inf,xmax = Inf,
+            ymin = -Inf,ymax = Inf, alpha = 0.01) +
   geom_errorbar(
     aes(ymin = val - sd, ymax = val + sd),
     width = 0.2,
@@ -750,7 +752,7 @@ metrics <- ggplot(metric_data,
   theme(panel.spacing.y = unit(0.5, "cm"))
 ```
 
-```{r Figure3, fig.width=32, fig.asp= 1.42, warning = F, message=F}
+```{r Figure3, fig.width=35, fig.asp= 1.42, warning = F, message=F}
 (
   curves
 ) /(metrics  + guides(color = "none", fill = "none")) + plot_layout(heights = c(0.8, 0.7)) + plot_annotation(tag_levels = 'A')  &
