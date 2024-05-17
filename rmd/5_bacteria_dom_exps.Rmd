@@ -18,6 +18,7 @@ library(lubridate)
 library(purrr)
 library(patchwork)
 library(janitor)
+library(gt)
 ```
 
 ```{r define path to save data}
@@ -368,16 +369,21 @@ p5_boc <- read_csv(chn_path) %>%
   select(exp, trt, desc, tp, gf75_cells, everything()) %>% 
   mutate(fgC_cell = (mean_c_umol * 12 * 10^9)/gf75_cells,
          fgN_cell = (mean_n_umol * 14 * 10^9)/gf75_cells ) %>% 
+  ungroup() %>% 
   mutate(desc = case_when(trt == 1 ~ "Control",
                           trt == 2 ~ "Thomas Fire Ash",
                           trt == 3 ~ "Low Temp. Ash",
                           trt == 4 ~ "High Temp. Ash")) %>% 
   select(exp, trt, desc, tp, fgC_cell, fgN_cell) %>% 
   left_join(p5_fcm,.) %>%
-  mutate(boc = (mean_cells_ml * fgC_cell) / (12 * 10^6),
-         bon = (mean_cells_ml * fgN_cell) / (14 * 10^6)) %>% 
   select(-trt)  %>% 
-  rename(trt = desc)
+  rename(trt = desc)  %>% 
+  group_by(exp, trt) %>%
+  mutate(fgC_cell = ifelse(exp == "B2" & tp == 3, fgC_cell[tp == 2], fgC_cell)) %>% 
+  mutate(interp_fgC_cell = zoo::na.approx(fgC_cell, dt, na.rm = F)) %>% 
+  mutate(boc = (mean_cells_ml * interp_fgC_cell) / (12 * 10^6)) %>% 
+  ungroup() %>% 
+  mutate(interp_bocdoc = ifelse(is.na(fgC_cell) | exp == "B2" & tp == 3, T, F))
 ```
 
 c_blank = 15.3 +/- 5.1, n = 9
@@ -390,6 +396,7 @@ n_blank = 7.1 +/- 1, n = 9
 ```{r define paths to doc data}
 doc_path <- "//Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r5_doc.xlsx"
 ```
+
 
 ```{r tidy and derive bge and doc bioav, message = F}
 doc <- readxl::read_xlsx(doc_path, skip = 27) %>%
@@ -416,12 +423,33 @@ doc <- readxl::read_xlsx(doc_path, skip = 27) %>%
   ) %>%
   select(-btl) %>%
   left_join(p5_boc, .) %>%
-  mutate(doc = mean_toc - boc)
+  mutate(doc = mean_toc - boc) %>% 
+  mutate(toc_unc = sd_toc / sqrt(3),
+         mean_toc_unc = round(mean(toc_unc), 1)) 
+
+
+#inclusion points
+
+incl <- doc %>% 
+  select(exp, trt, tp, days) %>%
+  mutate(bge_inclusion = ifelse(exp == "B16" & trt == "Control" & tp %in% c(0, 1, 2, 3, 4, 5) |
+                                  exp == "B16" & trt != "Control" & tp %in% c(0, 1, 2, 3, 4, 5) |
+                                  exp == "B15" & tp %in% c(0, 1, 2, 3) |
+                                  exp == "B1"  & tp %in% c(0, 1, 2, 3, 4, 5) |
+                                  exp == "B14" & trt != "Control" & tp %in% c(0, 1, 2, 3, 4) |
+                                  exp == "B14" & trt == "Control" & tp %in% c(0, 1, 2, 3, 4, 5) |
+                                  exp == "B3"  & tp %in% c(0, 1, 2) |
+                                  exp == "B2" & tp %in% c(0, 1, 2, 3),
+                                T, F)) %>% 
+  filter(bge_inclusion == T)
+
 
 #calculate boc rate of change as slope
 boc_rate <- doc %>% 
   select(exp, trt, tp, days, boc) %>%
   drop_na(boc) %>%
+  left_join(., incl) %>% 
+  drop_na(bge_inclusion) %>% 
   group_by(exp, trt) %>%
   mutate(group_id = cur_group_id()) %>%
   ungroup() %>%
@@ -447,6 +475,8 @@ boc_rate <- doc %>%
 doc_rate <- doc %>%
   select(exp, trt, tp, days, doc) %>%
   drop_na(doc) %>%
+  left_join(., incl) %>% 
+  drop_na(bge_inclusion) %>% 
   group_by(exp, trt) %>%
   mutate(group_id = cur_group_id()) %>%
   ungroup() %>%
@@ -475,7 +505,7 @@ p5_bge_bioav <- doc %>%
   left_join(., doc_rate) %>% 
   group_by(exp, trt) %>% 
   mutate(doc_rem = ifelse(is.na(doc[tp == 5]), first(doc) - doc[tp == 2], first(doc) - last(doc) ),
-         doc_bdl = ifelse(doc_rem <= 1.4, T, F),
+         doc_bdl = ifelse(doc_rem <= 0.8, T, F),
          bge = ifelse(doc_bdl == F, boc_rate/doc_rate, NA)) %>% 
   ungroup() %>% 
   group_by(exp, tp) %>% 
@@ -483,7 +513,7 @@ p5_bge_bioav <- doc %>%
   ungroup() %>% 
   mutate(amend_doc = doc - control_doc) %>% 
   group_by(exp, trt) %>% 
-  mutate(amend_doc_bioav = ifelse(trt != "Control", (amend_doc[tp == 0] - amend_doc[tp == 5]) / amend_doc[tp == 0]* 100, NA )) %>% 
+  mutate(amend_doc_bioav = ifelse(trt != "Control", (amend_doc[tp == 0] - last(amend_doc, na_rm = T)) / amend_doc[tp == 0]* 100, NA )) %>% 
   ungroup() %>% 
   mutate(exp = paste("P", exp, sep = ""))
 ```
@@ -500,7 +530,8 @@ p5_prod <- read_csv(context_path) %>%
   arrange(biomass, composite_z) %>% 
   drop_na(trt) %>% 
   mutate_at(vars(composite_z), round, 2) %>% 
-  arrange(desc(composite_z), .by_group = TRUE) 
+  arrange(desc(composite_z), .by_group = TRUE)  %>% 
+  left_join(., incl %>% mutate(exp = gsub("B", "PB", exp)))
 levels(p5_prod$composite_z)
 ```
 
@@ -545,6 +576,7 @@ custom.theme <- theme(
 
 pal4 = c("#2C1B21", "#6aa42c", "#5990e7", "#b95f83")
 pal3 = c("#6aa42c", "#5990e7", "#b95f83")
+shape2 = c(21, 24)
 plot_levels = c(
   "Control",
   "Thomas Fire Ash",
@@ -560,9 +592,9 @@ plot_levels = c(
   "bold(Biomass~index~'>'~1)",
   "bold(Cells~(L^-1))",
   "bold(TOC~(µmol~C~L^-1))",
-  "bold(Bacterial~C~(µmol~C~L^-1))",
+  "bold(BOC~(µmol~C~L^-1))",
   "bold(DOC~(µmol~C~L^-1))",
-  "bold(Growth~rate~(d^-1))",
+  "bold(Specific~growth~rate~(d^-1))",
   "bold(BGE~(dimensionless))",
   "bold(+DOC~bioav.~('%'))",
   "PB16",
@@ -576,26 +608,26 @@ plot_levels = c(
 
 ```{r pivot data for figure 4, message = F}
 fig4_data <- p5_prod %>%
-  select(exp, trt, biomass, composite_z, days, mean_toc, boc) %>%
+  select(exp, trt, biomass, composite_z, days, bge_inclusion, mean_toc, boc) %>%
   rename(toc = mean_toc) %>%
   pivot_longer(toc:boc, names_to = "var", values_to = "val") %>%
   mutate(
     var = case_when(
       var == "toc" ~ "bold(TOC~(µmol~C~L^-1))",
-      var == "boc" ~ "bold(Bacterial~C~(µmol~C~L^-1))"
+      var == "boc" ~ "bold(BOC~(µmol~C~L^-1))"
     )
   ) %>%
   left_join(
     .,
     p5_prod %>%
-      select(exp, trt, biomass, days,  composite_z, sd_toc) %>%
+      select(exp, trt, biomass, days, bge_inclusion,  composite_z, sd_toc) %>%
       mutate(var = "bold(TOC~(µmol~C~L^-1))") %>%
       rename(sd = sd_toc)
   ) %>%
    bind_rows(
     .,
     p5_prod %>%
-      select(exp, trt, biomass, days,  composite_z, doc, sd_toc) %>%
+      select(exp, trt, biomass, days, bge_inclusion,  composite_z, doc, sd_toc) %>%
       mutate(var = "bold(DOC~(µmol~C~L^-1))") %>%
       rename(val = doc,
              sd = sd_toc)
@@ -603,7 +635,7 @@ fig4_data <- p5_prod %>%
   bind_rows(
     .,
     p5_prod %>%
-      select(exp, trt, biomass, days,  composite_z, mean_cells_ml, sd_cells_ml) %>%
+      select(exp, trt, biomass, days,  bge_inclusion, composite_z, mean_cells_ml, sd_cells_ml) %>%
       mutate_at(vars(mean_cells_ml, sd_cells_ml), ~ . * 10 ^ 3) %>%
       mutate(var = "bold(Cells~(L^-1))") %>%
       rename(val = mean_cells_ml,
@@ -619,7 +651,9 @@ fig4_data <- p5_prod %>%
   ) %>% 
    mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
                               composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
-                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
+                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))%>% 
+  mutate(bge_inclusion = ifelse(is.na(bge_inclusion), F, bge_inclusion)) %>% 
+  mutate(bge_inclusion = ifelse(var %in% c("bold(TOC~(µmol~C~L^-1))", "bold(Cells~(L^-1))"), F, bge_inclusion))
 ```
 
 ```{r bacteria oc curves, fig.width=32, fig.asp=0.7}
@@ -640,22 +674,14 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
     alpha = 0.9
   ) +
   geom_line(linewidth = 1.1, alpha = 0.8) +
-  geom_point(
+  geom_point( aes(shape = bge_inclusion),
     color = "black",
     size = 8,
-    shape = 21,
     alpha = 0.8
   ) +
+  scale_shape_manual(values = shape2, guide = guide_legend(override.aes = list(fill = "black"))) +
   scale_color_manual(values = pal4) +
   scale_fill_manual(values = pal4) +
-  # ggh4x::facet_nested(
-  #   factor(var, levels = plot_levels) ~  factor(biomass, levels = plot_levels) + factor(
-  #     composite_z,
-  #     levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
-  #   ),
-  #   scales = "free_y",
-  #   labeller = label_parsed
-  # ) +
   ggh4x::facet_nested(
     factor(var, levels = plot_levels) ~  factor(biomass2, levels = plot_levels) + factor(
       composite_z,
@@ -668,7 +694,8 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
     x = expression(Day),
     fill = "",
     color = "",
-    linetype = ""
+    linetype = "",
+    shape = "BGE calculation inclusion"
   ) +
   guides(color = "none") +
   theme_linedraw() +
@@ -690,7 +717,7 @@ metric_data <- p5_prod %>%
                values_to = "val") %>%
   mutate(
     var = case_when(
-      var == "mean_gr_d" ~ "bold(Growth~rate~(d^-1))",
+      var == "mean_gr_d" ~ "bold(Specific~growth~rate~(d^-1))",
       var == "bge" ~ "bold(BGE~(dimensionless))",
       var == "amend_doc_bioav" ~ "bold(+DOC~bioav.~('%'))",
     )
@@ -725,12 +752,6 @@ metrics <- ggplot(metric_data,
                     ymax = val + sd),
                 width = .1,
                 position = position_dodge(.2)) +
-  # geom_linerange(
-  #   aes(ymin = 0, ymax = val),
-  #   position = position_dodge(width = 0.4),
-  #   linewidth = 1,
-  #   alpha = 0.8
-  # ) +
   geom_point(position = position_dodge(width = 0.2),
              size = 10,
              alpha = 0.8) +
@@ -752,9 +773,52 @@ metrics <- ggplot(metric_data,
   theme(panel.spacing.y = unit(0.5, "cm"))
 ```
 
-```{r Figure3, fig.width=35, fig.asp= 1.42, warning = F, message=F}
+```{r Figure3, fig.width=37, fig.asp= 1.42, warning = F, message=F}
 (
-  curves
-) /(metrics  + guides(color = "none", fill = "none")) + plot_layout(heights = c(0.8, 0.7)) + plot_annotation(tag_levels = 'A')  &
-  theme(plot.tag = element_text(size = 28))
+  (curves + guides(color = "none", fill = "none"))
+) /(metrics) + plot_layout(heights = c(0.8, 0.7), guides = "collect") + plot_annotation(tag_levels = 'A')  &
+  theme(plot.tag = element_text(size = 28), legend.position = "top", legend.box="vertical")
 ```
+
+
+# Supplementary Table
+
+```{r Supp Table1}
+table_data <- p5_prod %>% 
+  select(exp, trt, days, interp_bocdoc, bge_inclusion, interp_fgC_cell, boc_rate, doc_rate) %>% 
+  mutate_at(vars(contains(c("rate"))), round, 2) %>% 
+  mutate_at(vars(contains("interp_fgC_cell")), round, 1) %>% 
+  mutate(bge_inclusion = ifelse(is.na(bge_inclusion), F, bge_inclusion))
+  
+gt_tbl <- gt(table_data) 
+
+table <- 
+  gt_tbl |>
+  tab_header(
+    title = md("**Bacterial DOC Remineralization Experiements**"),
+  ) |>
+  cols_label(
+    exp = html("Experimental site"),
+    trt = html("Treatment"),
+    days = html("Days"), 
+    interp_bocdoc = html("Interpolated cell-specific bacterial carbon"),
+    bge_inclusion = html("BGE calculation inclusion"),
+    interp_fgC_cell = html("Cell-specific bacterial carbon"), 
+    boc_rate = html("Rate change in bacterial organic carbon"),
+    doc_rate = html("Rate change in DOC"),
+  ) |>
+  tab_spanner(
+    label = html("µmol C L<sup>-1</sup> d<sup>-1"),
+    columns = c(boc_rate, doc_rate)
+  ) |>
+  tab_spanner(
+    label = html("fg C cell<sup>-1"),
+    columns = c(interp_fgC_cell)
+  ) 
+
+table_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/TableS1.html"
+
+gtsave(table, table_path)
+```
+

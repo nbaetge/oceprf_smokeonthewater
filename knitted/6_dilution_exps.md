@@ -1,7 +1,7 @@
 Phytoplankton & zooplankton dilution experiments
 ================
 Nick Baetge
-compiled most recently on 06 May, 2024
+compiled most recently on 17 May, 2024
 
 ``` r
 library(tidyverse)
@@ -180,7 +180,7 @@ plot_levels = c(
   "bold(Higher~biomass~index)",
   "bold(-1~'<'~Biomass~index~'<'~1)",
   "bold(Biomass~index~'>'~1)",
-  "bold(Growth~(d^-1))",
+  "bold(Division~(d^-1))",
   "bold(Grazing~(d^-1))",
   "bold(Accumulation~(d^-1))",
   "P13",
@@ -209,7 +209,7 @@ p_rates <- rates %>%
   pivot_longer(c(mu, g_corr, r), names_to = "rate", values_to = "val") %>%
   mutate(
     rate = case_when(
-      rate == "mu" ~ "bold(Growth~(d^-1))",
+      rate == "mu" ~ "bold(Division~(d^-1))",
       rate == "g_corr" ~ "bold(Grazing~(d^-1))",
       rate == "r" ~ "bold(Accumulation~(d^-1))"
     )
@@ -227,7 +227,7 @@ p_rates_summary <- rates %>%
                values_to = "val") %>%
   mutate(
     rate = case_when(
-      rate == "ave_mu" ~ "bold(Growth~(d^-1))",
+      rate == "ave_mu" ~ "bold(Division~(d^-1))",
       rate == "ave_g" ~ "bold(Grazing~(d^-1))",
       rate == "ave_r" ~ "bold(Accumulation~(d^-1))"
     )
@@ -245,7 +245,7 @@ p_rates_summary <- rates %>%
       ) %>%
       mutate(
         rate = case_when(
-          rate == "sd_mu" ~ "bold(Growth~(d^-1))",
+          rate == "sd_mu" ~ "bold(Division~(d^-1))",
           rate == "sd_g" ~ "bold(Grazing~(d^-1))",
           rate == "sd_r" ~ "bold(Accumulation~(d^-1))"
         )
@@ -271,7 +271,9 @@ dots <- ggplot(p_rates_summary ,
     # position = position_dodge(.3)
   ) +
   stat_smooth(
-    aes(fill = factor(amend, levels = plot_levels)),
+    aes(fill = factor(amend, levels = plot_levels),
+        linetype = factor(amend, levels = plot_levels)),
+    color = "black", 
     method = "gam",
     formula = y ~ s(x, bs = "tp"),
     alpha = 0.25,
@@ -291,7 +293,7 @@ dots <- ggplot(p_rates_summary ,
     # nrow = 2
   ) +
   scale_x_continuous(breaks = c(-6, -3, -1, 0 , 1, 3, 6)) +
-  scale_fill_manual(values = pal4) +
+  scale_fill_manual(values = pal4, guide = guide_legend(override.aes = list(linetype = c("solid", "dashed")))) +
   scale_color_manual(values = pal4) +
   labs(
     y = expression(""),
@@ -301,6 +303,7 @@ dots <- ggplot(p_rates_summary ,
   ) +
   theme_linedraw() +
   custom.theme +
+  guides(linetype = "none") +
   geom_label(aes(x = 6, y = -0.5, label = flabel), size = 14)
 ```
 
