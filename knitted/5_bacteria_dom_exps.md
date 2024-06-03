@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 17 May, 2024
+compiled most recently on 01 June, 2024
 
 ``` r
 library(tidyverse)
@@ -622,12 +622,12 @@ custom.theme <- theme(
   legend.text = element_text(size = 38),
   legend.box = "vertical",
   legend.margin = margin(),
-  axis.title = element_text(size = 35, face = "bold"),
-  axis.text = element_text(size = 28),
+  axis.title = element_text(size = 44, face = "bold"),
+  axis.text = element_text(size = 38),
   panel.spacing.x = unit(0.5, "cm"),
   panel.spacing.y = unit(1, "cm"),
   strip.text.x = element_text(
-    size = 35,
+    size = 42,
     color = "white",
     face = "bold"
   ),
@@ -847,7 +847,7 @@ metrics <- ggplot(metric_data,
 (
   (curves + guides(color = "none", fill = "none"))
 ) /(metrics) + plot_layout(heights = c(0.8, 0.7), guides = "collect") + plot_annotation(tag_levels = 'A')  &
-  theme(plot.tag = element_text(size = 28), legend.position = "top", legend.box="vertical")
+  theme(plot.tag = element_text(size = 45), legend.position = "top", legend.box="vertical")
 ```
 
 ![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/figure-gfm/Figure3-1.png)<!-- -->
@@ -889,6 +889,9 @@ table <-
 
 table_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/TableS1.html"
+rtf_table_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/TableS1.rtf"
 
 gtsave(table, table_path)
+gtsave(table, rtf_table_path)
 ```

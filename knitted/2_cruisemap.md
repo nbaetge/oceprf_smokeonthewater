@@ -1,7 +1,7 @@
 Cruise map with satellite chl and ship sst
 ================
 Nick Baetge
-compiled most recently on 26 April, 2024
+compiled most recently on 01 June, 2024
 
 ``` r
 library(tidyverse)
@@ -34,6 +34,8 @@ v3_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r2_viirs_scene3_20230812_20230819_chl.nc"
 table_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/Table1.html"
+rtf_table_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/Table1.rtf"
 ```
 
 ## viirs chl data (for ggplot raster)
@@ -225,10 +227,10 @@ leg1 <- basemap(data = region, bathymetry = F) +
     color = "black",
     size = 10,
     box.padding = 0.4,
-    min.segment.length = 1,
+    min.segment.length = 1.2,
     segment.size = 1,
-    xlim = c(-119, -113),
-    ylim = c(33.5, 35)
+    xlim = c(-118, -113),
+    ylim = c(32, 34)
   ) +
   geom_point(
     data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'>'~1)") %>% drop_na(exp),
@@ -472,4 +474,5 @@ table <-
   ) 
 
 gtsave(table, table_path)
+gtsave(table, rtf_table_path)
 ```

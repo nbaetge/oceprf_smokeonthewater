@@ -150,17 +150,17 @@ custom.theme <- theme(
   legend.text = element_text(size = 38),
   legend.box = "vertical",
   legend.margin = margin(),
-  axis.title = element_text(size = 35, face = "bold"),
-  axis.text = element_text(size = 28),
+  axis.title = element_text(size = 44, face = "bold"),
+  axis.text = element_text(size = 38),
   panel.spacing.x = unit(0.5, "cm"),
-  panel.spacing.y = unit(0.25, "cm"),
+  panel.spacing.y = unit(1, "cm"),
   strip.text.x = element_text(
     size = 35,
     color = "white",
     face = "bold"
   ),
   strip.text.y = element_text(
-    size = 35,
+    size = 42,
     color = "white",
     face = "bold"
   ),
@@ -369,5 +369,5 @@ boxes <-
 (
   dots
 ) /(boxes + guides(color = "none", fill = "none")) + plot_layout(heights = c(1,1)) + plot_annotation(tag_levels = 'A')  &
-  theme(plot.tag = element_text(size = 28))
+  theme(plot.tag = element_text(size = 45))
 ```

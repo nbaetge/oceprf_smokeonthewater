@@ -1,7 +1,7 @@
 Ash leachate
 ================
 Nick Baetge
-compiled most recently on 01 May, 2024
+compiled most recently on 01 June, 2024
 
 ``` r
 library(tidyverse)
@@ -623,7 +623,7 @@ eems_plot <- ggplot() +
 
 ``` r
 (nuts / (abs_plot + guides(color = "none")) / (slope_plot + guides(color = "none")) / eems_plot + plot_layout(heights = c(2.5, 0.8, 0.7, 1.5))) + plot_annotation(tag_levels = 'A')  &
-  theme(plot.tag = element_text(size = 28))
+  theme(plot.tag = element_text(size = 45))
 ```
 
     ## Warning: Removed 3132 rows containing missing values or values outside the scale range

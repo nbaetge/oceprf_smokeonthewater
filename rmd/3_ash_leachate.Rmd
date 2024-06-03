@@ -631,7 +631,7 @@ eems_plot <- ggplot() +
 
 ```{r Figure2, fig.width=32, fig.asp= 1.1}
 (nuts / (abs_plot + guides(color = "none")) / (slope_plot + guides(color = "none")) / eems_plot + plot_layout(heights = c(2.5, 0.8, 0.7, 1.5))) + plot_annotation(tag_levels = 'A')  &
-  theme(plot.tag = element_text(size = 28))
+  theme(plot.tag = element_text(size = 45))
 ```
 
 # SAVE
