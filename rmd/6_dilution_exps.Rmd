@@ -371,3 +371,8 @@ boxes <-
 ) /(boxes + guides(color = "none", fill = "none")) + plot_layout(heights = c(1,1)) + plot_annotation(tag_levels = 'A')  &
   theme(plot.tag = element_text(size = 45))
 ```
+# Save data
+
+```{r save data}
+write_csv(p_rates_summary, prod_path)
+```

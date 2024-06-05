@@ -1,7 +1,7 @@
 Bacteria and DOM experiments
 ================
 Nick Baetge
-compiled most recently on 01 June, 2024
+compiled most recently on 04 June, 2024
 
 ``` r
 library(tidyverse)
@@ -866,7 +866,7 @@ gt_tbl <- gt(table_data)
 table <- 
   gt_tbl |>
   tab_header(
-    title = md("**Bacterial DOC Remineralization Experiements**"),
+    title = md("**Supporting Information Table S1.** Cell-specific bacterial carbon, bacterial organic carbon rate changes, and DOC removal rates"),
   ) |>
   cols_label(
     exp = html("Experimental site"),

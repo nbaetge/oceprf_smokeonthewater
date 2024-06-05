@@ -1,0 +1,289 @@
+exp,influx_id,trt,ash,amend,phyto,biomass,composite_z,rate,val,sd,biomass2,flabel
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-0.6279513172419463,bold(Division~(d^-1)),0.7173580668335073,0.06653713134780344,bold(-1~'<'~Biomass~index~'<'~1),1
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-0.6279513172419463,bold(Grazing~(d^-1)),0.2104009198454369,0.0665371313478035,bold(-1~'<'~Biomass~index~'<'~1),2
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-0.6279513172419463,bold(Accumulation~(d^-1)),0.5069571469880703,1.1102230246251565e-16,bold(-1~'<'~Biomass~index~'<'~1),3
+PB1,4,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-0.6279513172419463,bold(Division~(d^-1)),0.8985909056188187,0.21793306964357875,bold(-1~'<'~Biomass~index~'<'~1),1
+PB1,4,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-0.6279513172419463,bold(Grazing~(d^-1)),0.5609944417853249,0.21793306964357875,bold(-1~'<'~Biomass~index~'<'~1),2
+PB1,4,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-0.6279513172419463,bold(Accumulation~(d^-1)),0.33759646383349384,3.204937810639273e-17,bold(-1~'<'~Biomass~index~'<'~1),3
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Division~(d^-1)),0.657135088382712,0.061567814500346284,bold(-1~'<'~Biomass~index~'<'~1),4
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Grazing~(d^-1)),0.196874055335795,0.06156781450034632,bold(-1~'<'~Biomass~index~'<'~1),5
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Accumulation~(d^-1)),0.46026103304691696,7.850462293418876e-17,bold(-1~'<'~Biomass~index~'<'~1),6
+PB1,4,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Division~(d^-1)),0.8337902122505563,0.18016643456156958,bold(-1~'<'~Biomass~index~'<'~1),4
+PB1,4,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Grazing~(d^-1)),0.523087488808395,0.18016643456156958,bold(-1~'<'~Biomass~index~'<'~1),5
+PB1,4,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Accumulation~(d^-1)),0.3107027234421613,6.409875621278546e-17,bold(-1~'<'~Biomass~index~'<'~1),6
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Division~(d^-1)),0.8447194669069749,0.12110754078602849,bold(-1~'<'~Biomass~index~'<'~1),7
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Grazing~(d^-1)),0.0856359633426271,0.12110754078602845,bold(-1~'<'~Biomass~index~'<'~1),8
+PB1,4,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Accumulation~(d^-1)),0.7590835035643477,0,bold(-1~'<'~Biomass~index~'<'~1),9
+PB1,4,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Division~(d^-1)),0.848222825682417,0.21183882754638733,bold(-1~'<'~Biomass~index~'<'~1),7
+PB1,4,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Grazing~(d^-1)),0.9747855489908462,0.21183882754638733,bold(-1~'<'~Biomass~index~'<'~1),8
+PB1,4,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-0.6279513172419463,bold(Accumulation~(d^-1)),-0.12656272330842921,0,bold(-1~'<'~Biomass~index~'<'~1),9
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-1.1754462634221874,bold(Division~(d^-1)),0.3816957660712406,0.04326343346704925,bold(Biomass~index~'<'~-1),1
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-1.1754462634221874,bold(Grazing~(d^-1)),0.030591867181963564,0.04326343346704927,bold(Biomass~index~'<'~-1),2
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-1.1754462634221874,bold(Accumulation~(d^-1)),0.35110389888927707,0,bold(Biomass~index~'<'~-1),3
+P1.5,5,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-1.1754462634221874,bold(Division~(d^-1)),0.4941181944897117,0.04720052089967384,bold(Biomass~index~'<'~-1),1
+P1.5,5,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-1.1754462634221874,bold(Grazing~(d^-1)),0.25750642612463537,0.04720052089967384,bold(Biomass~index~'<'~-1),2
+P1.5,5,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-1.1754462634221874,bold(Accumulation~(d^-1)),0.2366117683650763,0,bold(Biomass~index~'<'~-1),3
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Division~(d^-1)),0.3681274376705201,0,bold(Biomass~index~'<'~-1),4
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Grazing~(d^-1)),0,0,bold(Biomass~index~'<'~-1),5
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Accumulation~(d^-1)),0.3681274376705201,0,bold(Biomass~index~'<'~-1),6
+P1.5,5,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Division~(d^-1)),0.7020203056228695,0.22164242678899482,bold(Biomass~index~'<'~-1),4
+P1.5,5,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Grazing~(d^-1)),0.5490509608414424,0.22164242678899485,bold(Biomass~index~'<'~-1),5
+P1.5,5,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Accumulation~(d^-1)),0.1529693447814271,3.204937810639273e-17,bold(Biomass~index~'<'~-1),6
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Division~(d^-1)),1.406879845322455,0.8350931430012365,bold(Biomass~index~'<'~-1),7
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Grazing~(d^-1)),0.5905000243385616,0.8350931430012366,bold(Biomass~index~'<'~-1),8
+P1.5,5,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Accumulation~(d^-1)),0.8163798209838933,1.1102230246251565e-16,bold(Biomass~index~'<'~-1),9
+P1.5,5,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Division~(d^-1)),0.880468992492687,0.22040973163086836,bold(Biomass~index~'<'~-1),7
+P1.5,5,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Grazing~(d^-1)),0.3876618742293746,0.22040973163086836,bold(Biomass~index~'<'~-1),8
+P1.5,5,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-1.1754462634221874,bold(Accumulation~(d^-1)),0.4928071182633124,5.551115123125783e-17,bold(Biomass~index~'<'~-1),9
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.5313158927751735,bold(Division~(d^-1)),0.3786642488503269,0.1529025905537307,bold(Biomass~index~'>'~1),1
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.5313158927751735,bold(Grazing~(d^-1)),0.10811845864153315,0.15290259055373073,bold(Biomass~index~'>'~1),2
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.5313158927751735,bold(Accumulation~(d^-1)),0.27054579020879377,0,bold(Biomass~index~'>'~1),3
+PB2,6,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),1.5313158927751735,bold(Division~(d^-1)),0.3446620656926632,0.06522818229874941,bold(Biomass~index~'>'~1),1
+PB2,6,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),1.5313158927751735,bold(Grazing~(d^-1)),0.05648309882072064,0.06522818229874941,bold(Biomass~index~'>'~1),2
+PB2,6,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),1.5313158927751735,bold(Accumulation~(d^-1)),0.2881789668719426,0,bold(Biomass~index~'>'~1),3
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Division~(d^-1)),0.797097796747129,0.2929329175359281,bold(Biomass~index~'>'~1),4
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Grazing~(d^-1)),0.20713485242241447,0.2929329175359281,bold(Biomass~index~'>'~1),5
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Accumulation~(d^-1)),0.5899629443247145,0,bold(Biomass~index~'>'~1),6
+PB2,6,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Division~(d^-1)),0.7602517161445373,0.16731508823339764,bold(Biomass~index~'>'~1),4
+PB2,6,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Grazing~(d^-1)),0.1892721695587996,0.16731508823339764,bold(Biomass~index~'>'~1),5
+PB2,6,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Accumulation~(d^-1)),0.5709795465857377,9.064933036736789e-17,bold(Biomass~index~'>'~1),6
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Division~(d^-1)),0.5229395722169526,0.2930296237963161,bold(Biomass~index~'>'~1),7
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Grazing~(d^-1)),0.207203234074918,0.2930296237963161,bold(Biomass~index~'>'~1),8
+PB2,6,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Accumulation~(d^-1)),0.31573633814203467,0,bold(Biomass~index~'>'~1),9
+PB2,6,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Division~(d^-1)),0.5439539889951717,0.1406056148842626,bold(Biomass~index~'>'~1),7
+PB2,6,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Grazing~(d^-1)),0.16539633380693156,0.1406056148842626,bold(Biomass~index~'>'~1),8
+PB2,6,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),1.5313158927751735,bold(Accumulation~(d^-1)),0.37855765518824,4.5324665183683945e-17,bold(Biomass~index~'>'~1),9
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),2.691564305127054,bold(Division~(d^-1)),1.0403789643049088,0.32051610584340207,bold(Biomass~index~'>'~1),1
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),2.691564305127054,bold(Grazing~(d^-1)),0.36603204824511065,0.32051610584340207,bold(Biomass~index~'>'~1),2
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),2.691564305127054,bold(Accumulation~(d^-1)),0.6743469160597981,0,bold(Biomass~index~'>'~1),3
+P2.5,7,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),2.691564305127054,bold(Division~(d^-1)),1.194630005721545,0.10900408897836864,bold(Biomass~index~'>'~1),1
+P2.5,7,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),2.691564305127054,bold(Grazing~(d^-1)),0.6580037360108212,0.10900408897836862,bold(Biomass~index~'>'~1),2
+P2.5,7,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),2.691564305127054,bold(Accumulation~(d^-1)),0.5366262697107238,9.064933036736789e-17,bold(Biomass~index~'>'~1),3
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Division~(d^-1)),0.9002666136247321,0.05350409273138542,bold(Biomass~index~'>'~1),4
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Grazing~(d^-1)),0.22026790590829307,0.05350409273138536,bold(Biomass~index~'>'~1),5
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Accumulation~(d^-1)),0.6799987077164391,0,bold(Biomass~index~'>'~1),6
+P2.5,7,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Division~(d^-1)),1.3444363538447228,0.286752501946091,bold(Biomass~index~'>'~1),4
+P2.5,7,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Grazing~(d^-1)),1.1381456069377718,0.28675250194609103,bold(Biomass~index~'>'~1),5
+P2.5,7,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Accumulation~(d^-1)),0.2062907469069511,6.409875621278546e-17,bold(Biomass~index~'>'~1),6
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Division~(d^-1)),1.033078477599235,0.33936508002281823,bold(Biomass~index~'>'~1),7
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Grazing~(d^-1)),0.6906715054582074,0.33936508002281823,bold(Biomass~index~'>'~1),8
+P2.5,7,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Accumulation~(d^-1)),0.34240697214102755,0,bold(Biomass~index~'>'~1),9
+P2.5,7,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Division~(d^-1)),1.07720239698494,0.336003975671334,bold(Biomass~index~'>'~1),7
+P2.5,7,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Grazing~(d^-1)),0.8757203424519096,0.336003975671334,bold(Biomass~index~'>'~1),8
+P2.5,7,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),2.691564305127054,bold(Accumulation~(d^-1)),0.20148205453303047,0,bold(Biomass~index~'>'~1),9
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.7355859192040868,0.1415879864964199,bold(Biomass~index~'>'~1),1
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.08995725660862376,0.14158798649641993,bold(Biomass~index~'>'~1),2
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.645628662595463,0,bold(Biomass~index~'>'~1),3
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.6369822595037186,0.05678106811361385,bold(Biomass~index~'>'~1),1
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.03278256496026944,0.056781068113613865,bold(Biomass~index~'>'~1),2
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.6041996945434491,0,bold(Biomass~index~'>'~1),3
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.6145311996011167,0.07688400100862747,bold(Biomass~index~'>'~1),1
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.04438899867870653,0.07688400100862747,bold(Biomass~index~'>'~1),2
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.5701422009224102,0,bold(Biomass~index~'>'~1),3
+PB3,8,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),1.0210541003171303,0.08396724914754312,bold(Biomass~index~'>'~1),1
+PB3,8,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.5704107183559362,0.08396724914754315,bold(Biomass~index~'>'~1),2
+PB3,8,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.4506433819611941,6.409875621278546e-17,bold(Biomass~index~'>'~1),3
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.8453526403276241,0.2272349881108244,bold(Biomass~index~'>'~1),4
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.13119418155508591,0.22723498811082443,bold(Biomass~index~'>'~1),5
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.7141584587725383,0,bold(Biomass~index~'>'~1),6
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.7711573401887103,0.39518892718207066,bold(Biomass~index~'>'~1),4
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.22816243348932785,0.39518892718207055,bold(Biomass~index~'>'~1),5
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.5429949066993824,7.850462293418876e-17,bold(Biomass~index~'>'~1),6
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.6170234850871447,0,bold(Biomass~index~'>'~1),4
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0,0,bold(Biomass~index~'>'~1),5
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.6170234850871447,0,bold(Biomass~index~'>'~1),6
+PB3,8,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.8823688767535164,0.2052283042572528,bold(Biomass~index~'>'~1),4
+PB3,8,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.5569464763188885,0.20522830425725277,bold(Biomass~index~'>'~1),5
+PB3,8,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.32542240043462795,5.551115123125783e-17,bold(Biomass~index~'>'~1),6
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.960712653948757,0.31622883007483676,bold(Biomass~index~'>'~1),7
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.5762311981411836,0.31622883007483676,bold(Biomass~index~'>'~1),8
+PB3,8,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.3844814558075734,3.925231146709438e-17,bold(Biomass~index~'>'~1),9
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.7231533453890726,0.2876137208201206,bold(Biomass~index~'>'~1),7
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.19252509432690226,0.2876137208201207,bold(Biomass~index~'>'~1),8
+PB3,8,Low Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.5306282510621704,7.850462293418876e-17,bold(Biomass~index~'>'~1),9
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.6652897389920388,0.25180386889646883,bold(Biomass~index~'>'~1),7
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.2713854532849503,0.25180386889646883,bold(Biomass~index~'>'~1),8
+PB3,8,High Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.39390428570708846,0,bold(Biomass~index~'>'~1),9
+PB3,8,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Division~(d^-1)),0.6342262630158442,0.1934940812783099,bold(Biomass~index~'>'~1),7
+PB3,8,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Grazing~(d^-1)),0.11351180712060623,0.19349408127830992,bold(Biomass~index~'>'~1),8
+PB3,8,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),1.26638608160356,bold(Accumulation~(d^-1)),0.5207144558952379,0,bold(Biomass~index~'>'~1),9
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),4.398811878062423,bold(Division~(d^-1)),0.6032908514380843,0,bold(Biomass~index~'>'~1),1
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),4.398811878062423,bold(Grazing~(d^-1)),0,0,bold(Biomass~index~'>'~1),2
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),4.398811878062423,bold(Accumulation~(d^-1)),0.6032908514380843,0,bold(Biomass~index~'>'~1),3
+P3.5,9,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),4.398811878062423,bold(Division~(d^-1)),0.5039250852499395,0.005583740967865647,bold(Biomass~index~'>'~1),1
+P3.5,9,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),4.398811878062423,bold(Grazing~(d^-1)),0.0033710118057786067,0.005583740967865657,bold(Biomass~index~'>'~1),2
+P3.5,9,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),4.398811878062423,bold(Accumulation~(d^-1)),0.5005540734441609,0,bold(Biomass~index~'>'~1),3
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Division~(d^-1)),0.8565460719132845,0.015548918165023263,bold(Biomass~index~'>'~1),4
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Grazing~(d^-1)),0.00897717208818363,0.015548918165023243,bold(Biomass~index~'>'~1),5
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Accumulation~(d^-1)),0.8475688998251009,0,bold(Biomass~index~'>'~1),6
+P3.5,9,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Division~(d^-1)),0.7045729600571333,0.07950810768098396,bold(Biomass~index~'>'~1),4
+P3.5,9,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Grazing~(d^-1)),0.08526669329707273,0.07950810768098397,bold(Biomass~index~'>'~1),5
+P3.5,9,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Accumulation~(d^-1)),0.6193062667600606,0,bold(Biomass~index~'>'~1),6
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Division~(d^-1)),0.4784672790278938,0.23985007593902757,bold(Biomass~index~'>'~1),7
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Grazing~(d^-1)),0.22348312185802524,0.23985007593902752,bold(Biomass~index~'>'~1),8
+P3.5,9,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Accumulation~(d^-1)),0.25498415716986855,3.925231146709438e-17,bold(Biomass~index~'>'~1),9
+P3.5,9,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Division~(d^-1)),0.3151216779972207,0.14049039325030302,bold(Biomass~index~'>'~1),7
+P3.5,9,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Grazing~(d^-1)),0.14960723951964733,0.14049039325030302,bold(Biomass~index~'>'~1),8
+P3.5,9,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),4.398811878062423,bold(Accumulation~(d^-1)),0.16551443847757336,2.2662332591841973e-17,bold(Biomass~index~'>'~1),9
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),3.352306851155512,bold(Division~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),1
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),3.352306851155512,bold(Grazing~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),2
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),3.352306851155512,bold(Accumulation~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),3
+P4,10,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),3.352306851155512,bold(Division~(d^-1)),0.18674674029832805,0.13961736176911121,bold(Biomass~index~'>'~1),1
+P4,10,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),3.352306851155512,bold(Grazing~(d^-1)),0.22254474617410708,0.1396173617691112,bold(Biomass~index~'>'~1),2
+P4,10,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),3.352306851155512,bold(Accumulation~(d^-1)),-0.03579800587577905,1.3877787807814457e-17,bold(Biomass~index~'>'~1),3
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Division~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),4
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Grazing~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),5
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Accumulation~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),6
+P4,10,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Division~(d^-1)),0.1282507546706129,0.23501922435408495,bold(Biomass~index~'>'~1),4
+P4,10,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Grazing~(d^-1)),0.27693395231573775,0.23501922435408495,bold(Biomass~index~'>'~1),5
+P4,10,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Accumulation~(d^-1)),-0.1486831976451249,0,bold(Biomass~index~'>'~1),6
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Division~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),7
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Grazing~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),8
+P4,10,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Accumulation~(d^-1)),NA,NA,bold(Biomass~index~'>'~1),9
+P4,10,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Division~(d^-1)),0.5390910238025277,0.3089821083166499,bold(Biomass~index~'>'~1),7
+P4,10,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Grazing~(d^-1)),0.15449105415832495,0.3089821083166499,bold(Biomass~index~'>'~1),8
+P4,10,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),3.352306851155512,bold(Accumulation~(d^-1)),0.38459996964420273,0,bold(Biomass~index~'>'~1),9
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),6.220888646669457,bold(Division~(d^-1)),0.5196231157455611,0.03279136107514913,bold(Biomass~index~'>'~1),1
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),6.220888646669457,bold(Grazing~(d^-1)),0.01984732816615545,0.03279136107514911,bold(Biomass~index~'>'~1),2
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),6.220888646669457,bold(Accumulation~(d^-1)),0.49977578757940566,3.925231146709438e-17,bold(Biomass~index~'>'~1),3
+P5,11,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),6.220888646669457,bold(Division~(d^-1)),0.5992347392197712,0.11132736041828489,bold(Biomass~index~'>'~1),1
+P5,11,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),6.220888646669457,bold(Grazing~(d^-1)),0.2660394034008732,0.11132736041828491,bold(Biomass~index~'>'~1),2
+P5,11,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),6.220888646669457,bold(Accumulation~(d^-1)),0.33319533581889804,5.551115123125783e-17,bold(Biomass~index~'>'~1),3
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Division~(d^-1)),0.7131478472666147,0,bold(Biomass~index~'>'~1),4
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Grazing~(d^-1)),0,0,bold(Biomass~index~'>'~1),5
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Accumulation~(d^-1)),0.7131478472666147,0,bold(Biomass~index~'>'~1),6
+P5,11,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Division~(d^-1)),0.8406629683802556,0.10731931053525455,bold(Biomass~index~'>'~1),4
+P5,11,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Grazing~(d^-1)),0.3900774249916217,0.10731931053525459,bold(Biomass~index~'>'~1),5
+P5,11,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Accumulation~(d^-1)),0.45058554338863394,5.551115123125783e-17,bold(Biomass~index~'>'~1),6
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Division~(d^-1)),0.5168878625064435,0.1572628164362192,bold(Biomass~index~'>'~1),7
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Grazing~(d^-1)),0.2292057900546626,0.15726281643621914,bold(Biomass~index~'>'~1),8
+P5,11,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Accumulation~(d^-1)),0.28768207245178085,5.551115123125783e-17,bold(Biomass~index~'>'~1),9
+P5,11,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Division~(d^-1)),0.6046254893941818,0.3547442930011817,bold(Biomass~index~'>'~1),7
+P5,11,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Grazing~(d^-1)),0.34951958737701355,0.3547442930011817,bold(Biomass~index~'>'~1),8
+P5,11,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),6.220888646669457,bold(Accumulation~(d^-1)),0.2551059020171682,3.204937810639273e-17,bold(Biomass~index~'>'~1),9
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.5788000310948989,bold(Division~(d^-1)),0.38292890481390013,0.033835630931362215,bold(-1~'<'~Biomass~index~'<'~1),1
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.5788000310948989,bold(Grazing~(d^-1)),0.019535010626422804,0.03383563093136222,bold(-1~'<'~Biomass~index~'<'~1),2
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.5788000310948989,bold(Accumulation~(d^-1)),0.3633938941874773,0,bold(-1~'<'~Biomass~index~'<'~1),3
+P12,12,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),0.5788000310948989,bold(Division~(d^-1)),0.6685074859498459,0.06566331860875863,bold(-1~'<'~Biomass~index~'<'~1),1
+P12,12,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),0.5788000310948989,bold(Grazing~(d^-1)),0.03283165930437932,0.06566331860875864,bold(-1~'<'~Biomass~index~'<'~1),2
+P12,12,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),0.5788000310948989,bold(Accumulation~(d^-1)),0.6356758266454666,0,bold(-1~'<'~Biomass~index~'<'~1),3
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Division~(d^-1)),0.27262583686321445,0,bold(-1~'<'~Biomass~index~'<'~1),4
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Grazing~(d^-1)),0,0,bold(-1~'<'~Biomass~index~'<'~1),5
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Accumulation~(d^-1)),0.27262583686321445,0,bold(-1~'<'~Biomass~index~'<'~1),6
+P12,12,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Division~(d^-1)),0.7238742428786659,0.14609607931075572,bold(-1~'<'~Biomass~index~'<'~1),4
+P12,12,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Grazing~(d^-1)),0.10797969115191408,0.1460960793107557,bold(-1~'<'~Biomass~index~'<'~1),5
+P12,12,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Accumulation~(d^-1)),0.6158945517267518,0,bold(-1~'<'~Biomass~index~'<'~1),6
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Division~(d^-1)),0.642323870663374,0.14743392173633368,bold(-1~'<'~Biomass~index~'<'~1),7
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Grazing~(d^-1)),0.3019980647261711,0.14743392173633368,bold(-1~'<'~Biomass~index~'<'~1),8
+P12,12,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Accumulation~(d^-1)),0.34032580593720296,0,bold(-1~'<'~Biomass~index~'<'~1),9
+P12,12,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Division~(d^-1)),0.9614930578455214,0.13672503048919868,bold(-1~'<'~Biomass~index~'<'~1),7
+P12,12,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Grazing~(d^-1)),0.41359494946453884,0.13672503048919868,bold(-1~'<'~Biomass~index~'<'~1),8
+P12,12,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),0.5788000310948989,bold(Accumulation~(d^-1)),0.5478981083809825,1.1102230246251565e-16,bold(-1~'<'~Biomass~index~'<'~1),9
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-3.785225208773903,bold(Division~(d^-1)),0.08654180275403739,0.048895319216724686,bold(Biomass~index~'<'~-1),1
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-3.785225208773903,bold(Grazing~(d^-1)),0.15295624565304444,0.04889531921672469,bold(Biomass~index~'<'~-1),2
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-3.785225208773903,bold(Accumulation~(d^-1)),-0.06641444289900707,9.813077866773595e-18,bold(Biomass~index~'<'~-1),3
+P13,13,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-3.785225208773903,bold(Division~(d^-1)),0.13826840139805,0.12211791947422775,bold(Biomass~index~'<'~-1),1
+P13,13,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-3.785225208773903,bold(Grazing~(d^-1)),0.18936750217396006,0.12211791947422775,bold(Biomass~index~'<'~-1),2
+P13,13,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-3.785225208773903,bold(Accumulation~(d^-1)),-0.05109910077591006,8.012344526598183e-18,bold(Biomass~index~'<'~-1),3
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Division~(d^-1)),0.1991039564082456,0.05974294201218334,bold(Biomass~index~'<'~-1),4
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Grazing~(d^-1)),0.06876100308815053,0.05974294201218334,bold(Biomass~index~'<'~-1),5
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Accumulation~(d^-1)),0.13034295332009507,2.7755575615628914e-17,bold(Biomass~index~'<'~-1),6
+P13,13,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Division~(d^-1)),0.387866439668404,0.1007292054247462,bold(Biomass~index~'<'~-1),4
+P13,13,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Grazing~(d^-1)),0.06504111688837295,0.1007292054247462,bold(Biomass~index~'<'~-1),5
+P13,13,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Accumulation~(d^-1)),0.32282532278003107,0,bold(Biomass~index~'<'~-1),6
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Division~(d^-1)),0.8788607032836692,0.09016408172193274,bold(Biomass~index~'<'~-1),7
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Grazing~(d^-1)),0.0520562568533933,0.09016408172193278,bold(Biomass~index~'<'~-1),8
+P13,13,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Accumulation~(d^-1)),0.8268044464302758,7.850462293418876e-17,bold(Biomass~index~'<'~-1),9
+P13,13,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Division~(d^-1)),0.8525482479881846,0.13021605776441195,bold(Biomass~index~'<'~-1),7
+P13,13,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Grazing~(d^-1)),0.16618075441361815,0.13021605776441192,bold(Biomass~index~'<'~-1),8
+P13,13,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-3.785225208773903,bold(Accumulation~(d^-1)),0.6863674935745665,0,bold(Biomass~index~'<'~-1),9
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),0.5849826133141105,0.08156225076266733,bold(-1~'<'~Biomass~index~'<'~1),1
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.5296134780466359,0.0815622507626673,bold(-1~'<'~Biomass~index~'<'~1),2
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.055369135267474535,3.217432742277823e-17,bold(-1~'<'~Biomass~index~'<'~1),3
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),0.35238420777849266,0.028823212295318243,bold(-1~'<'~Biomass~index~'<'~1),1
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.27581620978390836,0.028823212295318243,bold(-1~'<'~Biomass~index~'<'~1),2
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.0765679979945843,0,bold(-1~'<'~Biomass~index~'<'~1),3
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),0.7128330078183869,0.16925387908500752,bold(-1~'<'~Biomass~index~'<'~1),1
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.6411911281598585,0.1692538790850075,bold(-1~'<'~Biomass~index~'<'~1),2
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.0716418796585284,3.254629732262919e-17,bold(-1~'<'~Biomass~index~'<'~1),3
+PB14,14,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),0.8005551689425181,0.16202496532933489,bold(-1~'<'~Biomass~index~'<'~1),1
+PB14,14,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.7554704281882965,0.16202496532933489,bold(-1~'<'~Biomass~index~'<'~1),2
+PB14,14,Control,Control,Control,italic(Synechococcus),bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.04508474075422153,0,bold(-1~'<'~Biomass~index~'<'~1),3
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),0.3694968703080694,0.3205537619438758,bold(-1~'<'~Biomass~index~'<'~1),4
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.39569924270209345,0.3205537619438758,bold(-1~'<'~Biomass~index~'<'~1),5
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),-0.026202372394024086,3.024593730708204e-17,bold(-1~'<'~Biomass~index~'<'~1),6
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),-0.061382392288535544,0.0811756462676006,bold(-1~'<'~Biomass~index~'<'~1),4
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.07316992947009428,0.0811756462676006,bold(-1~'<'~Biomass~index~'<'~1),5
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),-0.13455232175862983,0,bold(-1~'<'~Biomass~index~'<'~1),6
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),0.4981435497453386,0.1516275303132489,bold(-1~'<'~Biomass~index~'<'~1),4
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.5615131636779278,0.15162753031324888,bold(-1~'<'~Biomass~index~'<'~1),5
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),-0.06336961393258926,3.254629732262919e-17,bold(-1~'<'~Biomass~index~'<'~1),6
+PB14,14,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),0.8099499495245256,0.40015299854772757,bold(-1~'<'~Biomass~index~'<'~1),4
+PB14,14,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.9577594540133366,0.40015299854772757,bold(-1~'<'~Biomass~index~'<'~1),5
+PB14,14,Control,Control,Control,Picoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),-0.14780950448881097,5.551115123125783e-17,bold(-1~'<'~Biomass~index~'<'~1),6
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),1.1753096876913973,0.07383771325948939,bold(-1~'<'~Biomass~index~'<'~1),7
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.354967637292722,0.07383771325948929,bold(-1~'<'~Biomass~index~'<'~1),8
+PB14,14,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.8203420503986754,1.1102230246251565e-16,bold(-1~'<'~Biomass~index~'<'~1),9
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),1.042171981340832,0.08115167088516938,bold(-1~'<'~Biomass~index~'<'~1),7
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.32463334765672763,0.08115167088516935,bold(-1~'<'~Biomass~index~'<'~1),8
+PB14,14,Low Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.7175386336841045,0,bold(-1~'<'~Biomass~index~'<'~1),9
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),1.2081998002591594,0.20728031840372751,bold(-1~'<'~Biomass~index~'<'~1),7
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.25656970193969547,0.2072803184037275,bold(-1~'<'~Biomass~index~'<'~1),8
+PB14,14,High Temp. Ash,Lab Ash,Ash leachate,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.9516300983194639,7.850462293418876e-17,bold(-1~'<'~Biomass~index~'<'~1),9
+PB14,14,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Division~(d^-1)),1.4421669642895991,0.22081760698389086,bold(-1~'<'~Biomass~index~'<'~1),7
+PB14,14,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Grazing~(d^-1)),0.9169526030715088,0.2208176069838908,bold(-1~'<'~Biomass~index~'<'~1),8
+PB14,14,Control,Control,Control,Nanoeukaryotes,bold(Higher~biomass~index),0.39322969406073305,bold(Accumulation~(d^-1)),0.5252143612180903,1.1102230246251565e-16,bold(-1~'<'~Biomass~index~'<'~1),9
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-3.2944146828558716,bold(Division~(d^-1)),0.5057318894320229,0.13109662504301184,bold(Biomass~index~'<'~-1),1
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-3.2944146828558716,bold(Grazing~(d^-1)),0.1303147636835499,0.13109662504301184,bold(Biomass~index~'<'~-1),2
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-3.2944146828558716,bold(Accumulation~(d^-1)),0.375417125748473,3.925231146709438e-17,bold(Biomass~index~'<'~-1),3
+PB15,15,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-3.2944146828558716,bold(Division~(d^-1)),1.1145455708516403,0.1377719679843105,bold(Biomass~index~'<'~-1),1
+PB15,15,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-3.2944146828558716,bold(Grazing~(d^-1)),0.5533015600327562,0.13777196798431052,bold(Biomass~index~'<'~-1),2
+PB15,15,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-3.2944146828558716,bold(Accumulation~(d^-1)),0.561244010818884,9.064933036736789e-17,bold(Biomass~index~'<'~-1),3
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Division~(d^-1)),0.22260769398179883,0.12174618942303671,bold(Biomass~index~'<'~-1),4
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Grazing~(d^-1)),0.0702901952362014,0.12174618942303671,bold(Biomass~index~'<'~-1),5
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Accumulation~(d^-1)),0.1523174987455974,0,bold(Biomass~index~'<'~-1),6
+PB15,15,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Division~(d^-1)),1.1275770641801397,0.3171477931802623,bold(Biomass~index~'<'~-1),4
+PB15,15,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Grazing~(d^-1)),0.853387671772833,0.3171477931802623,bold(Biomass~index~'<'~-1),5
+PB15,15,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Accumulation~(d^-1)),0.27418939240730666,6.409875621278546e-17,bold(Biomass~index~'<'~-1),6
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Division~(d^-1)),1.3341239631764068,0.13766780649082888,bold(Biomass~index~'<'~-1),7
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Grazing~(d^-1)),0.25779671929773196,0.13766780649082894,bold(Biomass~index~'<'~-1),8
+PB15,15,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Accumulation~(d^-1)),1.0763272438786748,1.5700924586837752e-16,bold(Biomass~index~'<'~-1),9
+PB15,15,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Division~(d^-1)),2.0351955237809944,0.4825525597282192,bold(Biomass~index~'<'~-1),7
+PB15,15,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Grazing~(d^-1)),1.0207577307673148,0.48255255972821914,bold(Biomass~index~'<'~-1),8
+PB15,15,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-3.2944146828558716,bold(Accumulation~(d^-1)),1.0144377930136796,0,bold(Biomass~index~'<'~-1),9
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-5.6329711894272725,bold(Division~(d^-1)),0.4265740713183996,0,bold(Biomass~index~'<'~-1),1
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-5.6329711894272725,bold(Grazing~(d^-1)),0,0,bold(Biomass~index~'<'~-1),2
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-5.6329711894272725,bold(Accumulation~(d^-1)),0.4265740713183996,0,bold(Biomass~index~'<'~-1),3
+PB16,16,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-5.6329711894272725,bold(Division~(d^-1)),1.0677158043380657,0.2553843285452816,bold(Biomass~index~'<'~-1),1
+PB16,16,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-5.6329711894272725,bold(Grazing~(d^-1)),0.6319453467345723,0.2553843285452816,bold(Biomass~index~'<'~-1),2
+PB16,16,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-5.6329711894272725,bold(Accumulation~(d^-1)),0.4357704576034934,6.409875621278546e-17,bold(Biomass~index~'<'~-1),3
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Division~(d^-1)),0.2840257612486704,0,bold(Biomass~index~'<'~-1),4
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Grazing~(d^-1)),0,0,bold(Biomass~index~'<'~-1),5
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Accumulation~(d^-1)),0.2840257612486704,0,bold(Biomass~index~'<'~-1),6
+PB16,16,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Division~(d^-1)),1.28564116212069,0.45619716849411146,bold(Biomass~index~'<'~-1),4
+PB16,16,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Grazing~(d^-1)),1.1208487543234407,0.45619716849411146,bold(Biomass~index~'<'~-1),5
+PB16,16,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Accumulation~(d^-1)),0.16479240779724935,0,bold(Biomass~index~'<'~-1),6
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Division~(d^-1)),1.0279267200043547,0.20281281287889585,bold(Biomass~index~'<'~-1),7
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Grazing~(d^-1)),0.27762112560446084,0.20281281287889585,bold(Biomass~index~'<'~-1),8
+PB16,16,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Accumulation~(d^-1)),0.750305594399894,0,bold(Biomass~index~'<'~-1),9
+PB16,16,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Division~(d^-1)),1.582879927976198,0.1452392501467173,bold(Biomass~index~'<'~-1),7
+PB16,16,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Grazing~(d^-1)),0.5718656986260742,0.14523925014671726,bold(Biomass~index~'<'~-1),8
+PB16,16,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-5.6329711894272725,bold(Accumulation~(d^-1)),1.0110142293501239,0,bold(Biomass~index~'<'~-1),9
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-1.8566058012636024,bold(Division~(d^-1)),1.068294307254872,0.1055964576392232,bold(Biomass~index~'<'~-1),1
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-1.8566058012636024,bold(Grazing~(d^-1)),0.625557804349476,0.10559645763922328,bold(Biomass~index~'<'~-1),2
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,italic(Synechococcus),bold(Lower~biomass~index),-1.8566058012636024,bold(Accumulation~(d^-1)),0.44273650290539607,6.798699777552591e-17,bold(Biomass~index~'<'~-1),3
+P17,17,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-1.8566058012636024,bold(Division~(d^-1)),1.4197822777994922,0.2504607037204953,bold(Biomass~index~'<'~-1),1
+P17,17,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-1.8566058012636024,bold(Grazing~(d^-1)),1.2134031526335354,0.2504607037204953,bold(Biomass~index~'<'~-1),2
+P17,17,Control,Control,Control,italic(Synechococcus),bold(Lower~biomass~index),-1.8566058012636024,bold(Accumulation~(d^-1)),0.20637912516595683,5.551115123125783e-17,bold(Biomass~index~'<'~-1),3
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Division~(d^-1)),1.1185110725837288,0.13252237477622897,bold(Biomass~index~'<'~-1),4
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Grazing~(d^-1)),0.5378664723684814,0.13252237477622897,bold(Biomass~index~'<'~-1),5
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Picoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Accumulation~(d^-1)),0.5806446002152476,1.3597399555105182e-16,bold(Biomass~index~'<'~-1),6
+P17,17,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Division~(d^-1)),1.6016500435969034,0.29715855905606403,bold(Biomass~index~'<'~-1),4
+P17,17,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Grazing~(d^-1)),1.4193284868029488,0.29715855905606403,bold(Biomass~index~'<'~-1),5
+P17,17,Control,Control,Control,Picoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Accumulation~(d^-1)),0.18232155679395468,0,bold(Biomass~index~'<'~-1),6
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Division~(d^-1)),1.7424991170581547,0.19540661901140877,bold(Biomass~index~'<'~-1),7
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Grazing~(d^-1)),0.6126342848859405,0.19540661901140882,bold(Biomass~index~'<'~-1),8
+P17,17,Thomas Fire Ash,Thomas Fire Ash,Ash leachate,Nanoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Accumulation~(d^-1)),1.1298648321722142,0,bold(Biomass~index~'<'~-1),9
+P17,17,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Division~(d^-1)),1.6604251363281886,0.48620512605635324,bold(Biomass~index~'<'~-1),7
+P17,17,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Grazing~(d^-1)),1.1994713426023709,0.4862051260563533,bold(Biomass~index~'<'~-1),8
+P17,17,Control,Control,Control,Nanoeukaryotes,bold(Lower~biomass~index),-1.8566058012636024,bold(Accumulation~(d^-1)),0.4609537937258176,9.064933036736789e-17,bold(Biomass~index~'<'~-1),9
