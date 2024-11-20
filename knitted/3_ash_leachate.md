@@ -1,7 +1,7 @@
 Ash leachate
 ================
 Nick Baetge
-compiled most recently on 01 June, 2024
+compiled most recently on 20 November, 2024
 
 ``` r
 library(tidyverse)
@@ -11,6 +11,7 @@ library(purrr)
 library(patchwork)
 library(janitor)
 library(staRdom)
+library(gt)
 ```
 
 # IMPORT DATA & DO CALCS
@@ -30,6 +31,9 @@ prod1_path <-
 
 prod2_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p3_ash_leachate_cdom.csv"
+
+prod3_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p3_ash_leachate_eems.csv"
 ```
 
 ## Leachate DOC from high temperature combustion (units = µmol/L )
@@ -470,8 +474,8 @@ custom.theme <- theme(
   )
 )
 
-pal4 = c("#2C1B21", "#6aa42c", "#5990e7", "#b95f83")
-pal3 = c("#6aa42c", "#5990e7", "#b95f83")
+pal4 = c("#785EF0", "#DC267F","#FFB000", "#FE6100")
+pal3 = c("#DC267F","#FFB000", "#FE6100")
 plot_levels = c(
   "Control",
   "Thomas Fire Ash",
@@ -523,7 +527,7 @@ nuts <- ggplot(data = conc, aes(
   scale_fill_manual(values = pal4) +
   scale_x_discrete(labels = scales::parse_format()) +
   labs(
-    y = expression(Concentration),
+    y = expression(bold(Concentration)),
     x = "",
     fill = "",
     color = "",
@@ -547,8 +551,8 @@ abs_plot <-
   scale_color_manual(values = pal3) +
   scale_fill_manual(values = pal3) +
   labs(
-    y = expression(a[CDOM] ~ (m ^ -1)),
-    x = expression(Wavelength ~ (nm)),
+    y = expression(bold(a[CDOM] ~ (m ^ -1))),
+    x = expression(bold(Wavelength ~ (nm))),
     color = "",
     linetype = ""
   ) +
@@ -580,7 +584,7 @@ slope_plot <-
   ) +
   scale_color_manual(values = pal3) +
   scale_x_discrete(labels = scales::parse_format()) +
-  labs(y = expression(Ratio),
+  labs(y = expression(bold(a[CDOM] ~ Ratio)),
        x = "",
        color = "") +
   theme_linedraw() +
@@ -602,9 +606,9 @@ eems_plot <- ggplot() +
                size = 0.3,
                binwidth = 2) +
   labs(
-    x = expression(Excitation ~ (nm)),
-    y = expression(Emission ~ (nm)),
-    fill = expression(Fluorescence ~ intensity ~ (ppb ~ QSE))
+    x = expression(bold(Excitation ~ (nm))),
+    y = expression(bold(Emission ~ (nm))),
+    fill = expression(bold(CDOM ~ Fluorescence ~ intensity ~ (ppb ~ QSE)))
   ) +
   viridis::scale_fill_viridis(option = "H", na.value = NA) +
   geom_label(
@@ -622,18 +626,53 @@ eems_plot <- ggplot() +
 ```
 
 ``` r
-(nuts / (abs_plot + guides(color = "none")) / (slope_plot + guides(color = "none")) / eems_plot + plot_layout(heights = c(2.5, 0.8, 0.7, 1.5))) + plot_annotation(tag_levels = 'A')  &
+design <- c(
+  area(1, 1, 2,3),
+  area(3, 1, 3, 2),
+  area(3,3),
+  area(4, 1, 4, 3)
+)
+
+fig2 <- nuts / (abs_plot + guides(color = "none")) / (slope_plot + guides(color = "none")) / eems_plot + plot_layout(design = design) + plot_annotation(tag_levels = 'A')  &
   theme(plot.tag = element_text(size = 45))
+
+ggsave(fig2, file = "~/github/oceprf_smokeonthewater/prod/figs/leachate.svg", width = 32, height = 35.2)
 ```
 
     ## Warning: Removed 3132 rows containing missing values or values outside the scale range
     ## (`geom_raster()`).
-
-![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/3_ash_leachate_files/figure-gfm/Figure2-1.png)<!-- -->
 
 # SAVE
 
 ``` r
 write_csv(conc, prod1_path)
 write_csv(cdom, prod2_path)
+write_csv(slope_params, prod3_path)
+```
+
+# Supporting pH table
+
+``` r
+ph_data <- readxl::read_xlsx("~/github/oceprf_smokeonthewater/raw/r9_pH.xlsx", sheet = 4) %>% 
+  mutate_at(c(3:4), ~round(.,4))
+ 
+gt_ph<- gt(ph_data) 
+
+phtable <- 
+  gt_ph |>
+  tab_header(
+    title = md("**Table S3.** Spectrophotometric pH measurements of phytoplankton dilution experiment bottles"),
+  )  |>
+  cols_label(
+    pH = html("pH of 5 replicates"),
+    sd = html("Std. deviation")
+  )   |>
+  tab_source_note(source_note = md(
+    "Precision of 5 replicates for a single pH sample is ±0.0004 (Liu, X., M. C. Patsavas, and R. H. Byrne. 2011. Purification and Characterization of meta-Cresol Purple for Spectrophotometric Seawater pH Measurements. Environ. Sci. Technol. 45: 4862–4868. doi:10.1021/es200665d)"
+  )) |>
+  tab_source_note(source_note = md(
+    "Accuracy of spectrophotometric pH sample is ±0.003 (Orr, J. C., J.-M. Epitalon, A. G. Dickson, and J.-P. Gattuso. 2018. Routine uncertainty propagation for the marine carbon dioxide system. Marine Chemistry 207: 84–107. doi:10.1016/j.marchem.2018.10.006)"
+  )) 
+
+gtsave(phtable, "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/3_ash_leachate_files/pH_table.html")
 ```

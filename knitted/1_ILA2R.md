@@ -1,7 +1,7 @@
 1: Tidy Matlab product from Inline Analysis
 ================
 Nick Baetge
-compiled most recently on 12 April, 2024
+compiled most recently on 20 November, 2024
 
 ``` r
 library(tidyverse)
@@ -10,6 +10,8 @@ library(lubridate)
 library(purrr)
 library(patchwork)
 library(janitor)
+library(kohonen)
+library(factoextra)
 ```
 
 Here we tidy the bio-optical data from the inline system and create a
@@ -38,6 +40,8 @@ prod_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_biooptics.csv"
 index_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
+bcodmo_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/bco_dmo/BIO-OPTICS.csv"
 ```
 
 ``` r
@@ -410,10 +414,102 @@ summary <- tidy %>%
   )  
 ```
 
-## z-scores
+## self-organizing maps
 
 ``` r
-zscores <- summary %>%
+som <- summary %>%
+  select(
+    stn,
+    mean_chl_ap676lh,
+    mean_gamma_cp,
+    mean_bbb_532,
+    mean_poc_cp_660,
+    mean_nano_syn,
+    mean_pico_syn,
+  ) %>%
+  rename_all( ~ stringr::str_replace(., "mean_", "")) %>%
+  # mutate(across(c(2:7), ~ (. - mean(., na.rm = T)) / sd(., na.rm = T),  .names = "z_{col}")) %>%
+  # mutate_at(vars(z_gamma_cp, z_bbb_532), ~ . * -1) %>% # reverse these z-scores as they are inversely related to particle size
+  # mutate(composite_z = rowSums(across(c(7:11))),
+  #        biomass = ifelse(composite_z < 0, "Lower", "Higher")) %>% 
+  #  left_join(read_csv(exploc_path), .) %>% 
+  # left_join(., acs_n) %>% 
+  # left_join(., cells_n) %>% 
+  # arrange(composite_z) 
+  mutate_at("stn", as_factor)
+```
+
+``` r
+# make a train data sets that scaled and convert them to be a matrix beccause kohonen function accepts numeric matrix
+som.train <- as.matrix(scale(som[,-1]))
+```
+
+``` r
+# make stable sampling
+RNGkind(sample.kind = "Rounding")
+```
+
+    ## Warning in RNGkind(sample.kind = "Rounding"): non-uniform 'Rounding' sampler
+    ## used
+
+``` r
+# make a SOM grid
+set.seed(100)
+som.grid <- somgrid(xdim =2, ydim = 2, topo = "hexagonal") #user input of 2 clusters
+
+# make a SOM model
+set.seed(100)
+som.model <- som(som.train, som.grid, rlen = 100, radius = 2.5, keep.data = TRUE,
+                  dist.fcts = "euclidean")
+```
+
+``` r
+set.seed(100)
+fviz_nbclust(som.train, kmeans, method = "silhouette", k.max = 6 )
+```
+
+![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/1_ILA2R_files/figure-gfm/find%20optimum%20number%20of%20clusters-1.png)<!-- -->
+
+``` r
+clust <- kmeans(som.train, 2)
+```
+
+``` r
+svg(file = "~/github/oceprf_smokeonthewater/prod/figs/SOM_clusters.svg", width = 4, height = 4) 
+plot(som.model, type = "codes", bgcol = rainbow(9)[clust$cluster], main = "Cluster Map")
+add.cluster.boundaries(som.model, clust$cluster)
+dev.off()
+```
+
+    ## quartz_off_screen 
+    ##                 2
+
+``` r
+clusters <- som.model$unit.classif
+som_results <- som %>% 
+  mutate(cluster = clusters) %>% 
+  mutate(stn = as.character(stn),
+         stn = as.numeric(stn)) %>% 
+  left_join(read_csv(exploc_path), .) %>%
+  left_join(., acs_n) %>%
+  left_join(., cells_n) %>%
+  arrange(cluster)
+```
+
+    ## Rows: 14 Columns: 5
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## chr (2): date, exp
+    ## dbl (3): stn, lat, lon
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+    ## Joining with `by = join_by(stn)`
+    ## Joining with `by = join_by(stn)`
+    ## Joining with `by = join_by(stn)`
+
+``` r
+index <-  summary %>%
   select(
     stn,
     mean_chl_ap676lh,
@@ -426,17 +522,95 @@ zscores <- summary %>%
   rename_all( ~ stringr::str_replace(., "mean_", "")) %>%
   mutate(across(c(2:7), ~ (. - mean(., na.rm = T)) / sd(., na.rm = T),  .names = "z_{col}")) %>%
   mutate_at(vars(z_gamma_cp, z_bbb_532), ~ . * -1) %>% # reverse these z-scores as they are inversely related to particle size
-  mutate(composite_z = rowSums(across(c(7:11))),
-         biomass = ifelse(composite_z < 0, "Lower", "Higher")) %>% 
-   left_join(read_csv(exploc_path), .) %>% 
-  left_join(., acs_n) %>% 
-  left_join(., cells_n) %>% 
-  arrange(composite_z)
+  mutate(composite_z = rowSums(across(c(7:11)))) %>%
+  select(stn, composite_z, contains("z")) %>% 
+  left_join(som_results, .) %>% 
+    arrange(composite_z)  %>% 
+  mutate(cluster = ifelse(cluster == 1, "High biomass", "Low biomass"))
 ```
+
+    ## Joining with `by = join_by(stn)`
+
+## data for bco-dmo
+
+``` r
+matlab2POS_2 = function(x, timez = "UTC") {
+    days = x - 719529   # 719529 = days from 1-1-0000 to 1-1-1970
+    secs = days * 86400 # 86400 seconds in a day
+    # Converting the secs value to a POSIXct value in the UTC time zone, then converts that to a time/date string that 
+    # should lose the time zone, and then it performs a second as.POSIXct() conversion on the time/date string to get a POSIXct value in the user's specified timezone.
+    return(as.POSIXct(strftime(as.POSIXct(secs, origin = '1970-1-1', 
+            tz = 'UTC'), format = '%Y-%m-%d %H:%M:%S', 
+            tz = 'UTC', usetz = FALSE), tz = timez))
+}
+
+bco_dmo <-  acs %>%
+  select(dt,
+         ap_16,
+         ap_29,
+         ap_56,
+         cp_16,
+         cp_29,
+         cp_56,
+         poc,
+         chl_ap676lh,
+         gamma) %>%
+  rename(
+    ap_470 = ap_16,
+    ap_532 = ap_29,
+    ap_660 = ap_56,
+    cp_470 = cp_16,
+    cp_532 = cp_29,
+    cp_660 = cp_56,
+    poc_cp_660 = poc,
+    gamma_cp = gamma
+  ) %>%
+  left_join(
+    bb %>%
+      select(dt, bbp_1:bbp_3) %>%
+      rename(
+        bbp_470 = bbp_1,
+        bbp_532 = bbp_2,
+        bbp_660 = bbp_3
+      ),
+    .
+  ) %>%
+ rename(m_dt = dt) %>%
+  mutate(dt = matlab2POS_2(m_dt), .before = m_dt) %>%
+  select(-m_dt) %>%
+  mutate(stn = ifelse(between(dt, stn_times$start[stn_times$stn == 4], stn_times$end[stn_times$stn == 4]), 4, NA),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 5], stn_times$end[stn_times$stn == 5]), 5, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 6], stn_times$end[stn_times$stn == 6]), 6, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 7], stn_times$end[stn_times$stn == 7]), 7, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 8], stn_times$end[stn_times$stn == 8]), 8, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 9], stn_times$end[stn_times$stn == 9]), 9, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 10], stn_times$end[stn_times$stn == 10]), 10, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 11], stn_times$end[stn_times$stn == 11]), 11, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 12], stn_times$end[stn_times$stn == 12]), 12, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 13], stn_times$end[stn_times$stn == 13]), 13, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 14], stn_times$end[stn_times$stn == 14]), 14, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 15], stn_times$end[stn_times$stn == 15]), 15, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 16], stn_times$end[stn_times$stn == 16]), 16, stn),
+         stn = ifelse(between(dt, stn_times$start[stn_times$stn == 17], stn_times$end[stn_times$stn == 17]), 17, stn)
+    ) %>% 
+  drop_na(stn) %>% 
+  left_join(.,  read_csv(exploc_path)) %>% 
+  select(stn, lat, lon, dt, everything(), -date, -exp) 
+```
+
+    ## Joining with `by = join_by(dt)`
+    ## Rows: 14 Columns: 5
+    ## ── Column specification
+    ## ──────────────────────────────────────────────────────── Delimiter: "," chr
+    ## (2): date, exp dbl (3): stn, lat, lon
+    ## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+    ## Specify the column types or set `show_col_types = FALSE` to quiet this message.
+    ## Joining with `by = join_by(stn)`
 
 # save
 
 ``` r
 write_csv(summary, prod_path)
-write_csv(zscores, index_path)
+write_csv(index, index_path)
+write_csv(bco_dmo, bcodmo_path)
 ```

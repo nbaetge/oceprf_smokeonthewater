@@ -24,6 +24,8 @@ library(gt)
 ```{r define path to save data}
 prod_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p5_bacteria_dom_exps.csv"
+bcodmo_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/bco_dmo/BACTERIA_DOM.csv"
 ```
 
 # Bacterial cell data
@@ -525,20 +527,78 @@ context_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
 
 p5_prod <- read_csv(context_path) %>% 
-  select(stn, exp, lat, lon, biomass, composite_z) %>% 
+  select(stn, exp, lat, lon,  cluster, composite_z) %>% 
   left_join(., p5_bge_bioav) %>% 
-  arrange(biomass, composite_z) %>% 
+  arrange(cluster) %>% 
   drop_na(trt) %>% 
-  mutate_at(vars(composite_z), round, 2) %>% 
-  arrange(desc(composite_z), .by_group = TRUE)  %>% 
   left_join(., incl %>% mutate(exp = gsub("B", "PB", exp)))
-levels(p5_prod$composite_z)
+```
+
+```{r}
+bco_dmo <- p5_prod %>% 
+  select(stn, lat, lon, dt, trt, mean_cells_ml, sd_cells_ml, boc, mean_toc, sd_toc) %>% 
+  rename(bact_cells = mean_cells_ml,
+         sd_bact_cells = sd_cells_ml) %>% 
+  arrange(stn, trt, dt)
+```
+
+
+```{r filter data needed to run some stats}
+data4stats <- p5_prod %>% 
+  select(exp, trt, cluster, mean_gr_d, bge, doc_rate, amend_doc, amend_doc_bioav) %>%
+  distinct() %>% 
+  # mutate(bge = ifelse(is.na(bge), mean(bge, na.rm = T), bge)) %>% 
+  rename(bact_mu = 4) %>% 
+  mutate(trt2 = ifelse(trt == "Control", "Control", "Ash leachate")) 
+```
+
+```{r pivot data for plotting curves, message = F}
+data4curves <- p5_prod %>%
+  select(exp, trt, cluster, days, bge_inclusion, mean_toc, boc) %>%
+  rename(toc = mean_toc) %>%
+  pivot_longer(toc:boc, names_to = "var", values_to = "val") %>%
+  mutate(
+    var = case_when(
+      var == "toc" ~ "bold(TOC~(µmol~C~L^-1))",
+      var == "boc" ~ "bold(BOC~(µmol~C~L^-1))"
+    )
+  ) %>%
+  left_join(
+    .,
+    p5_prod %>%
+      select(exp, trt, days, bge_inclusion,  cluster, sd_toc) %>%
+      mutate(var = "bold(TOC~(µmol~C~L^-1))") %>%
+      rename(sd = sd_toc)
+  ) %>%
+   bind_rows(
+    .,
+    p5_prod %>%
+      select(exp, trt, days, bge_inclusion,  cluster, doc, sd_toc) %>%
+      mutate(var = "bold(DOC~(µmol~C~L^-1))") %>%
+      rename(val = doc,
+             sd = sd_toc)
+  ) %>%
+  bind_rows(
+    .,
+    p5_prod %>%
+      select(exp, trt, days,  bge_inclusion, cluster, mean_cells_ml, sd_cells_ml) %>%
+      mutate_at(vars(mean_cells_ml, sd_cells_ml), ~ . * 10 ^ 3) %>%
+      mutate(var = "bold(Cells~(L^-1))") %>%
+      rename(val = mean_cells_ml,
+             sd = sd_cells_ml)
+  ) %>%
+  arrange(exp, trt, days, var) %>%
+  mutate(bge_inclusion = ifelse(is.na(bge_inclusion), F, bge_inclusion)) %>% 
+  mutate(bge_inclusion = ifelse(var %in% c("bold(TOC~(µmol~C~L^-1))", "bold(Cells~(L^-1))"), F, bge_inclusion)) %>% 
+  mutate(cluster = case_when(cluster == "Low biomass" ~ "Low~biomass",
+                             cluster == "High biomass" ~ "High~biomass")) 
 ```
 
 # Save data
 
 ```{r save data}
 write_csv(p5_prod, prod_path)
+write_csv(bco_dmo, bcodmo_path)
 ```
 
 # Plot data
@@ -574,22 +634,23 @@ custom.theme <- theme(
   )
 )
 
-pal4 = c("#2C1B21", "#6aa42c", "#5990e7", "#b95f83")
-pal3 = c("#6aa42c", "#5990e7", "#b95f83")
+pal4 = c("#785EF0", "#DC267F","#FFB000", "#FE6100")
+pal3 = c("#DC267F","#FFB000", "#FE6100")
+pal2 = c("#0947EA","#92EA33")
 shape2 = c(21, 24)
 plot_levels = c(
   "Control",
   "Thomas Fire Ash",
   "Low Temp. Ash",
   "High Temp. Ash",
+  "Ash leachate",
   "DOC",
   "bold(Leachate)",
   "bold(Amendment)",
-  "bold(Lower~biomass~index)",
-  "bold(Biomass~index~'<'~-1)",
-  "bold(Higher~biomass~index)",
-  "bold(-1~'<'~Biomass~index~'<'~1)",
-  "bold(Biomass~index~'>'~1)",
+  "Low~biomass",
+  "High~biomass",
+  "Low biomass",
+  "High biomass",
   "bold(Cells~(L^-1))",
   "bold(TOC~(µmol~C~L^-1))",
   "bold(BOC~(µmol~C~L^-1))",
@@ -606,58 +667,10 @@ plot_levels = c(
 ) 
 ```
 
-```{r pivot data for figure 4, message = F}
-fig4_data <- p5_prod %>%
-  select(exp, trt, biomass, composite_z, days, bge_inclusion, mean_toc, boc) %>%
-  rename(toc = mean_toc) %>%
-  pivot_longer(toc:boc, names_to = "var", values_to = "val") %>%
-  mutate(
-    var = case_when(
-      var == "toc" ~ "bold(TOC~(µmol~C~L^-1))",
-      var == "boc" ~ "bold(BOC~(µmol~C~L^-1))"
-    )
-  ) %>%
-  left_join(
-    .,
-    p5_prod %>%
-      select(exp, trt, biomass, days, bge_inclusion,  composite_z, sd_toc) %>%
-      mutate(var = "bold(TOC~(µmol~C~L^-1))") %>%
-      rename(sd = sd_toc)
-  ) %>%
-   bind_rows(
-    .,
-    p5_prod %>%
-      select(exp, trt, biomass, days, bge_inclusion,  composite_z, doc, sd_toc) %>%
-      mutate(var = "bold(DOC~(µmol~C~L^-1))") %>%
-      rename(val = doc,
-             sd = sd_toc)
-  ) %>%
-  bind_rows(
-    .,
-    p5_prod %>%
-      select(exp, trt, biomass, days,  bge_inclusion, composite_z, mean_cells_ml, sd_cells_ml) %>%
-      mutate_at(vars(mean_cells_ml, sd_cells_ml), ~ . * 10 ^ 3) %>%
-      mutate(var = "bold(Cells~(L^-1))") %>%
-      rename(val = mean_cells_ml,
-             sd = sd_cells_ml)
-  ) %>%
-  arrange(exp, trt, days, var) %>%
-  mutate(
-    biomass = ifelse(
-      biomass == "Lower",
-      "bold(Lower~biomass~index)",
-      "bold(Higher~biomass~index)"
-    )
-  ) %>% 
-   mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
-                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))%>% 
-  mutate(bge_inclusion = ifelse(is.na(bge_inclusion), F, bge_inclusion)) %>% 
-  mutate(bge_inclusion = ifelse(var %in% c("bold(TOC~(µmol~C~L^-1))", "bold(Cells~(L^-1))"), F, bge_inclusion))
-```
 
-```{r bacteria oc curves, fig.width=32, fig.asp=0.7}
-curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
+
+```{r bacteria curves, fig.width=32, fig.asp=0.5}
+curves <- ggplot(data4curves[!is.na(data4curves$val), ] %>% filter(var %in% c("bold(BOC~(µmol~C~L^-1))", "bold(DOC~(µmol~C~L^-1))")),
                  aes(
                    x = days,
                    y = val,
@@ -665,8 +678,6 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
                    color = factor(trt, levels = plot_levels),
                    fill = factor(trt, levels = plot_levels)
                  )) +
-   geom_rect(data = subset(fig4_data[!is.na(fig4_data$val), ], biomass2 == "bold(-1~'<'~Biomass~index~'<'~1)"), fill = "light grey",xmin = -Inf,xmax = Inf,
-            ymin = -Inf,ymax = Inf, alpha = 0.01) +
   geom_errorbar(
     aes(ymin = val - sd, ymax = val + sd),
     width = 0.2,
@@ -683,101 +694,410 @@ curves <- ggplot(fig4_data[!is.na(fig4_data$val), ],
   scale_color_manual(values = pal4) +
   scale_fill_manual(values = pal4) +
   ggh4x::facet_nested(
-    factor(var, levels = plot_levels) ~  factor(biomass2, levels = plot_levels) + factor(
-      composite_z,
-      levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
-    ) + exp,
+    factor(var, levels = plot_levels) ~  factor(cluster, levels = plot_levels) + exp,
     scales = "free_y",
     labeller = label_parsed
   ) +
   labs(y = "", 
-    x = expression(Day),
+    x = expression(bold(Day)),
     fill = "",
     color = "",
     linetype = "",
     shape = "BGE calculation inclusion"
   ) +
-  guides(color = "none") +
+  guides(color = "none", fill = guide_legend( 
+    override.aes=list(shape = 21))) +
   theme_linedraw() +
   custom.theme 
 ```
 
-```{r pivot data for derived metrics, message = F}
-metric_data <- p5_prod %>%
-  select(exp,
-         trt,
-         biomass,
-         composite_z,
-         mean_gr_d,
-         bge,
-         amend_doc_bioav) %>%
-  distinct() %>%
-  pivot_longer(mean_gr_d:amend_doc_bioav,
-               names_to = "var",
-               values_to = "val") %>%
-  mutate(
-    var = case_when(
-      var == "mean_gr_d" ~ "bold(Specific~growth~rate~(d^-1))",
-      var == "bge" ~ "bold(BGE~(dimensionless))",
-      var == "amend_doc_bioav" ~ "bold(+DOC~bioav.~('%'))",
-    )
-  ) %>%
-  left_join(
-    .,
-    p5_prod %>%
-      select(exp, trt, biomass,  composite_z, sd_gr_d) %>%
-      distinct() %>%
-      mutate(var = "bold(Growth~rate~(d^-1))") %>%
-      rename(sd = sd_gr_d)
-  ) %>%
-  mutate(biomass = ifelse(
-    biomass == "Lower",
-    "bold(Lower~biomass~index)",
-    "bold(Higher~biomass~index)"
-  ))
-```
 
-```{r bact oc metrics, fig.width=26, fig.asp = 0.8, warning = F, message = F}
-metrics <- ggplot(metric_data,
-                  aes(
-                    x = factor(
-                      composite_z,
-                      levels = c("-5.63", "-3.29", "-0.63", "0.39", "1.27", "1.53")
-                    ),
-                    y = val,
-                    fill = factor(trt, levels = plot_levels),
-                    color = factor(trt, levels = plot_levels)
-                  )) +
-  geom_errorbar(aes(ymin = val - sd,
-                    ymax = val + sd),
-                width = .1,
-                position = position_dodge(.2)) +
-  geom_point(position = position_dodge(width = 0.2),
-             size = 10,
-             alpha = 0.8) +
-  ggh4x::facet_nested_wrap(
-    ~ factor(var, levels = plot_levels),
-    labeller = label_parsed,
-    scales = "free",
-    strip.position = "right",
-    nrow = 3
+```{r bact mu model, fig.width=26, fig.asp = 0.6}
+# Fit the ANOVA model with interaction
+mod1 <- aov(bact_mu ~ cluster * trt2, data = data4stats)
+
+# Extract the ANOVA table
+anova_results1 <- summary(mod1)
+
+# Get p-values for significant terms
+p_value_cluster <- anova_results1[[1]]["Pr(>F)"][1,1]
+p_value_trt <- anova_results1[[1]]["Pr(>F)"][2,1]
+# p_value_interaction <- anova_results2[[1]]["Pr(>F)"][3,1]
+
+# Format p-values for annotations
+formatted_p_cluster <- paste0("p = ", format.pval(p_value_cluster, digits = 2))
+formatted_p_trt <- paste0("p = ", format.pval(p_value_trt, digits = 2))
+# formatted_p_interaction <- paste0("p (cluster:trt) = ", format.pval(p_value_interaction, digits = 2))
+
+cluster <- ggplot(data4stats, aes(x = factor(cluster, levels = plot_levels), y = bact_mu, fill = factor(cluster, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(cluster, levels = plot_levels)),
+    size = 7,
+    position = position_jitterdodge(),
+    alpha = 0.5, 
+    shape = 21,
+    color = "black"
+  ) +
+  labs(
+    x = "SOM cluster",
+    y = expression(bold(Bacterial~specific~growth~rate~(d^-1))),
+    fill = "",
+    color = ""
+  ) +
+  scale_fill_manual(values = pal2) +
+  scale_color_manual(values = pal2) +
+   theme_linedraw() +
+  custom.theme +
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$bact_mu, na.rm = TRUE),
+    label = formatted_p_cluster,
+    size = 6,  vjust = 2
+  ) +
+   guides(color = "none") 
+
+
+# Plot for Treatment Effect with ANOVA p-value using Box Plot
+trt <-  ggplot(data4stats, aes(x = factor(trt2, levels = plot_levels), y = bact_mu, fill = factor(trt, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(trt, levels = plot_levels)),
+    size = 7,
+    shape = 21, 
+    position = position_jitterdodge(),
+    alpha = 0.5,
+    color = "black"
+  ) +
+  labs(
+    x = "Treatment",
+    y = expression(bold(Bacterial~specific~growth~rate~(d^-1))),
+    fill = "",
+    color = ""
   ) +
   scale_fill_manual(values = pal4) +
   scale_color_manual(values = pal4) +
-  labs(y = expression(""),
-       x = expression("Biomass index"),
-       color = "") +
-  theme_linedraw() +
+   theme_linedraw() +
   custom.theme +
-  guides(fill = "none") +
-  theme(panel.spacing.y = unit(0.5, "cm"))
+  # Add p-value annotations for interaction
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$bact_mu, na.rm = TRUE),
+    label = formatted_p_trt,
+    size = 6,  vjust = 2
+  ) +
+   guides(color= "none") 
+
+# Combine plots side by side
+mu <- cluster + trt +  plot_layout(guides = 'collect') & theme(legend.position = "top")
+
+```
+```{r bge model, fig.width=26, fig.asp = 0.6}
+# Fit the ANOVA model with interaction
+mod2 <- aov(bge ~ cluster * trt2, data = data4stats)
+
+# Extract the ANOVA table
+anova_results2 <- summary(mod2)
+
+# Get p-values for significant terms
+p_value_cluster <- anova_results2[[1]]["Pr(>F)"][1,1]
+p_value_trt <- anova_results2[[1]]["Pr(>F)"][2,1]
+# p_value_interaction <- anova_results2[[1]]["Pr(>F)"][3,1]
+
+# Format p-values for annotations
+formatted_p_cluster <- paste0("p = ", format.pval(p_value_cluster, digits = 2))
+formatted_p_trt <- paste0("p = ", format.pval(p_value_trt, digits = 2))
+# formatted_p_interaction <- paste0("p (cluster:trt) = ", format.pval(p_value_interaction, digits = 2))
+
+cluster2 <- ggplot(data4stats, aes(x = factor(cluster, levels = plot_levels), y = bge, fill = factor(cluster, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(cluster, levels = plot_levels)),
+    size = 7,
+    position = position_jitterdodge(),
+    alpha = 0.5, 
+    shape = 21,
+    color = "black"
+  ) +
+  labs(
+    x = "SOM cluster",
+    y = expression(bold(BGE)),
+    fill = "",
+    color = ""
+  ) +
+  scale_fill_manual(values = pal2) +
+  scale_color_manual(values = pal2) +
+   theme_linedraw() +
+  custom.theme +
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$bge, na.rm = TRUE),
+    label = formatted_p_cluster,
+    size = 6,  vjust = 2
+  ) +
+   guides(color = "none") 
+
+
+# Plot for Treatment Effect with ANOVA p-value using Box Plot
+trt2 <-  ggplot(data4stats, aes(x = factor(trt2, levels = plot_levels), y = bge, fill = factor(trt, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(trt, levels = plot_levels)),
+    size = 7,
+    shape = 21, 
+    position = position_jitterdodge(),
+    alpha = 0.5,
+    color = "black"
+  ) +
+  labs(
+    x = "Treatment",
+    y = expression(bold(BGE)),
+    fill = "",
+    color = ""
+  ) +
+  scale_fill_manual(values = pal4) +
+  scale_color_manual(values = pal4) +
+   theme_linedraw() +
+  custom.theme +
+  # Add p-value annotations for interaction
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$bge, na.rm = TRUE),
+    label = formatted_p_trt,
+    size = 6,  vjust = 2
+  ) +
+   guides(color= "none") 
+
+# Combine plots side by side
+bge <- cluster2 + trt2 +  plot_layout(guides = 'collect') & theme(legend.position = "top")
+
 ```
 
 ```{r Figure3, fig.width=37, fig.asp= 1.42, warning = F, message=F}
-(
-  (curves + guides(color = "none", fill = "none"))
-) /(metrics) + plot_layout(heights = c(0.8, 0.7), guides = "collect") + plot_annotation(tag_levels = 'A')  &
+fig3 <- (
+  (curves)
+) /(mu)/(bge) + plot_layout(heights = c(0.8, 0.7, 0.7), guides = "collect") + plot_annotation(tag_levels = 'A')  &
   theme(plot.tag = element_text(size = 45), legend.position = "top", legend.box="vertical")
+
+ggsave(fig3, file = "~/github/oceprf_smokeonthewater/prod/figs/bact.svg", width = 37, height = 48)
+```
+
+
+
+```{r doc rate, fig.width=26, fig.asp = 0.6}
+# Fit the ANOVA model with interaction
+mod3 <- aov(doc_rate ~ cluster * trt2, data = data4stats)
+
+# Extract the ANOVA table
+anova_results3 <- summary(mod3)
+
+# Get p-values for significant terms
+p_value_cluster <- anova_results3[[1]]["Pr(>F)"][1,1]
+p_value_trt <- anova_results3[[1]]["Pr(>F)"][2,1]
+p_value_interaction <- anova_results3[[1]]["Pr(>F)"][3,1]
+
+# Format p-values for annotations
+formatted_p_cluster <- paste0("p = ", format.pval(p_value_cluster, digits = 2))
+formatted_p_trt <- paste0("p = ", format.pval(p_value_trt, digits = 2))
+formatted_p_interaction <- paste0("p (Cluster : Treatment) = ", format.pval(p_value_interaction, digits = 2))
+
+cluster <- ggplot(data4stats, aes(x = factor(cluster, levels = plot_levels), y = doc_rate, fill = factor(cluster, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(cluster, levels = plot_levels)),
+    size = 7,
+    position = position_jitterdodge(),
+    alpha = 0.5, 
+    shape = 21,
+    color = "black"
+  ) +
+  labs(
+    x = "SOM cluster",
+    y = expression(bold(DOC~remineralization~rate~(µmol~C~L^-1~d^-1))),
+    fill = "",
+    color = ""
+  ) +
+  scale_fill_manual(values = pal2) +
+  scale_color_manual(values = pal2) +
+   theme_linedraw() +
+  custom.theme +
+   guides(color = "none") 
+
+
+# Plot for Treatment Effect with ANOVA p-value using Box Plot
+trt <-  ggplot(data4stats, aes(x = factor(trt2, levels = plot_levels), y = doc_rate, fill = factor(trt, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(trt, levels = plot_levels)),
+    size = 7,
+    shape = 21, 
+    position = position_jitterdodge(),
+    alpha = 0.5,
+    color = "black"
+  ) +
+  labs(
+    x = "Treatment",
+    y = expression(bold(DOC~remineralization~rate~(µmol~C~L^-1~d^-1))),
+    fill = "",
+    color = ""
+  ) +
+  scale_fill_manual(values = pal4) +
+  scale_color_manual(values = pal4) +
+   theme_linedraw() +
+  custom.theme +
+  # Add p-value annotations for interaction
+  annotate(
+    "text",
+    x = 1.5,  # Position for p-value of interaction
+    y = max(data4stats$doc_rate, na.rm = TRUE) * 0.95,
+    label = formatted_p_interaction,
+    size = 6, vjust = 2
+  ) +
+  annotate(
+    "text",
+    x = 1.5,
+    y = max(data4stats$doc_rate, na.rm = TRUE) * 0.85,
+    label = formatted_p_cluster,
+    size = 6, vjust = 2
+  ) +
+  annotate(
+    "text",
+    x = 1.5,
+    y = max(data4stats$doc_rate, na.rm = TRUE) * 0.75,
+    label = formatted_p_trt,
+    size = 6, vjust = 2
+  ) +
+   guides(color= "none") 
+
+# Combine plots side by side
+doc_rate <- cluster + trt +  plot_layout(guides = 'collect') & theme(legend.position = "top")
+
+```
+```{r doc remin, fig.width=26, fig.asp = 0.6}
+# Fit the ANOVA model with interaction
+mod4 <- aov(amend_doc_bioav ~ cluster * trt, data = data4stats %>% filter(!trt == "Control"))
+
+# Extract the ANOVA table
+anova_results4 <- summary(mod4)
+
+# Get p-values for significant terms
+p_value_cluster <- anova_results4[[1]]["Pr(>F)"][1,1]
+p_value_trt <- anova_results4[[1]]["Pr(>F)"][2,1]
+# p_value_interaction <- anova_results4[[1]]["Pr(>F)"][3,1]
+
+# Format p-values for annotations
+formatted_p_cluster <- paste0("p = ", format.pval(p_value_cluster, digits = 2))
+formatted_p_trt <- paste0("p = ", format.pval(p_value_trt, digits = 2))
+# formatted_p_interaction <- paste0("p (Cluster : Treatment) = ", format.pval(p_value_interaction, digits = 2))
+
+cluster <- ggplot(data4stats, aes(x = factor(cluster, levels = plot_levels), y = amend_doc_bioav, fill = factor(cluster, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(cluster, levels = plot_levels)),
+    size = 7,
+    position = position_jitterdodge(),
+    alpha = 0.5, 
+    shape = 21,
+    color = "black"
+  ) +
+  labs(
+    x = "SOM cluster",
+    y = expression(bold(Bioavailability~of~amended~DOC~('%'))),
+    fill = "",
+    color = ""
+  ) +
+  scale_fill_manual(values = pal2) +
+  scale_color_manual(values = pal2) +
+   theme_linedraw() +
+  custom.theme +
+   guides(color = "none") 
+
+
+# Plot for Treatment Effect with ANOVA p-value using Box Plot
+trt <-  ggplot(data4stats %>% filter(trt != "Control"), aes(x = factor(trt, levels = plot_levels), y = amend_doc_bioav, fill = factor(trt, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(trt, levels = plot_levels)),
+    size = 7,
+    shape = 21, 
+    position = position_jitterdodge(),
+    alpha = 0.5,
+    color = "black"
+  ) +
+  labs(
+    x = "Treatment",
+    y = expression(bold(Bioavailability~of~amended~DOC~('%'))),
+    fill = "",
+    color = ""
+  ) +
+  scale_fill_manual(values = pal3) +
+  scale_color_manual(values = pal3) +
+   theme_linedraw() +
+  custom.theme +
+  # Add p-value annotations for interaction
+  annotate(
+    "text",
+    x = 1.5,  # Position for p-value of interaction
+    y = max(data4stats$amend_doc_bioav, na.rm = TRUE) * 0.95,
+    label = formatted_p_interaction,
+    size = 6, vjust = 2
+  ) +
+  annotate(
+    "text",
+    x = 1.5,
+    y = max(data4stats$amend_doc_bioav, na.rm = TRUE) * 0.85,
+    label = formatted_p_cluster,
+    size = 6, vjust = 2
+  ) +
+  annotate(
+    "text",
+    x = 1.5,
+    y = max(data4stats$amend_doc_bioav, na.rm = TRUE) * 0.75,
+    label = formatted_p_trt,
+    size = 6, vjust = 2
+  ) +
+   guides(color= "none") 
+
+# Combine plots side by side
+bioav <- cluster + trt +  plot_layout(guides = 'collect') & theme(legend.position = "top")
+
+```
+
+
+```{r Figure4, fig.width=37, fig.asp= 1.42, warning = F, message=F}
+fig4 <- (
+ doc_rate)/(bioav) + plot_layout(heights = c(0.7, 0.7), guides = "collect") + plot_annotation(tag_levels = 'A')  &
+  theme(plot.tag = element_text(size = 45), legend.position = "top", legend.box="vertical")
+
+ggsave(fig4, file = "~/github/oceprf_smokeonthewater/prod/figs/doc.svg", width = 37, height = 40)
 ```
 
 
@@ -795,7 +1115,7 @@ gt_tbl <- gt(table_data)
 table <- 
   gt_tbl |>
   tab_header(
-    title = md("**Supporting Information Table S1.** Cell-specific bacterial carbon, bacterial organic carbon rate changes, and DOC removal rates"),
+    title = md("**Table S2.** Cell-specific bacterial carbon, bacterial organic carbon rate changes, and DOC removal rates"),
   ) |>
   cols_label(
     exp = html("Experimental site"),
@@ -817,11 +1137,54 @@ table <-
   ) 
 
 table_path <-
-  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/TableS1.html"
-rtf_table_path <-
-  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/TableS1.rtf"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/5_bacteria_dom_exps_files/bact_table.html"
 
 gtsave(table, table_path)
-gtsave(table, rtf_table_path)
+```
+
+# Supplementary Figure
+
+```{r supplemental curves, fig.width=32, fig.asp=0.5}
+suppfig1 <- ggplot(data4curves[!is.na(data4curves$val), ] %>% filter(!var %in% c("bold(BOC~(µmol~C~L^-1))", "bold(DOC~(µmol~C~L^-1))")),
+                 aes(
+                   x = days,
+                   y = val,
+                   group = interaction(exp, trt, var),
+                   color = factor(trt, levels = plot_levels),
+                   fill = factor(trt, levels = plot_levels)
+                 )) +
+  geom_errorbar(
+    aes(ymin = val - sd, ymax = val + sd),
+    width = 0.2,
+    linewidth = 0.6,
+    alpha = 0.9
+  ) +
+  geom_line(linewidth = 1.1, alpha = 0.8) +
+  geom_point( aes(shape = bge_inclusion),
+    color = "black",
+    size = 8,
+    alpha = 0.8
+  ) +
+  scale_shape_manual(values = shape2, guide = guide_legend(override.aes = list(fill = "black"))) +
+  scale_color_manual(values = pal4) +
+  scale_fill_manual(values = pal4) +
+  ggh4x::facet_nested(
+    factor(var, levels = plot_levels) ~  factor(cluster, levels = plot_levels) + exp,
+    scales = "free_y",
+    labeller = label_parsed
+  ) +
+  labs(y = "", 
+    x = expression(bold(Day)),
+    fill = "",
+    color = "",
+    linetype = "",
+    shape = "BGE calculation inclusion"
+  ) +
+  guides(color = "none", fill = guide_legend( 
+    override.aes=list(shape = 21))) +
+  theme_linedraw() + 
+  custom.theme 
+
+ggsave(suppfig1, file = "~/github/oceprf_smokeonthewater/prod/figs/bact_suppl.svg", width = 37, height = 20)
 ```
 

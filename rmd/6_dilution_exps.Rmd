@@ -18,11 +18,17 @@ library(lubridate)
 library(purrr)
 library(patchwork)
 library(janitor)
+library(FactoMineR)
+library(factoextra)
+library(corrr)
+library(ggcorrplot)
 ```
 
 ```{r define path to save data}
 prod_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p6_dilution_exps.csv"
+bcodmo_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/bco_dmo/PHYTO_DILUTION.csv"
 ```
 
 # Influx flow cytometry data
@@ -45,8 +51,20 @@ ids <- readxl::read_xlsx(influx_path, sheet = 1) %>%
 context_path <- "/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p1_insitu_index.csv"
 
 context <- read_csv(context_path) %>% 
-  select(stn, exp, lat, lon, biomass, composite_z)
+  select(stn, exp, lat, lon, date, cluster, composite_z, chl_ap676lh:pico_syn)
 ```
+
+
+```{r leachate data, message = F}
+leach_nuts <- read_csv("/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p3_ash_leachate_nuts_tm_doc.csv") %>% filter(type == "bold(Amendment)") %>%  select(trt, analyte, val) %>% pivot_wider( id_cols = trt, names_from = analyte, values_from = val)
+
+leach_cdom <- read_csv("/Users/nicholasbaetge/github/oceprf_smokeonthewater/prod/p3_ash_leachate_eems.csv") %>% pivot_wider( id_cols = trt, names_from = slope_parameter, values_from = slope) %>% rename(E2_E3 = 2, SR = 3)
+
+nuts <- left_join(leach_nuts, leach_cdom) %>% 
+  add_row(trt = "Control") %>% 
+  mutate_at(c(2:17), ~replace_na(.,0)) 
+```
+
 
 
 ```{r caluclate rates, message=F, warning = F}
@@ -69,7 +87,7 @@ apparent_gr  <- readxl::read_xlsx(influx_path, sheet = 2) %>%
   select(influx_id, trt, contains(c("_d", "_k"))) %>%
   ungroup()
 
-rates <- apparent_gr %>%
+tidy_rates <- apparent_gr %>%
   select(influx_id:syn_d, syn_k) %>%
   rename(d = syn_d,
          k = syn_k) %>%
@@ -89,33 +107,42 @@ rates <- apparent_gr %>%
       rename(d = nano_d,
              k = nano_k) %>%
       mutate(phyto = "nano", .after = "trt")
-  ) %>%
-  group_by(influx_id, trt, phyto) %>%
-  mutate(
-    g = ifelse(d != 0, (k - k[d == 0]) / d, NA),
-    theory_violated = ifelse(g < 0, T, F),
-    g_corr = ifelse(theory_violated == T, 0, g),
-    ave_g = mean(g_corr, na.rm = T),
-    sd_g = sd(g_corr, na.rm = T),
-    mu = g_corr + k[d == 0],
-    ave_mu = mean(mu, na.rm = T),
-    sd_mu = sd(mu, na.rm = T),
-    r = mu - g_corr,
-    ave_r = mean(r, na.rm = T),
-    sd_r = sd(r, na.rm = T)
+  ) 
+  
+lm_rates <-  tidy_rates %>% 
+  group_by(influx_id, trt, phyto) %>% 
+  do(broom::tidy(lmodel2::lmodel2(data = ., formula = k ~ d))) %>% 
+  filter(method == "SMA", term == "Slope") %>% 
+  ungroup() %>% 
+  mutate(negative_slope = ifelse(estimate < 0, T, F)) %>% 
+  select(influx_id, trt, phyto, estimate, negative_slope) %>%
+  rename(slope = estimate) %>% 
+  distinct() %>% 
+  left_join(tidy_rates, .)
+  
+
+rates <- lm_rates %>% 
+    group_by(influx_id, trt, phyto) %>% 
+    mutate(
+      g = ifelse(d != 0 & negative_slope  == F, (k - k[d == 0]) / d, NA),
+      # theory_violated = ifelse(g < 0, T, F),
+      theory_violated = ifelse(negative_slope  == F, F, negative_slope),
+      g_corr = ifelse(theory_violated == T | g < 0, 0, g),
+      ave_g = mean(g_corr, na.rm = T),
+      sd_g = sd(g_corr, na.rm = T),
+      mu = g_corr + k[d == 0],
+      ave_mu = mean(mu, na.rm = T),
+      sd_mu = sd(mu, na.rm = T),
+      r = mu - g_corr,
+      ave_r = mean(r, na.rm = T),
+      sd_r = sd(r, na.rm = T)
   ) %>%
   ungroup() %>%
   left_join(ids, .) %>%
   left_join(., context) %>%
-  mutate(amend = ifelse(trt == "CTL", "Control", "Ash leachate"),
+  mutate(trt2 = ifelse(trt == "CTL", "Control", "Ash leachate"),
          .after = trt) %>%
   mutate(
-    ash = case_when(
-      trt == "CTL" ~ "Control",
-      trt == "TFA" ~ "Thomas Fire Ash",
-      trt == "LTA" ~ "Lab Ash",
-      trt == "HTA" ~ "Lab Ash"
-    ),
     trt = case_when(
       trt == "CTL" ~ "Control",
       trt == "TFA" ~ "Thomas Fire Ash",
@@ -128,16 +155,49 @@ rates <- apparent_gr %>%
       phyto == "nano" ~ "Nanoeukaryotes"
     )
   ) %>%
-  mutate(
-    biomass = ifelse(
-      biomass == "Lower",
-      "bold(Lower~biomass~index)",
-      "bold(Higher~biomass~index)"
-    )
-  ) %>%
-  select(exp:trt, ash, everything())
+  select(exp:trt, trt2, everything()) %>% 
+  # filter(negative_slope == F) %>% 
+  select(stn:pico_syn, exp, trt:sd_r) 
 
 ```
+
+```{r prepare data for statistics}
+data4stats <- rates %>% 
+  filter(theory_violated == F) %>% 
+  select(exp, trt, trt2, cluster:pico_syn, phyto, ave_g, ave_mu, ave_r) %>% 
+  distinct() %>% 
+   left_join(., nuts) %>% 
+  rename(grazing = ave_g, 
+         phyto_mu = ave_mu,
+         accum = ave_r) %>% 
+  mutate(grazing = ifelse(is.na(grazing), mean(grazing, na.rm = T), grazing), 
+            phyto_mu = ifelse(is.na(phyto_mu), mean(phyto_mu, na.rm = T), phyto_mu), 
+            accum = ifelse(is.na(accum), mean(accum, na.rm = T), accum)) %>% 
+   mutate_at(vars(cluster), as_factor) %>% 
+   mutate(phyto = ifelse( phyto == "italic(Synechococcus)", "Synechococcus", phyto))
+```
+
+#bco-dmo 
+
+```{r tidy data for bcodmo}
+bcodmo <- rates %>% 
+  select(stn, lat, lon, trt, phyto, ave_mu, sd_mu, ave_g, sd_g, ave_r, sd_r) %>% 
+  mutate(phyto = ifelse( phyto == "italic(Synechococcus)", "Synechococcus", phyto)) %>% 
+  distinct() %>% 
+  arrange(stn, trt, phyto) %>% 
+  rename(division = 6,
+         sd_division = 7,
+         grazing = 8,
+         sd_grazing = 9,
+         accumulation = 10,
+         sd_accumulation = 11) %>% 
+  left_join(., context %>% select(stn, date)) %>% 
+  mutate(time = as_hms("13:00:00"),
+         date = mdy(date),
+         dt = ymd_hms(paste(date, time))) %>% 
+  select(stn, lat, lon, dt, everything(), -date, -time)
+```
+
 
 # Plots
 
@@ -172,24 +232,25 @@ custom.theme <- theme(
   )
 )
 
-pal4 = c("#2C1B21", "#6aa42c", "#5990e7", "#b95f83")
-pal3 = c("#6aa42c", "#5990e7", "#b95f83")
-pal2 = c("#2C1B21", "white")
+pal4 = c("#785EF0", "#DC267F","#FFB000", "#FE6100")
+pal3 = c("#DC267F","#FFB000", "#FE6100")
+pal2 = c("#0947EA","#92EA33")
+shape2 = c(21, 24)
+shape2a = c(16, 4)
+shape3 = c(21, 24, 22)
 plot_levels = c(
   "Control",
   "Ash leachate",
   "Thomas Fire Ash",
-  "Lab Ash",
   "Low Temp. Ash",
   "High Temp. Ash",
   "DOC",
   "bold(Leachate)",
   "bold(Amendment)",
-  "bold(Lower~biomass~index)",
-  "bold(Biomass~index~'<'~-1)",
-  "bold(Higher~biomass~index)",
-  "bold(-1~'<'~Biomass~index~'<'~1)",
-  "bold(Biomass~index~'>'~1)",
+  "Low~biomass",
+  "High~biomass",
+  "Low biomass",
+  "High biomass",
   "bold(Division~(d^-1))",
   "bold(Grazing~(d^-1))",
   "bold(Accumulation~(d^-1))",
@@ -207,6 +268,7 @@ plot_levels = c(
   "P4",
   "P3.5",
   "P5",
+  "Synechococcus",
   "italic(Synechococcus)",
   "Picoeukaryotes",
   "Nanoeukaryotes"
@@ -214,165 +276,393 @@ plot_levels = c(
 ```
 
 
-```{r pivot data for plotting, message=F, warning = F}
-p_rates <- rates %>%
-  select(exp:phyto, biomass, composite_z, mu, g_corr, r) %>%
-  pivot_longer(c(mu, g_corr, r), names_to = "rate", values_to = "val") %>%
-  mutate(
-    rate = case_when(
-      rate == "mu" ~ "bold(Division~(d^-1))",
-      rate == "g_corr" ~ "bold(Grazing~(d^-1))",
-      rate == "r" ~ "bold(Accumulation~(d^-1))"
-    )
-  ) %>%
-  distinct() %>% 
- mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
-                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)")) 
-
-p_rates_summary <- rates %>%
-  select(exp:phyto, biomass, composite_z, ave_mu, ave_g, ave_r) %>%
-  distinct() %>%
-  pivot_longer(c(ave_mu, ave_g, ave_r),
-               names_to = "rate",
-               values_to = "val") %>%
-  mutate(
-    rate = case_when(
-      rate == "ave_mu" ~ "bold(Division~(d^-1))",
-      rate == "ave_g" ~ "bold(Grazing~(d^-1))",
-      rate == "ave_r" ~ "bold(Accumulation~(d^-1))"
-    )
-  ) %>%
-  distinct() %>%
-  left_join(
-    .,
-    rates %>%
-      select(exp:phyto, biomass, composite_z, sd_mu, sd_g, sd_r) %>%
-      distinct() %>%
-      pivot_longer(
-        c(sd_mu, sd_g, sd_r),
-        names_to = "rate",
-        values_to = "sd"
-      ) %>%
-      mutate(
-        rate = case_when(
-          rate == "sd_mu" ~ "bold(Division~(d^-1))",
-          rate == "sd_g" ~ "bold(Grazing~(d^-1))",
-          rate == "sd_r" ~ "bold(Accumulation~(d^-1))"
-        )
-      )
-  ) %>% 
-  mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~Biomass~index~'<'~1)",
-                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)")) %>% 
-  left_join(., p_rates %>% select(phyto, rate) %>% distinct() %>%  mutate(flabel = 1:n()))
-```
 
 
-```{r fig.width=32, fig.asp = 0.7, warning = F, message = F}
-dots <- ggplot(p_rates_summary ,
-               aes(x = composite_z,
-                   y = val,)) +
-  geom_errorbar(
-    aes(
-      color = factor(trt, levels = plot_levels),
-      ymin = val - sd,
-      ymax = val + sd
-    ),
-    width = .2
-    # position = position_dodge(.3)
-  ) +
-  stat_smooth(
-    aes(fill = factor(amend, levels = plot_levels),
-        linetype = factor(amend, levels = plot_levels)),
-    color = "black", 
-    method = "gam",
-    formula = y ~ s(x, bs = "tp"),
-    alpha = 0.25,
-    size = 2
-  ) +
-  geom_point(
-    aes(color = factor(trt, levels = plot_levels)),
-    # position = position_dodge(width = 0.3),
-    size = 10,
-    alpha = 0.8
-  ) +
-  facet_grid(
-    # ggh4x::facet_nested_wrap(
-    factor(rate, levels = plot_levels) ~  factor(phyto, levels = plot_levels),
-    labeller = label_parsed,
-    scales = "free",
-    # nrow = 2
-  ) +
-  scale_x_continuous(breaks = c(-6, -3, -1, 0 , 1, 3, 6)) +
-  scale_fill_manual(values = pal4, guide = guide_legend(override.aes = list(linetype = c("solid", "dashed")))) +
-  scale_color_manual(values = pal4) +
-  labs(
-    y = expression(""),
-    x = expression("Biomass index"),
-    fill = "GAM",
-    color = ""
-  ) +
-  theme_linedraw() +
-  custom.theme +
-  guides(linetype = "none") +
-  geom_label(aes(x = 6, y = -0.5, label = flabel), size = 14)
-```
+```{r phyto mu model, fig.width=26, fig.asp = 0.6}
+# Fit the ANOVA model with interaction
+mod1 <- aov(phyto_mu ~ cluster * trt2, data = data4stats)
 
-```{r fig.width=32, fig.asp = 0.9, message = F, warning=F}
-boxes <-
-  ggplot(p_rates, aes(x = factor(amend, levels = plot_levels), y = val)) +
-  geom_boxplot(
-    aes(fill = factor(amend, levels = plot_levels)),
-    alpha = 0.7,
+# Extract the ANOVA table
+anova_results1 <- summary(mod1)
+
+# Get p-values for significant terms
+p_value_cluster <- anova_results1[[1]]["Pr(>F)"][1,1]
+p_value_trt <- anova_results1[[1]]["Pr(>F)"][2,1]
+# p_value_interaction <- anova_results2[[1]]["Pr(>F)"][3,1]
+
+# Format p-values for annotations
+formatted_p_cluster <- paste0("p = ", format.pval(p_value_cluster, digits = 2))
+formatted_p_trt <- paste0("p = ", format.pval(p_value_trt, digits = 2))
+# formatted_p_interaction <- paste0("p (cluster:trt) = ", format.pval(p_value_interaction, digits = 2))
+
+cluster <- ggplot(data4stats, aes(x = factor(cluster, levels = plot_levels), y = phyto_mu, fill = cluster)) +
+  geom_boxplot(alpha = 0.7,
     outlier.shape = NA,
-    width = 0.5,
-    position = position_dodge(0.4)
-  ) +
-  geom_rect(data = subset(p_rates, biomass2 == "bold(-1~'<'~Biomass~index~'<'~1)"), fill = "light grey",xmin = -Inf,xmax = Inf,
-            ymin = -Inf,ymax = Inf, alpha = 0.01) +
+    width = 0.4,
+    position = position_dodge(0.5)) +
   geom_jitter(
-    aes(color = factor(trt, levels = plot_levels)),
+    aes(fill = cluster, shape = phyto),
     size = 7,
-    position = position_jitterdodge(),
-    alpha = 0.5
+    position = position_jitterdodge(jitter.width = 0.07, dodge.width = 0.7),
+    alpha = 0.5, 
+    stroke = 2,
+    # shape = 21,
+    color = "black"
   ) +
-  ggh4x::facet_nested(
-    factor(rate, levels = plot_levels) ~  factor(biomass2, levels = plot_levels) + factor(phyto, levels = plot_levels),
-    labeller = label_parsed,
-    scales = "free"
+  labs(
+    x = "SOM cluster",
+    y = expression(bold(Division~rate~(d^-1))),
+    fill = "",
+    color = "",
+    shape = ""
   ) +
   scale_fill_manual(values = pal2) +
-  scale_color_manual(values = pal4) +
-  labs(
-    y = expression(""),
-    x = expression(""),
-    fill = "",
-    color = ""
-  ) +
-  theme_linedraw() +
+  scale_color_manual(values = pal2) +
+  scale_shape_manual(values = shape3) +
+   theme_linedraw() +
   custom.theme +
-  guides(fill = "none") +
-  # guides(color= "none",fill = guide_legend(override.aes = list(shape = 21))) +
-  theme(axis.text.x = element_blank()) +
-  ggpubr::geom_pwc(
-    method = "wilcoxon",
-    label = "{p.format}{p.signif}",
-    hide.ns = TRUE,
-    vjust = 0.2,
-    size = 0.6,
-    label.size = 7
-  )
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$phyto_mu, na.rm = TRUE),
+    label = formatted_p_cluster,
+    size = 6,  vjust = 2
+  ) +
+   guides(color = "none") 
+
+
+# Plot for Treatment Effect with ANOVA p-value using Box Plot
+trt <-  ggplot(data4stats, aes(x = factor(trt2, levels = plot_levels), y = phyto_mu, fill = factor(trt, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = factor(trt, levels = plot_levels), shape = phyto),
+    size = 7,
+    # shape = 21, 
+    position = position_jitterdodge(jitter.width = 0.07, dodge.width = 0.7),
+    alpha = 0.5,
+    stroke = 2,
+    color = "black"
+  ) +
+  labs(
+    x = "Treatment",
+    y = expression(bold(Division~rate~(d^-1))),
+    fill = "",
+    color = "",
+    shape = ""
+  ) +
+  scale_fill_manual(values = pal4) +
+  scale_color_manual(values = pal4) +
+   scale_shape_manual(values = shape3) +
+   theme_linedraw() +
+  custom.theme +
+  # Add p-value annotations for interaction
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$phyto_mu, na.rm = TRUE),
+    label = formatted_p_trt,
+    size = 6,  vjust = 2
+  ) +
+   guides(color= "none") 
+
+# Combine plots side by side
+mu <- cluster + trt +  plot_layout(guides = 'collect') & theme(legend.position = "top", legend.box="vertical", legend.margin=margin()) 
+
 ```
 
-```{r Figure4, fig.width=40, fig.asp= 1.2, warning = F, message=F}
-(
-  dots
-) /(boxes + guides(color = "none", fill = "none")) + plot_layout(heights = c(1,1)) + plot_annotation(tag_levels = 'A')  &
-  theme(plot.tag = element_text(size = 45))
+
+```{r grazing model, fig.width=26, fig.asp = 0.6}
+# Fit the ANOVA model with interaction
+mod2 <- aov(grazing ~ cluster * trt2, data = data4stats)
+
+# Extract the ANOVA table
+anova_results2 <- summary(mod2)
+
+# Get p-values for significant terms
+p_value_cluster <- anova_results2[[1]]["Pr(>F)"][1,1]
+p_value_trt <- anova_results2[[1]]["Pr(>F)"][2,1]
+p_value_interaction <- anova_results2[[1]]["Pr(>F)"][3,1]
+
+# Format p-values for annotations
+formatted_p_cluster <- paste0("p (Cluster) = ", format.pval(p_value_cluster, digits = 2))
+formatted_p_trt <- paste0("p (Treatment) = ", format.pval(p_value_trt, digits = 2))
+formatted_p_interaction <- paste0("p (Cluster:Treatment) = ", format.pval(p_value_interaction, digits = 2))
+
+cluster <- ggplot(data4stats, aes(x = cluster, y = grazing, fill = cluster)) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.5,
+    position = position_dodge(0.5)) +
+  geom_jitter(
+    aes(fill = cluster, shape = phyto),
+    size = 7,
+    position = position_jitterdodge(jitter.width = 0.07, dodge.width = 0.7),
+    alpha = 0.5, 
+    stroke = 2,
+    # shape = 21,
+    color = "black"
+  ) +
+  labs(
+    x = "SOM cluster",
+    y = expression(bold(Grazing~(d^-1))),
+    fill = "",
+    color = "", 
+    shape = ""
+  ) +
+   scale_fill_manual(values = pal2) +
+  scale_color_manual(values = pal2) +
+  scale_shape_manual(values = shape3) +
+   theme_linedraw() +
+  custom.theme +
+  # Add p-value annotations for phyto and interaction
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$grazing, na.rm = TRUE),
+    label = formatted_p_cluster,
+    size = 8,  vjust = 2
+  ) +
+   guides(fill = "none") 
+
+
+# Create an interaction plot for 'cluster' and 'trt2' as a box plot
+interaction_plot <- ggplot(data4stats, aes(x = factor(trt2, levels = plot_levels), y = grazing)) +
+ geom_boxplot(aes(fill = factor(trt, levels = plot_levels), color = factor(trt, levels = plot_levels)),
+              alpha = 0.7,
+              outlier.shape = NA,
+    width = 0.5,
+    position = position_dodge(0.5)) +
+ geom_jitter(
+    aes(fill = factor(trt, levels = plot_levels), shape = phyto),
+    size = 7,
+    # shape = 21, 
+     position = position_jitterdodge(jitter.width = 0.07, dodge.width = 0.7),
+    alpha = 0.5,
+    stroke = 2,
+    color = "black"
+  ) +
+  facet_wrap(~ cluster) +  # Facet by 'cluster' to see interactions per cluster
+  labs(
+    x = expression(bold(Treatment)),
+    y = expression(bold(Grazing~(d^-1))),
+    fill = "",
+    color = "", 
+    shape = ""
+  ) +
+  scale_fill_manual(values = pal4) +
+  scale_color_manual(values = pal4) +
+   scale_shape_manual(values = shape3) +
+  theme_linedraw() +
+  guides(color = "none") +
+  custom.theme +
+  # Add p-value annotations for cluster and interaction
+  annotate(
+    "text",
+    x = 1.5,  # Position for p-value of interaction
+    y = max(data4stats$grazing, na.rm = TRUE) * 0.95,
+    label = formatted_p_interaction,
+    size = 6, vjust = 2
+  ) +
+  annotate(
+    "text",
+    x = 1.5,
+    y = max(data4stats$grazing, na.rm = TRUE) * 0.85,
+    label = formatted_p_cluster,
+    size = 6, vjust = 2
+  ) +
+  annotate(
+    "text",
+    x = 1.5,
+    y = max(data4stats$grazing, na.rm = TRUE) * 0.75,
+    label = formatted_p_trt,
+    size = 6, vjust = 2
+  )
+
+grazing <- cluster + interaction_plot
 ```
+
+```{r phyto accum model, fig.width=26, fig.asp = 0.8}
+# Fit the ANOVA model with interaction
+mod3 <- aov(accum ~ cluster * trt2, data = data4stats)
+
+# Extract the ANOVA table
+anova_results3 <- summary(mod3)
+
+# Get p-values for significant terms
+p_value_cluster <- anova_results3[[1]]["Pr(>F)"][1,1]
+p_value_trt <- anova_results3[[1]]["Pr(>F)"][2,1]
+# p_value_interaction <- anova_results2[[1]]["Pr(>F)"][3,1]
+
+# Format p-values for annotations
+formatted_p_cluster <- paste0("p (Cluster) = ", format.pval(p_value_cluster, digits = 2))
+formatted_p_trt <- paste0("p (Treatment) = ", format.pval(p_value_trt, digits = 2))
+# formatted_p_interaction <- paste0("p (cluster:trt) = ", format.pval(p_value_interaction, digits = 2))
+
+cluster <- ggplot(data4stats, aes(x = factor(cluster, levels = plot_levels), y = accum, fill = cluster)) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+   geom_jitter(
+    aes(fill = cluster, shape = phyto),
+    size = 7,
+    position = position_jitterdodge(jitter.width = 0.07, dodge.width = 0.7),
+    alpha = 0.5, 
+    stroke = 2,
+    # shape = 21,
+    color = "black"
+  ) +
+  labs(
+    x = "SOM cluster",
+    y = expression(bold(Accumulation~rate~(d^-1))),
+    fill = "",
+    color = "",
+    shape = ""
+  ) +
+  scale_fill_manual(values = pal2) +
+  scale_color_manual(values = pal2) +
+   scale_shape_manual(values = shape3) +
+   theme_linedraw() +
+  custom.theme +
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$accum, na.rm = TRUE),
+    label = formatted_p_cluster,
+    size = 6,  vjust = 2
+  ) +
+   guides(color = "none", fill = "none") 
+
+
+# Plot for Treatment Effect with ANOVA p-value using Box Plot
+trt <-  ggplot(data4stats, aes(x = factor(trt2, levels = plot_levels), y = accum, fill = factor(trt, levels = plot_levels))) +
+  geom_boxplot(alpha = 0.7,
+    outlier.shape = NA,
+    width = 0.4,
+    position = position_dodge(0.5)) +
+ geom_jitter(
+    aes(fill = factor(trt, levels = plot_levels), shape = phyto),
+    size = 7,
+    position = position_jitterdodge(jitter.width = 0.07, dodge.width = 0.7),
+    alpha = 0.5, 
+    stroke = 2,
+    # shape = 21,
+    color = "black"
+  ) +
+  labs(
+    x = "Treatment",
+    y = expression(bold(Accumulation~rate~(d^-1))),
+    fill = "",
+    color = "",
+    shape = ""
+  ) +
+  scale_fill_manual(values = pal4) +
+  scale_color_manual(values = pal4) +
+   scale_shape_manual(values = shape3) +
+   theme_linedraw() +
+  custom.theme +
+  # Add p-value annotations for interaction
+  annotate(
+    "text",
+    x = 1,
+    y = max(data4stats$accum, na.rm = TRUE),
+    label = formatted_p_trt,
+    size = 6,  vjust = 2
+  ) +
+   guides(color= "none") 
+
+# Combine plots side by side
+accum <- cluster + trt +  plot_layout(guides = 'collect') & theme(legend.position = "top")
+
+```
+
+```{r fig5, fig.width=33, fig.asp = 1.4}
+fig5 <- mu / (grazing +  guides(fill = "none", color = "none")) / (accum + guides(fill = "none", color = "none")) +
+  plot_layout(guides = "collect") + plot_annotation(tag_levels = 'A')  &
+  theme(plot.tag = element_text(size = 45), legend.position = "top", legend.box="vertical")
+
+ggsave(fig4, file = "~/github/oceprf_smokeonthewater/prod/figs/phyto_rates.svg", width = 33, height = 46)
+```
+
+
+## Supplemental figures
+
+
+```{r k v d plot, fig.width=50, fig.asp = 0.5}
+kvd <- ggplot(rates %>% mutate(cluster = ifelse(cluster == "High biomass", "High~biomass", "Low~biomass")), aes(
+  x = d,
+  y = k,
+  color = factor(trt, levels = plot_levels)
+)) +
+  geom_point(
+    aes(shape = theory_violated, color = factor(trt, levels = plot_levels)),
+    size = 8,
+    alpha = 0.8
+  ) +
+  geom_smooth(
+    method = lm,
+    se = FALSE,
+    linewidth = 1.1,
+    alpha = 0.8
+  ) +
+  # facet_grid(
+  #   # ggh4x::facet_nested_wrap(
+  #   factor(phyto, levels = plot_levels) ~ factor(exp, levels = plot_levels),
+  #   labeller = label_parsed,
+  #   scales = "free"
+  # ) +
+  ggh4x::facet_nested(
+    factor(phyto, levels = plot_levels)  ~  factor(cluster, levels = plot_levels) + exp,
+    scales = "free_y",
+    labeller = label_parsed
+  ) +
+  scale_color_manual(values = pal4) +
+  scale_fill_manual(values = pal4) +
+  scale_shape_manual(values = shape2a, guide = guide_legend(override.aes = list(fill = "black"))) +
+  labs(
+    color = "",
+    y = expression(bold(Apparent ~ growth ~ rate ~ (d ^ -1))),
+    x = expression(bold(Dilution)),
+    shape = "Theory violated"
+  ) +
+  guides(fill = guide_legend(override.aes = list(shape = 21))) +
+  theme_linedraw() +
+  custom.theme +
+  theme(axis.text.x = element_text(angle = 45, size = 26, vjust = 0.1)) 
+
+ggsave(kvd, file = "~/github/oceprf_smokeonthewater/prod/figs/division_v_dilution.svg", width = 48, height = 20)
+```
+
+
+```{r phyto PCA plot}
+
+pca <- prcomp(data4stats[, -c(1,2,3,4,5, 12)],  scale = TRUE)
+
+pca_plot <- fviz_pca_biplot(pca , 
+                                  geom.ind = c("point"),
+                                  # fill.ind = as_factor(round(data4stats$composite_z, 1)),
+                                  fill.ind = data4stats$trt,
+                                  pointshape = 21, pointsize=3,
+                                  palette = "set2",labelsize = 5, col.var = "black",
+                                  addEllipses=F, ellipse.level=0.90, mean.point =FALSE,
+                                  repel = TRUE) +
+  scale_fill_viridis_d(option = "H")+
+  labs(fill = "Biomass Index", title = "") +
+  theme_test() +
+  theme(text = element_text(size = 12))
+
+ggsave(pca_plot, file = "~/github/oceprf_smokeonthewater/prod/figs/pca.svg", width = 12, height = 8)
+```
+
+
 # Save data
 
 ```{r save data}
-write_csv(p_rates_summary, prod_path)
+write_csv(rates, prod_path)
+write_csv(bcodmo, bcodmo_path)
 ```
+
+

@@ -1,7 +1,7 @@
 Cruise map with satellite chl and ship sst
 ================
 Nick Baetge
-compiled most recently on 01 June, 2024
+compiled most recently on 20 November, 2024
 
 ``` r
 library(tidyverse)
@@ -33,9 +33,9 @@ v2_path <-
 v3_path <-
   "/Users/nicholasbaetge/github/oceprf_smokeonthewater/raw/r2_viirs_scene3_20230812_20230819_chl.nc"
 table_path <-
-  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/Table1.html"
-rtf_table_path <-
-  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/Table1.rtf"
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/insitu_table.html"
+suptable_path <-
+  "/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/zscore_table.html"
 ```
 
 ## viirs chl data (for ggplot raster)
@@ -116,10 +116,7 @@ index <- read_csv(index_path) %>%
   ) ~ 1,
   between(
     date, ymd("2023-08-13"), ymd("2023-08-21")
-  ) ~ 2)) %>% 
-   mutate(biomass2 = case_when(composite_z <= -1 ~ "bold(Biomass~index~'<'~-1)",
-                              composite_z > -1 & composite_z < 1 ~ "bold(-1~'<'~biomass~index~'<'~1)",
-                              composite_z >= 1 ~ "bold(Biomass~index~'>'~1)"))
+  ) ~ 2)) 
 ```
 
 # Plot data
@@ -168,19 +165,19 @@ custom.theme <- theme(
 leg1 <- basemap(data = region, bathymetry = F) +
   geom_raster(data = viirs1_2_chla,
               aes(x = lon, y = lat, fill = chla),
-              interpolate = TRUE) +
+              interpolate = TRUE, alpha = 0.85) +
   viridis::scale_fill_viridis(
     breaks = chl_breaks,
     labels = chl_breaks,
     trans = scales::pseudo_log_trans(sigma = 0.001),
     na.value = NA
   ) +
-  geom_path(
-    data = met %>% filter(viirs == 1),
-    aes(x = lon, y = lat),
-    color = "white",
-    linewidth = 4
-  )  +
+  # geom_path(
+  #   data = met %>% filter(viirs == 1),
+  #   aes(x = lon, y = lat),
+  #   color = "white",
+  #   linewidth = 4
+  # )  +
   geom_path(
     data = met %>% filter(viirs == 1),
     aes(x = lon, y = lat, color = sst_c),
@@ -194,11 +191,12 @@ leg1 <- basemap(data = region, bathymetry = F) +
     color = expression(SST ~ ("˚C"))
   ) +
   ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'>'~1)"),
+    data = index %>% filter(viirs == 1) %>% filter(cluster == "High biomass"),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
-    color = "#b51963",
+    fill = "#92EA33",
+    color = "black",
     size = 10,
     box.padding = 0.4,
     min.segment.length = 1,
@@ -207,11 +205,12 @@ leg1 <- basemap(data = region, bathymetry = F) +
     ylim = c(35, 36)
   ) +
   ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)"),
+    data = index %>% filter(viirs == 1) %>% filter(cluster == "Low biomass"),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
-    color = "#0073E6",
+    fill = "#0947EA",
+    color = "black",
     size = 10,
     box.padding = 0.4,
     min.segment.length = 1,
@@ -219,40 +218,18 @@ leg1 <- basemap(data = region, bathymetry = F) +
     xlim = c(-119, -116),
     ylim = c(34, 34.5)
   ) +
-  ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)"),
-    aes(x = lon, y = lat, label = exp),
-    alpha = 0.75,
-    fontface = 'bold',
-    color = "black",
-    size = 10,
-    box.padding = 0.4,
-    min.segment.length = 1.2,
-    segment.size = 1,
-    xlim = c(-118, -113),
-    ylim = c(32, 34)
-  ) +
   geom_point(
-    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'>'~1)") %>% drop_na(exp),
+    data = index %>% filter(viirs == 1) %>% filter(cluster == "High biomass") %>% drop_na(exp),
     aes(x = lon, y = lat),
-    color = "#b51963",
+    color = "#92EA33",
     size = 8,
     shape = 21,
     stroke = 3
   ) +
   geom_point(
-    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)") %>% drop_na(exp),
+    data = index %>% filter(viirs == 1) %>% filter(cluster == "Low biomass") %>% drop_na(exp),
     aes(x = lon, y = lat),
-    color = "#0073E6",
-    size = 8,
-    shape = 21,
-    stroke = 3
-  ) +
-   geom_point(
-    data = index %>% filter(viirs == 1) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)") %>%
-      drop_na(exp),
-    aes(x = lon, y = lat),
-    color = "black",
+    color =  "#0947EA",
     size = 8,
     shape = 21,
     stroke = 3
@@ -267,19 +244,19 @@ leg1 <- basemap(data = region, bathymetry = F) +
 leg2 <- basemap(data = region, bathymetry = F) +
   geom_raster(data = viirs3_chla,
               aes(x = lon, y = lat, fill = chla),
-              interpolate = TRUE) +
+              interpolate = TRUE, alpha = 0.85) +
   viridis::scale_fill_viridis(
     breaks = chl_breaks,
     labels = chl_breaks,
     trans = scales::pseudo_log_trans(sigma = 0.001),
     na.value = NA
   ) +
-  geom_path(
-    data = met %>% filter(viirs == 2),
-    aes(x = lon, y = lat),
-    color = "white",
-    linewidth = 4.2
-  )  +
+  # geom_path(
+  #   data = met %>% filter(viirs == 2),
+  #   aes(x = lon, y = lat),
+  #   color = "white",
+  #   linewidth = 6
+  # )  +
   geom_path(
     data = met %>% filter(viirs == 2),
     aes(x = lon, y = lat, color = sst_c),
@@ -294,45 +271,47 @@ leg2 <- basemap(data = region, bathymetry = F) +
   ) +
     
    ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)"),
+    data = index %>% filter(viirs == 2) %>% filter(cluster == "High biomass"),
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
+    fill = "#92EA33",
     color = "black",
     size = 10,
     box.padding = 0.8,
     min.segment.length = 1,
     segment.size = 1,
-     xlim = c(-119, -114),
-    ylim = c(34.7, 36)
+     xlim = c(-120.5, -114),
+    ylim = c(5, 36)
   ) +
   ggrepel::geom_label_repel(
-    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)") ,
+    data = index %>% filter(viirs == 2) %>% filter(cluster == "Low biomass") ,
     aes(x = lon, y = lat, label = exp),
     alpha = 0.75,
     fontface = 'bold',
-    color = "#0073E6",
+    fill =  "#0947EA",
+    color = "black",
     size = 10,
     box.padding = 0.8,
     min.segment.length = 1,
     segment.size = 1,
-    xlim = c(-120, -116),
-    ylim = c(34, 36),
+    xlim = c(-121, -114),
+    ylim = c(33.5, 35),
     seed = 1
   ) +
   
    geom_point(
-    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(-1~'<'~biomass~index~'<'~1)") %>% drop_na(exp),
+    data = index %>% filter(viirs == 2) %>% filter(cluster == "High biomass") %>% drop_na(exp),
     aes(x = lon, y = lat),
-    color = "black",
+    color =  "#92EA33",
     size = 8,
     shape = 21,
     stroke = 3
   ) +
   geom_point(
-    data = index %>% filter(viirs == 2) %>% filter(biomass2 == "bold(Biomass~index~'<'~-1)")  %>% drop_na(exp),
+    data = index %>% filter(viirs == 2) %>% filter(cluster == "Low biomass")  %>% drop_na(exp),
     aes(x = lon, y = lat),
-    color = "#0073E6",
+    color =  "#0947EA",
     size = 8,
     shape = 21,
     stroke = 3
@@ -344,26 +323,26 @@ leg2 <- basemap(data = region, bathymetry = F) +
 ```
 
 ``` r
-(leg1) + (leg2 + guides(color = "none", fill = "none"))  + plot_layout(guides = "collect")
+maps <- (leg1) + (leg2 + guides(color = "none", fill = "none"))  + plot_layout(guides = "collect")
+
+ggsave(maps, file = "~/github/oceprf_smokeonthewater/prod/figs/maps.svg", width = 30, height = 14)
 ```
 
-![](/Users/nicholasbaetge/github/oceprf_smokeonthewater/knitted/2_cruisemap_files/figure-gfm/Figure1-1.png)<!-- -->
-
-# table
+# Tables
 
 ``` r
 table_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn, contains("sd"))) %>% 
-  select(exp, stn, date, lat, lon, everything(), -biomass, -stn) %>% 
+  select(exp, stn, date, lat, lon, everything(), -stn) %>% 
   mutate_at(vars(contains(c("lat", "lon", "z", "chl", "gamma", "poc", "nano_syn", "pico_syn"))), round, 2) %>% 
   mutate_at(vars(contains("bbb")), round, 4) %>% 
   arrange(composite_z) %>% 
-  select(exp, date, lat, lon, acs_n, cells_n, chl_ap676lh, poc_cp_660, everything(), -contains("poc_chl")) 
+  select(exp, date, lat, lon, cluster, acs_n, chl_ap676lh, poc_cp_660, gamma_cp, bbb_532, cells_n, everything(), -contains("poc_chl"), -contains("z")) 
 ```
 
     ## Rows: 14 Columns: 21
     ## ── Column specification ────────────────────────────────────────────────────────
     ## Delimiter: ","
-    ## chr  (3): date, exp, biomass
+    ## chr  (3): date, exp, cluster
     ## dbl (18): stn, lat, lon, chl_ap676lh, gamma_cp, bbb_532, poc_cp_660, nano_sy...
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
@@ -382,23 +361,24 @@ gt_tbl <- gt(table_data )
 
 table <- 
   gt_tbl |>
-  tab_header(
-    title = md("**In situ field conditions**"),
-  ) |>
+  # tab_header(
+  #   title = md("**Pre-existing in situ biomass conditions**"),
+  # ) |>
   cols_label(
     exp = html("Experimental site"),
     date = html("Date"),
     lat = html("Latitude, <br>&deg;N"),
     lon = html("Longitude, <br>&deg;W"),
-    acs_n = html("Bio-optical estimates"),
-    cells_n = html("Flow cytometry estimates"),
-    chl_ap676lh = html("Chl<sub>a<sub>p</sub>(676)lh"),
+    cluster = md("**SOM cluster**"),
+    chl_ap676lh = html("Chl<sub>a<sub>p</sub>(676)lh<br>(mg m<sup>-3</sup>)"),
     gamma_cp = html("&gamma;"),
     bbb_532 = html("b<sub>bp</sub>/b<sub>p</sub>(532)"),
-    poc_cp_660 = html("POC<sub>c<sub>p</sub>(660)"),
+    poc_cp_660 = html("POC<sub>c<sub>p</sub>(660)<br>(mg m<sup>-3</sup>)"),
+    acs_n = html("n"),
     nano_syn = html("nanoeukaryotes:<br><i>Synechococcus</i>"),
     pico_syn = html("picoeukaryotes:<br><i>Synechococcus</i>"),
-    composite_z = md("**Biomass index**") 
+    cells_n = html("n")
+    
   ) |>
   cols_merge_uncert(
     col_val = chl_ap676lh,
@@ -424,55 +404,75 @@ table <-
     col_val = pico_syn,
     col_uncert = sd_pico_syn
   )|>
-  cols_merge_n_pct(
-    col_n = chl_ap676lh,
-    col_pct = z_chl_ap676lh
-  ) |>
-  cols_merge_n_pct(
-    col_n = gamma_cp,
-    col_pct = z_gamma_cp
-  )|>
-  cols_merge_n_pct(
-    col_n = bbb_532,
-    col_pct = z_bbb_532
-  )|>
-  cols_merge_n_pct(
-    col_n = poc_cp_660,
-    col_pct = z_poc_cp_660
-  )|>
-  cols_merge_n_pct(
-    col_n = nano_syn,
-    col_pct = z_nano_syn
-  ) |>
-   cols_merge_n_pct(
-    col_n = pico_syn,
-    col_pct = z_pico_syn
-  ) |>
-  tab_spanner(
-    label = html("mg m<sup>-3"),
-    columns = c(chl_ap676lh, poc_cp_660)
-  ) |>
-  tab_spanner(
-    label = html("Dimensionless"),
-    columns = c(gamma_cp, bbb_532, nano_syn, pico_syn, composite_z)
-  ) |>
-  tab_spanner(
-    label = html("Experimental site mean &plusmn standard deviation (z-score)"),
-    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_532, nano_syn, pico_syn)
-  ) |>
   tab_spanner(
     label = html("Inline bio-optics"),
-    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_532)
+    columns = c(chl_ap676lh, poc_cp_660, gamma_cp, bbb_532, acs_n)
   ) |>
   tab_spanner(
     label = html("Flow cytometry"),
-    columns = c(nano_syn, pico_syn)
-  ) |>
-  tab_spanner(
-    label = html("<i>n"),
-    columns = c(acs_n, cells_n)
+    columns = c(nano_syn, pico_syn, cells_n )
   ) 
 
 gtsave(table, table_path)
-gtsave(table, rtf_table_path)
+```
+
+``` r
+suptable_data <- left_join(read_csv(index_path), read_csv(meta_path) %>% select(stn, contains("sd"))) %>% 
+  select(exp, date, lat, lon, composite_z, contains("z"))  %>% 
+  mutate_at(vars(contains(c("lat", "lon", "z"))), round, 2) %>% 
+  arrange(composite_z)
+```
+
+    ## Rows: 14 Columns: 21
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## chr  (3): date, exp, cluster
+    ## dbl (18): stn, lat, lon, chl_ap676lh, gamma_cp, bbb_532, poc_cp_660, nano_sy...
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+    ## Rows: 14 Columns: 15
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## dbl (15): stn, mean_chl_ap676lh, sd_chl_ap676lh, mean_gamma_cp, sd_gamma_cp,...
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+    ## Joining with `by = join_by(stn)`
+
+``` r
+gt_sup <- gt(suptable_data ) 
+
+suptable <- 
+  gt_sup |>
+  tab_header(
+    title = md("**Table S1.** In situ biomass conditions from composite z-scores"),
+  ) |>
+  cols_label(
+    exp = html("Experimental site"),
+    date = html("Date"),
+    lat = html("Latitude, <br>&deg;N"),
+    lon = html("Longitude, <br>&deg;W"),
+    composite_z = md("**Composite z-score**"),
+    z_chl_ap676lh = html("Chl<sub>a<sub>p</sub>(676)lh"),
+    z_gamma_cp = html("&gamma;"),
+    z_bbb_532 = html("b<sub>bp</sub>/b<sub>p</sub>(532)"),
+    z_poc_cp_660 = html("POC<sub>c<sub>p</sub>(660)"),
+    z_nano_syn = html("nanoeukaryotes:<br><i>Synechococcus</i>"),
+    z_pico_syn = html("picoeukaryotes:<br><i>Synechococcus</i>")
+    
+  ) |>
+  tab_spanner(
+    label = html("Inline bio-optics z-scores"),
+    columns = c(z_chl_ap676lh, z_poc_cp_660, z_gamma_cp, z_bbb_532)
+  ) |>
+  tab_spanner(
+    label = html("Flow cytometry z-scores"),
+    columns = c(z_nano_syn, z_pico_syn)
+  ) |>
+  tab_source_note(source_note = md(
+    "Z-scores for each variable were calculated as the experimental site estimate minus the mean of estimates across all experimental sites, then divided by the standard deviation of the estimates across all experimental sites. Z-scores for γ and bbp:bp were reversed as both metrics are inversely related to particle size. A composite z-score, or biomass index, is calculated as the sum of the z-scores for each site."
+  )) 
+
+gtsave(suptable, suptable_path)
 ```

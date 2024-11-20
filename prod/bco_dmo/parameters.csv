@@ -1,0 +1,30 @@
+Column Name,Column Description [Include meaning of any codes or flags used in data column as well as detection limits.],Units of measurement,missing data/no data value
+stn,Station number,unitless,
+lat,latitude,ûN,
+lon,longitude,ûW,
+dt,datetime,ymd_hms,blank= no data value
+bbp_470,particulate backscattering at 470 nm,1/m,blank= no data value
+bbp_532,particulate backscattering at 532 nm,1/m,blank= no data value
+bbp_660,particulate backscattering at 660 nm,1/m,blank= no data value
+ap_470,particulate absorption at 470 nm,1/m,blank= no data value
+ap_532,particulate absorption at 532 nm,1/m,blank= no data value
+ap_660,particulate absorption at 660 nm,1/m,blank= no data value
+cp_470,particulate attenuation at 470 nm,1/m,blank= no data value
+cp_532,particulate attenuation at 532 nm,1/m,blank= no data value
+cp_660,particulate attenuation at 660 nm,1/m,blank= no data value
+poc_cp_660,Particulate organic carbon concentration estimated from particulate attenuation at 660 nm ,mg/cubic m,blank= no data value
+chl_ap676lh,Chlorophyll concentration estimated from the line height of particulate absorption at 676 nm,mg/cubic m,blank= no data value
+gamma_cp,The mean particle size index _,unitless,blank= no data value
+trt,"treatment type: control or amendment with (1) Thomas Fire ash leachate, (2) low temperature (<500ûC) ash leachate, or (3)high termperature (>500ûC) ash leachate ",unitless,blank= no data value
+bact_cells,mean bacterial abundance between replicate samples,cells/ml,blank= no data value
+sd_bact_cells,standard deviation of the mean bacterial abundance between replicate samples,cells/ml,blank= no data value
+boc,bacterial organic carbon,µmol C/L,blank= no data value
+toc,total organic carbon,µmol C/L,blank= no data value
+sd_toc,standard deviation of the mean total organic carbon between replicate samples,µmol C/L,blank= no data value
+phyto,phytoplankton group enumerated in dilution experiments,unitless,blank= no data value
+division,mean apparent division rate for each phytoplankton group across replicate bottles,1/d,blank= no data value
+sd_division,standard deviation of the mean apparent division rate for each phytoplankton group across replicate bottles,1/d,blank= no data value
+grazing,mean grazing rate rate for each phytoplankton group across replicate bottles,1/d,blank= no data value
+sd_grazing,standard deviation of the mean grazing  rate for each phytoplankton group across replicate bottles,1/d,blank= no data value
+accumulation ,mean accumulation rate for each phytoplankton group across replicate bottles,1/d,blank= no data value
+sd_accumulation,standard deviation of the mean accumulation rate for each phytoplankton group across replicate bottles,1/d,blank= no data value
